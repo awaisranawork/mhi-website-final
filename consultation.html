@@ -385,7 +385,11 @@ document.addEventListener('DOMContentLoaded', () => {
       formStatus.style.display = 'block';
       formStatus.style.fontSize = '1.05rem';
       formStatus.style.padding = '30px';
-      formStatus.textContent = 'Application received. Our team will review your business details and confirm your slot within 24 hours.';
+      formStatus.textContent = 'Application received. Redirecting to Thank You page...';
+      
+      setTimeout(() => {
+        window.location.href = 'thankyou.html';
+      }, 1500);
 
     } catch (error) {
       console.error('Error!', error.message);
