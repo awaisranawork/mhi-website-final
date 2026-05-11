@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MFGBN74S');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7V8JGHDJV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W7V8JGHDJV');
+  </script>
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="FYCthtRBHV0R0aHyKS7QHwepIzAHEu05BJf7ektWJc0" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Potato Holdings — AI Implementation Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEEDF5;--card:#fff;--text:#111;--text-mid:#444;--text-light:#777;
+  --accent:#6C5CE7;--accent-dark:#5A4BD1;--accent-glow:rgba(108,92,231,.12);
+  --border:#DDDAE8;--input-bg:#FAFAFD;--input-focus:#F3F0FF;
+  --red:#D94040;--green:#2D8F4E;--radius:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6}
+
+.hero{
+  background:linear-gradient(135deg,#1a1340 0%,#2d1f6b 50%,#1a1340 100%);
+  color:#fff;padding:52px 24px 48px;text-align:center;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 35% 75%,rgba(108,92,231,.2),transparent 55%),
+              radial-gradient(ellipse at 70% 25%,rgba(160,120,255,.1),transparent 45%);
+  pointer-events:none;
+}
+.hero-inner{position:relative;z-index:1;max-width:620px;margin:0 auto}
+.hero-back{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,.5);font-size:13px;font-weight:600;margin-bottom:16px;text-decoration:none;transition:.2s;border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:40px}
+.hero-back:hover{color:#fff;border-color:rgba(255,255,255,.4)}
+.hero-chip{
+  display:inline-block;background:rgba(108,92,231,.2);border:1px solid rgba(108,92,231,.4);
+  color:#B8AAFF;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  padding:5px 16px;border-radius:40px;margin-bottom:18px;
+}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(26px,5vw,40px);font-weight:800;line-height:1.18;margin-bottom:12px}
+.hero h1 em{font-style:italic;color:#B8AAFF}
+.hero p{font-size:15px;color:rgba(255,255,255,.6);max-width:500px;margin:0 auto;line-height:1.7}
+
+.wrap{max-width:660px;margin:-22px auto 50px;padding:0 14px;position:relative;z-index:2}
+.card{background:var(--card);border-radius:16px;box-shadow:0 4px 30px rgba(0,0,0,.07);overflow:hidden}
+
+.sec{padding:30px 26px 26px;border-bottom:1px solid var(--border)}.sec:last-child{border-bottom:none}
+.sec-head{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.sec-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--accent),var(--accent-dark));font-size:15px;flex-shrink:0}
+.sec-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:700}
+.sec-desc{font-size:13px;color:var(--text-light);margin-bottom:20px;padding-left:40px}
+
+.fg{margin-bottom:18px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.row2{grid-template-columns:1fr}}
+label{display:block;font-size:13.5px;font-weight:600;margin-bottom:5px}
+label .r{color:var(--red);margin-left:2px}
+.hint{font-size:12px;color:var(--text-light);margin-top:3px;font-style:italic;line-height:1.5}
+
+input[type=text],input[type=email],input[type=tel],input[type=url],input[type=number],select,textarea{
+  width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:var(--radius);
+  background:var(--input-bg);font-family:'Outfit',sans-serif;font-size:14px;color:var(--text);
+  transition:.2s;outline:none;
+}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);background:var(--input-focus);box-shadow:0 0 0 3px var(--accent-glow)}
+textarea{resize:vertical;min-height:100px}
+select{cursor:pointer;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23777' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;
+}
+
+.opts{display:flex;flex-direction:column;gap:7px}
+.opt{display:flex;align-items:center;gap:10px;padding:10px 14px;border:1.5px solid var(--border);border-radius:var(--radius);cursor:pointer;background:var(--input-bg);transition:.15s}
+.opt:hover{border-color:var(--accent);background:var(--input-focus)}
+.opt input[type=radio],.opt input[type=checkbox]{accent-color:var(--accent);width:16px;height:16px;cursor:pointer;flex-shrink:0}
+.opt span{font-size:14px}
+
+.fup{border:2px dashed var(--border);border-radius:var(--radius);padding:22px;text-align:center;cursor:pointer;background:var(--input-bg);position:relative;transition:.2s}
+.fup:hover{border-color:var(--accent);background:var(--input-focus)}
+.fup input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.fup .ic{font-size:26px;margin-bottom:4px}
+.fup .tx{font-size:12.5px;color:var(--text-light)}
+.fup .tx strong{color:var(--accent)}
+.fname{font-size:12px;color:var(--green);margin-top:5px;font-weight:600}
+
+.task-card{background:linear-gradient(135deg,#F5F2FF,#EDE8FF);border:1.5px solid #D4CCF0;border-radius:12px;padding:20px 22px;margin-bottom:18px}
+.task-card .task-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent-dark);background:rgba(108,92,231,.12);padding:3px 10px;border-radius:20px;margin-bottom:10px}
+.task-card label{font-size:14px;font-weight:700;margin-bottom:4px}
+.task-card .hint{color:#6B5FA0}
+
+.sub-sec{padding:24px 26px 30px;text-align:center}
+.sub-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;font-family:'Outfit',sans-serif;font-size:15px;font-weight:700;padding:14px 50px;border:none;border-radius:50px;cursor:pointer;transition:.25s;box-shadow:0 4px 18px rgba(108,92,231,.3);letter-spacing:.3px}
+.sub-btn:hover{transform:translateY(-2px);box-shadow:0 6px 26px rgba(108,92,231,.4)}
+.sub-btn:active{transform:translateY(0)}
+.sub-note{font-size:12px;color:var(--text-light);margin-top:12px}
+
+.success{display:none;text-align:center;padding:60px 26px}
+.success .chk{width:64px;height:64px;background:linear-gradient(135deg,var(--green),#238B3E);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:28px;color:#fff;animation:pop .4s cubic-bezier(.175,.885,.32,1.275)}
+@keyframes pop{0%{transform:scale(0)}100%{transform:scale(1)}}
+.success h2{font-family:'Playfair Display',serif;font-size:24px;margin-bottom:8px}
+.success p{color:var(--text-light);font-size:14px}
+
+.footer{text-align:center;padding:18px;font-size:12px;color:var(--text-light)}
+.footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFGBN74S"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+<div class="hero">
+  <div class="hero-inner">
+    <a href="index.html" class="hero-back">← Back to MHI</a><br>
+    <div class="hero-chip">We're Hiring</div>
+    <h1>AI Implementation <em>Specialist</em></h1>
+    <p>Join Potato Holdings and bring AI-powered change across our entire organization — from design to media buying to content creation.</p>
+  </div>
+</div>
+
+<div class="wrap">
+<div class="card">
+<form id="appForm">
+
+<!-- 1. PERSONAL -->
+<div class="sec">
+  <div class="sec-head"><span class="sec-icon">👤</span><span class="sec-title">Personal Information</span></div>
+  <p class="sec-desc">Basic details so we can reach out to you.</p>
+  <div class="row2">
+    <div class="fg"><label>Full Name <span class="r">*</span></label><input type="text" placeholder="e.g. Sana Malik" required></div>
+    <div class="fg"><label>Email Address <span class="r">*</span></label><input type="email" placeholder="e.g. sana@email.com" required></div>
+  </div>
+  <div class="row2">
+    <div class="fg"><label>Phone / WhatsApp Number <span class="r">*</span></label><input type="tel" placeholder="e.g. 0300-1234567" required></div>
+    <div class="fg"><label>Age <span class="r">*</span></label><input type="number" placeholder="e.g. 26" min="16" max="60" required></div>
+  </div>
+  <div class="fg">
+    <label>City of Residence <span class="r">*</span></label>
+    <input type="text" placeholder="e.g. Lahore" required>
+  </div>
+  <div class="fg">
+    <label>Are you willing to work on-site from our office? <span class="r">*</span></label>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="onsite" value="yes" required><span>Yes, fully on-site</span></label>
+      <label class="opt"><input type="radio" name="onsite" value="hybrid"><span>Prefer hybrid (some remote, some on-site)</span></label>
+      <label class="opt"><input type="radio" name="onsite" value="remote"><span>Prefer fully remote</span></label>
+    </div>
+  </div>
+</div>
+
+<!-- 2. EDUCATION & EXPERIENCE -->
+<div class="sec">
+  <div class="sec-head"><span class="sec-icon">🎓</span><span class="sec-title">Education & Experience</span></div>
+  <p class="sec-desc">Your background and relevant work experience.</p>
+  <div class="fg"><label>Educational Qualification <span class="r">*</span></label><input type="text" placeholder="e.g. BS Computer Science, MBA" required></div>
+  <div class="fg"><label>Most Recent Company Worked At (if any)</label><input type="text" placeholder="e.g. ABC Tech Solutions"></div>
+  <div class="fg"><label>Your Title / Role There (if any)</label><input type="text" placeholder="e.g. AI Analyst, Automation Lead"></div>
+  <div class="fg"><label>LinkedIn URL <span class="r">*</span></label><input type="url" placeholder="e.g. https://linkedin.com/in/yourprofile" required></div>
+  <div class="fg">
+    <label>How long have you been actively working with AI tools? <span class="r">*</span></label>
+    <select required>
+      <option value="" disabled selected>Select</option>
+      <option>Less than 6 months</option>
+      <option>6 months – 1 year</option>
+      <option>1 – 2 years</option>
+      <option>2 – 3 years</option>
+      <option>More than 3 years</option>
+    </select>
+  </div>
+</div>
+
+<!-- 3. AI KNOWLEDGE -->
+<div class="sec">
+  <div class="sec-head"><span class="sec-icon">🤖</span><span class="sec-title">AI Skills & Knowledge</span></div>
+  <p class="sec-desc">Tell us about the AI tools and skills you already have.</p>
+
+  <div class="fg">
+    <label>Which AI tools do you actively use? (select all that apply) <span class="r">*</span></label>
+    <div class="opts">
+      <label class="opt"><input type="checkbox" name="tools" value="chatgpt"><span>ChatGPT / Claude / Gemini</span></label>
+      <label class="opt"><input type="checkbox" name="tools" value="midjourney"><span>Midjourney / DALL-E / AI Image Tools</span></label>
+      <label class="opt"><input type="checkbox" name="tools" value="video"><span>AI Video Tools (InVideo, Runway, Kling, etc.)</span></label>
+      <label class="opt"><input type="checkbox" name="tools" value="automation"><span>Automation Tools (Zapier, Make, n8n)</span></label>
+      <label class="opt"><input type="checkbox" name="tools" value="coding"><span>AI Coding Assistants (Copilot, Cursor, etc.)</span></label>
+      <label class="opt"><input type="checkbox" name="tools" value="other"><span>Other AI tools</span></label>
+    </div>
+  </div>
+
+  <div class="fg">
+    <label>Which of our departments do you feel most confident implementing AI in? <span class="r">*</span></label>
+    <div class="opts">
+      <label class="opt"><input type="checkbox" name="dept" value="design"><span>Design (graphics, visuals)</span></label>
+      <label class="opt"><input type="checkbox" name="dept" value="shopify"><span>Shopify Development (website, e-commerce)</span></label>
+      <label class="opt"><input type="checkbox" name="dept" value="content"><span>Content Writing (copy, captions, blogs)</span></label>
+      <label class="opt"><input type="checkbox" name="dept" value="video"><span>Video Editing & AI Video</span></label>
+      <label class="opt"><input type="checkbox" name="dept" value="media"><span>Media Buying (ads management)</span></label>
+      <label class="opt"><input type="checkbox" name="dept" value="pm"><span>Client & Project Management</span></label>
+    </div>
+  </div>
+
+  <div class="fg">
+    <label>Have you ever implemented an AI solution in a company or team before? <span class="r">*</span></label>
+    <div class="opts">
+      <label class="opt"><input type="radio" name="implemented" value="yes" required><span>Yes, I have real experience doing this</span></label>
+      <label class="opt"><input type="radio" name="implemented" value="personal"><span>Yes, but only for my own projects</span></label>
+      <label class="opt"><input type="radio" name="implemented" value="no"><span>Not yet, but I know how to</span></label>
+    </div>
+  </div>
+</div>
+
+<!-- 4. PORTFOLIO -->
+<div class="sec">
+  <div class="sec-head"><span class="sec-icon">📂</span><span class="sec-title">Portfolio & Links</span></div>
+  <p class="sec-desc">Share anything that shows your AI skills and thinking.</p>
+  <div class="fg">
+    <label>Portfolio or Project Link (optional)</label>
+    <input type="url" placeholder="e.g. Google Drive, GitHub, personal website">
+    <p class="hint">Share anything — a project, a case study, a tool you built, or work you're proud of.</p>
+  </div>
+  <div class="fg">
+    <label>CV / Resume <span class="r">*</span></label>
+    <div class="fup" id="fup1">
+      <div class="ic">📄</div>
+      <div class="tx">Click to upload &nbsp;<strong>PDF, DOC, DOCX or PNG — Max 10MB</strong></div>
+      <input type="file" accept=".pdf,.doc,.docx,.png" id="file1">
+      <div class="fname" id="fn1"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. SALARY -->
+<div class="sec">
+  <div class="sec-head"><span class="sec-icon">💰</span><span class="sec-title">Salary & Availability</span></div>
+  <p class="sec-desc">Be honest about your expectations.</p>
+  <div class="fg">
+    <label>Salary Expectation (PKR per month) <span class="r">*</span></label>
+    <input type="text" placeholder="e.g. 80,000" required>
+    <p class="hint">Share the minimum figure that genuinely works for you. We want to match the right person to the right number rather than filter people over small margins.</p>
+  </div>
+  <div class="fg">
+    <label>When can you start? <span class="r">*</span></label>
+    <select required>
+      <option value="" disabled selected>Select</option>
+      <option>Immediately</option>
+      <option>Within 1 week</option>
+      <option>Within 2 weeks</option>
+      <option>Within 1 month</option>
+      <option>Need more than 1 month</option>
+    </select>
+  </div>
+</div>
+
+<!-- 7. WHY -->
+<div class="sec">
+  <div class="sec-head"><span class="sec-icon">💬</span><span class="sec-title">Final Question</span></div>
+  <p class="sec-desc">Be honest. Generic answers won't make it through.</p>
+  <div class="fg">
+    <label>Why do you want to join Potato Holdings as an AI Specialist? <span class="r">*</span></label>
+    <textarea placeholder="Tell us honestly. If you're passionate about AI, say that. If the role excites you, tell us why. No generic answers please." required></textarea>
+  </div>
+  <div class="fg">
+    <label>How did you hear about this job? <span class="r">*</span></label>
+    <select required><option value="" disabled selected>Select</option><option>Instagram</option><option>TikTok</option><option>Facebook</option><option>LinkedIn</option><option>YouTube</option><option>A friend told me</option><option>Other</option></select>
+  </div>
+</div>
+
+<div class="sub-sec">
+  <button type="submit" class="sub-btn">Submit Application →</button>
+  <p class="sub-note">Your information is safe. We only use it for this hiring process.</p>
+</div>
+<div class="success" id="suc">
+  <div class="chk">✓</div>
+  <h2>Application Submitted!</h2>
+  <p>Thank you for applying! Our team will review your application and get back to you soon.</p>
+</div>
+</form>
+</div>
+</div>
+
+<div class="footer">© 2026 <a href="#">Potato Holdings</a> — Building with AI</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// PASTE YOUR GOOGLE APPS SCRIPT URL BELOW (from Step 4 of guide)
+// ═══════════════════════════════════════════════════════════════
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbzvYTU6a4boGv1kHHezaHJtoq8lIWgQssBAJ4MEIKtF4Afwo5TqJCxDR8cq_Z0TQU9y/exec";
+
+let cvFile = null;
+
+document.getElementById('file1').addEventListener('change', function(){
+  const file = this.files[0];
+  if (!file) { cvFile = null; document.getElementById('fn1').textContent = ''; return; }
+  if (file.size > 10485760) { alert('File too large. Max size is 10MB.'); this.value = ''; return; }
+  document.getElementById('fn1').textContent = '📎 ' + file.name;
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    cvFile = { name: file.name, type: file.type || 'application/octet-stream', data: ev.target.result.split(',')[1] };
+  };
+  reader.readAsDataURL(file);
+});
+
+document.getElementById('appForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const btn = this.querySelector('.sub-btn');
+
+  if (!cvFile) {
+    alert('Please upload your CV / Resume before submitting.');
+    return;
+  }
+
+  btn.textContent = 'Submitting...';
+  btn.disabled = true;
+
+  const inputs = Array.from(this.querySelectorAll('input[type=text],input[type=email],input[type=tel],input[type=url],input[type=number]'));
+  const selects = Array.from(this.querySelectorAll('select'));
+  const textareas = Array.from(this.querySelectorAll('textarea')).map(t=>t.value);
+  const getRadio = (name) => {
+    const el = this.querySelector(`input[name="${name}"]:checked`);
+    if (!el) return '';
+    return el.closest('label')?.querySelector('span')?.textContent?.trim() || el.value;
+  };
+  const getChecked = (name) => Array.from(this.querySelectorAll(`input[name="${name}"]:checked`))
+    .map(c => c.closest('label')?.querySelector('span')?.textContent?.trim() || c.value)
+    .join(', ');
+
+  const data = {
+    "Form Type": "AI Specialist",
+    "Timestamp": new Date().toLocaleString('en-PK', {timeZone: 'Asia/Karachi'}),
+    "Full Name": inputs[0]?.value || '',
+    "Email": inputs[1]?.value || '',
+    "Phone": inputs[2]?.value || '',
+    "Age": inputs[3]?.value || '',
+    "City": inputs[4]?.value || '',
+    "Work On-site": getRadio('onsite'),
+    "Education": inputs[5]?.value || '',
+    "Recent Company": inputs[6]?.value || '',
+    "Title/Role": inputs[7]?.value || '',
+    "LinkedIn": inputs[8]?.value || '',
+    "AI Experience Duration": selects[0]?.value || '',
+    "AI Tools Used": getChecked('tools'),
+    "Confident Departments": getChecked('dept'),
+    "Implemented AI Before": getRadio('implemented'),
+    "Portfolio Link": inputs[9]?.value || '',
+    "Salary Expectation": inputs[10]?.value || '',
+    "When Can Start": selects[1]?.value || '',
+    "Why Join Potato Holdings": textareas[0] || '',
+    "How Did You Hear": selects[2]?.value || ''
+  };
+
+  if (cvFile) {
+    data["CV File Name"] = cvFile.name;
+    data["CV File Type"] = cvFile.type;
+    data["CV File Data"] = cvFile.data;
+  }
+
+  try {
+    await fetch(SHEET_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+  } catch(err) {
+    console.log('Submitted (no-cors)');
+  }
+
+  this.querySelectorAll('.sec,.sub-sec').forEach(s=>s.style.display='none');
+  document.getElementById('suc').style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>

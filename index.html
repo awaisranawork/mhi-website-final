@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MFGBN74S');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7V8JGHDJV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W7V8JGHDJV');
+  </script>
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="FYCthtRBHV0R0aHyKS7QHwepIzAHEu05BJf7ektWJc0" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="M. Hamza Irshad — Building brands, scaling systems, creating a modern business group across ecommerce, manufacturing, and services.">
+  <title>M. Hamza Irshad — Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+<style>
+/* ════════════════════════════════════════════
+   MHI — M. Hamza Irshad — Personal Brand
+   ════════════════════════════════════════════ */
+
+:root {
+  --bg: #0b0b0b;
+  --bg-card: #141414;
+  --bg-elevated: #1a1a1a;
+  --bg-blue: #060e1c;
+  --bg-blue-card: #0d1a30;
+  --bg-blue-elevated: #122040;
+  --text-1: #edece8;
+  --text-2: #9a9990;
+  --text-3: #5a5a52;
+  --accent: #c8ff00;
+  --accent-rgb: 200,255,0;
+  --accent-dim: rgba(200,255,0,.1);
+  --blue-accent: #3d9bff;
+  --blue-accent-dim: rgba(61,155,255,.12);
+  --border: rgba(255,255,255,.07);
+  --border-h: rgba(255,255,255,.14);
+  --border-blue: rgba(61,155,255,.15);
+  --nav-bg: rgba(11,11,11,.82);
+  --shadow: 0 2px 24px rgba(0,0,0,.3);
+  --r-lg: 20px;
+  --r-md: 14px;
+  --r-pill: 100px;
+  --font-d: 'Syne', sans-serif;
+  --font-b: 'Instrument Sans', sans-serif;
+  --ease: cubic-bezier(.25,.46,.45,.94);
+  --t: .35s var(--ease);
+  --max-w: 1140px;
+}
+
+[data-theme="light"] {
+  --bg: #f4f1eb;
+  --bg-card: #eae7e0;
+  --bg-elevated: #e0ddd6;
+  --bg-blue: #edf2fc;
+  --bg-blue-card: #dce8f5;
+  --bg-blue-elevated: #ccddf0;
+  --text-1: #18180f;
+  --text-2: #65635a;
+  --text-3: #9c9a91;
+  --accent: #18180f;
+  --accent-rgb: 24,24,15;
+  --accent-dim: rgba(24,24,15,.07);
+  --blue-accent: #1a6fd4;
+  --blue-accent-dim: rgba(26,111,212,.1);
+  --border-blue: rgba(26,111,212,.2);
+  --border: rgba(0,0,0,.07);
+  --border-h: rgba(0,0,0,.14);
+  --nav-bg: rgba(244,241,235,.82);
+  --shadow: 0 2px 24px rgba(0,0,0,.06);
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px;overflow-x:hidden}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text-1);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transition:background .5s var(--ease),color .5s var(--ease)}
+::selection{background:var(--accent);color:var(--bg)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+ul,ol{list-style:none}
+
+/* ═══ NAV ═══ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 40px;height:64px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(24px) saturate(1.2);-webkit-backdrop-filter:blur(24px) saturate(1.2);background:var(--nav-bg);border-bottom:1px solid var(--border);transition:all var(--t)}
+.nav--scrolled{height:56px;box-shadow:0 1px 12px rgba(0,0,0,.15)}
+.nav__chip{display:flex;align-items:center;gap:10px;padding:6px 14px 6px 8px;border-radius:var(--r-pill);border:1px solid var(--border);transition:all var(--t)}
+.nav__chip:hover{border-color:var(--border-h);background:var(--bg-elevated)}
+.nav__avatar{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,rgb(var(--accent-rgb)),#888);display:flex;align-items:center;justify-content:center;font-family:var(--font-d);font-weight:700;font-size:.7rem;color:var(--bg)}
+.nav__chip-name{font-size:.82rem;font-weight:500;color:var(--text-2)}
+.nav__chip-label{font-size:.7rem;padding:2px 9px;background:var(--accent-dim);border-radius:var(--r-pill);color:var(--text-2);font-weight:600}
+.nav__logo{font-family:var(--font-d);font-weight:800;font-size:1.05rem;letter-spacing:-.02em;position:relative}
+.nav__logo::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--accent);transition:width var(--t)}
+.nav__logo:hover::after{width:100%}
+.nav__links{display:flex;gap:4px}
+.nav__link{font-size:.85rem;font-weight:500;color:var(--text-2);padding:8px 16px;border-radius:var(--r-pill);transition:all var(--t)}
+.nav__link:hover,.nav__link--active{color:var(--text-1);background:var(--accent-dim)}
+.nav__right{display:flex;align-items:center;gap:10px}
+.nav__theme{width:38px;height:38px;border-radius:50%;border:1px solid var(--border);background:0;color:var(--text-2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:all var(--t)}
+.nav__theme:hover{border-color:var(--text-1);color:var(--text-1);transform:rotate(180deg)}
+.nav__theme-label{font-size:.76rem;color:var(--text-3);font-weight:500}
+.nav__burger{display:none;width:40px;height:40px;border:1px solid var(--border);border-radius:8px;background:0;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.nav__burger span{display:block;width:18px;height:2px;background:var(--text-1);border-radius:2px;transition:all var(--t)}
+.nav__burger.active span:nth-child(1){transform:rotate(45deg) translate(3px,4px)}
+.nav__burger.active span:nth-child(2){opacity:0}
+.nav__burger.active span:nth-child(3){transform:rotate(-45deg) translate(3px,-4px)}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--bg);padding:40px;flex-direction:column;gap:8px;z-index:999}
+.mobile-menu.active{display:flex}
+.mobile-menu a{font-family:var(--font-d);font-size:1.8rem;font-weight:700;padding:12px 0;border-bottom:1px solid var(--border);transition:color var(--t)}
+.mobile-menu a:hover{color:var(--accent)}
+
+/* ═══ SECTION WRAPPERS ═══ */
+.sec{width:100%;position:relative}
+.sec--blue{background:var(--bg-blue)}
+.sec--bordered{border-top:1px solid var(--border)}
+.sec--blue.sec--bordered{border-top:1px solid var(--border-blue)}
+.sec--blue .section__label{color:var(--blue-accent)}
+
+/* ═══ HERO ═══ */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.1fr 0.9fr;grid-template-rows:1fr auto;column-gap:80px;padding:140px 40px 80px;max-width:var(--max-w);margin:0 auto;position:relative}
+.hero__top{grid-column:1;grid-row:1;align-self:end;padding-bottom:28px}
+.hero__bottom{grid-column:1;grid-row:2;align-self:start}
+.hero__label{font-size:.8rem;color:var(--text-3);text-transform:uppercase;letter-spacing:.18em;margin-bottom:28px;font-weight:600;opacity:0;animation:fu .7s var(--ease) .15s forwards}
+.hero__title{font-family:var(--font-d);font-size:clamp(2.6rem,5vw,4.6rem);font-weight:800;line-height:1.04;letter-spacing:-.045em;margin-bottom:0;opacity:0;animation:fu .7s var(--ease) .3s forwards}
+.hero__sub{font-size:1.05rem;color:var(--text-2);max-width:500px;line-height:1.75;margin-bottom:40px;opacity:0;animation:fu .7s var(--ease) .45s forwards}
+.hero__ctas{display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:fu .7s var(--ease) .55s forwards}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:var(--r-pill);font-family:var(--font-d);font-weight:700;font-size:.88rem;transition:all var(--t);border:none;cursor:pointer;letter-spacing:-.01em}
+.btn--primary{background:var(--text-1);color:var(--bg)}
+.btn--primary:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 8px 30px rgba(var(--accent-rgb),.15)}
+.btn--secondary{background:0;border:1px solid var(--border);color:var(--text-1)}
+.btn--secondary:hover{border-color:var(--text-1);background:var(--accent-dim)}
+.hero__meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:36px;opacity:0;animation:fu .7s var(--ease) .7s forwards}
+.hero__tag{display:flex;align-items:center;gap:8px;font-size:.84rem;color:var(--text-2);font-weight:500}
+.hero__dot{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 2.5s ease-in-out infinite;flex-shrink:0}
+.hero__scroll{position:absolute;bottom:40px;left:40px;font-size:.75rem;color:var(--text-3);letter-spacing:.2em;text-transform:uppercase;writing-mode:vertical-rl;font-weight:600;opacity:0;animation:fu .7s var(--ease) .9s forwards}
+.hero__scroll::before{content:'';display:block;width:1px;height:40px;background:var(--text-3);margin:0 auto 12px;animation:scrollLine 2s ease-in-out infinite}
+
+/* ═══ HERO CEO IMAGE ═══ */
+.hero__image-wrap{grid-column:2;grid-row:1/3;align-self:center;position:relative;display:flex;justify-content:center;align-items:center;opacity:0;animation:fu .9s var(--ease) .5s forwards}
+.hero__image-glow{position:absolute;width:340px;height:440px;background:radial-gradient(ellipse at center,rgba(61,155,255,.18) 0%,rgba(80,40,200,.07) 55%,transparent 75%);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);z-index:0;pointer-events:none}
+.hero__ceo-img{width:100%;max-width:420px;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:28px;position:relative;z-index:1;box-shadow:0 40px 80px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.08),0 0 60px rgba(61,155,255,.1);border:1px solid rgba(255,255,255,.07)}
+[data-theme="light"] .hero__ceo-img{box-shadow:0 30px 60px rgba(0,60,180,.12),0 0 0 1px rgba(0,0,0,.06);border-color:rgba(0,0,0,.05)}
+.hero__img-corner{position:absolute;top:-14px;right:-14px;width:calc(100% - 50px);max-width:370px;height:calc(100% - 10px);border:1px solid var(--border-blue);border-radius:28px;z-index:0;pointer-events:none}
+.hero__image-badge{position:absolute;background:var(--bg-card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border-h);border-radius:var(--r-md);padding:14px 20px;z-index:2;min-width:130px;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+[data-theme="light"] .hero__image-badge{background:rgba(255,255,255,.92);box-shadow:0 8px 32px rgba(0,60,160,.1)}
+.hero__image-badge-value{font-family:var(--font-d);font-size:1.5rem;font-weight:800;color:var(--accent);letter-spacing:-.03em;line-height:1;margin-bottom:4px}
+[data-theme="light"] .hero__image-badge-value{color:var(--blue-accent)}
+.hero__image-badge-label{font-size:.7rem;color:var(--text-2);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.hero__image-badge--1{bottom:24px;left:-28px;animation:float 4s ease-in-out infinite .3s}
+.hero__image-badge--2{top:44px;right:-22px;animation:float 4s ease-in-out infinite 1.1s}
+.hero__image-badge--3{bottom:100px;right:-22px;animation:float 4s ease-in-out infinite .7s}
+
+/* ═══ MARQUEE ═══ */
+.marquee{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 0;position:relative;background:var(--bg)}
+.marquee::before,.marquee::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.marquee::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
+.marquee::after{right:0;background:linear-gradient(-90deg,var(--bg),transparent)}
+.marquee__track{display:flex;gap:12px;animation:mq 38s linear infinite;width:max-content;will-change:transform}
+.marquee:hover .marquee__track{animation-play-state:paused}
+.marquee__item{font-size:.8rem;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;padding:6px 18px;border-radius:var(--r-pill);border:1px solid var(--border);flex-shrink:0;transition:all var(--t)}
+.marquee__item:hover{border-color:var(--accent);color:var(--text-1);background:var(--accent-dim)}
+
+/* ═══ SECTIONS ═══ */
+.section{padding:100px 40px;max-width:var(--max-w);margin:0 auto}
+.section__label{font-size:.76rem;text-transform:uppercase;letter-spacing:.18em;color:var(--text-3);margin-bottom:10px;font-weight:600}
+.section__title{font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.035em;margin-bottom:24px}
+.section__intro{font-size:1.05rem;color:var(--text-2);max-width:600px;line-height:1.8;margin-bottom:56px}
+.section__intro strong{color:var(--text-1);font-weight:600}
+
+/* ═══ ABOUT ═══ */
+.about__grid{display:grid;grid-template-columns:1.2fr 1fr;gap:80px}
+.about__text p{font-size:1.02rem;line-height:1.85;color:var(--text-2);margin-bottom:18px}
+.about__text strong{color:var(--text-1);font-weight:600}
+.about__pullquote{font-family:var(--font-d);font-size:1.25rem;font-weight:700;color:var(--text-1);line-height:1.5;margin:32px 0;padding-left:20px;border-left:3px solid var(--accent)}
+.about__sidebar h3{font-family:var(--font-d);font-size:.92rem;font-weight:700;margin-bottom:20px;margin-top:44px}
+.about__sidebar h3:first-child{margin-top:0}
+
+/* ═══ ECOSYSTEM ═══ */
+.eco__grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.eco-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:36px;transition:all var(--t);position:relative;overflow:hidden}
+.eco-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,rgb(var(--accent-rgb)),transparent);opacity:0;transition:opacity var(--t)}
+.eco-card:hover{border-color:var(--border-h);box-shadow:var(--shadow);transform:translateY(-3px)}
+.eco-card:hover::before{opacity:1}
+.sec--blue .eco-card{background:var(--bg-blue-card);border-color:rgba(61,155,255,.1)}
+.sec--blue .eco-card:hover{border-color:rgba(61,155,255,.28);box-shadow:0 12px 40px rgba(0,0,0,.45)}
+.eco-card__number{font-family:var(--font-d);font-size:.72rem;font-weight:800;color:var(--text-3);margin-bottom:14px;letter-spacing:.05em}
+.eco-card__icon{font-size:1.8rem;margin-bottom:16px}
+.eco-card__title{font-family:var(--font-d);font-size:1.2rem;font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
+.eco-card__desc{font-size:.88rem;color:var(--text-2);line-height:1.6;margin-bottom:16px}
+.eco-card__tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:.72rem;padding:5px 14px;border-radius:var(--r-pill);background:var(--accent-dim);color:var(--text-2);font-weight:600;letter-spacing:.02em}
+.sec--blue .tag{background:var(--blue-accent-dim)}
+
+/* ═══ BELIEFS ═══ */
+.beliefs__grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border)}
+.belief{background:var(--bg-card);padding:36px;transition:all var(--t)}
+.belief:hover{background:var(--bg-elevated)}
+.sec--blue .beliefs__grid{border-color:rgba(61,155,255,.12)}
+.sec--blue .belief{background:var(--bg-blue-card)}
+.sec--blue .belief:hover{background:var(--bg-blue-elevated)}
+.belief__number{font-family:var(--font-d);font-size:.72rem;font-weight:800;color:var(--text-3);margin-bottom:12px}
+.belief__title{font-family:var(--font-d);font-size:1.1rem;font-weight:700;margin-bottom:8px;letter-spacing:-.02em}
+.belief__desc{font-size:.88rem;color:var(--text-2);line-height:1.6}
+
+/* ═══ FOCUS ═══ */
+.focus__grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.focus-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:32px;transition:all var(--t)}
+.focus-card:hover{border-color:var(--border-h);transform:translateY(-2px)}
+.sec--blue .focus-card{background:var(--bg-blue-card);border-color:rgba(61,155,255,.1)}
+.sec--blue .focus-card:hover{border-color:rgba(61,155,255,.28)}
+.focus-card__label{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--text-3);font-weight:600;margin-bottom:10px}
+.focus-card__title{font-family:var(--font-d);font-size:1rem;font-weight:700;margin-bottom:6px}
+.focus-card__desc{font-size:.85rem;color:var(--text-2);line-height:1.6}
+
+/* ═══ STATS BAR ═══ */
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);margin-top:56px}
+.stats-bar__item{background:var(--bg-card);padding:36px;text-align:center;transition:all var(--t)}
+.stats-bar__item:hover{background:var(--bg-elevated)}
+.sec--blue .stats-bar{border-color:rgba(61,155,255,.12)}
+.sec--blue .stats-bar__item{background:var(--bg-blue-card)}
+.sec--blue .stats-bar__item:hover{background:var(--bg-blue-elevated)}
+.stats-bar__value{font-family:var(--font-d);font-size:2rem;font-weight:800;color:var(--accent);letter-spacing:-.03em;margin-bottom:4px}
+[data-theme="light"] .stats-bar__value{color:var(--text-1)}
+.stats-bar__label{font-size:.8rem;color:var(--text-2)}
+
+/* ═══ CONTENT / JOURNEY ═══ */
+.content__grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.content__text p{font-size:1.02rem;line-height:1.85;color:var(--text-2);margin-bottom:18px}
+.content__text strong{color:var(--text-1);font-weight:600}
+.content__topics{display:flex;flex-direction:column;gap:12px}
+.content__topic{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-md);padding:20px 24px;display:flex;align-items:center;gap:14px;transition:all var(--t)}
+.content__topic:hover{border-color:var(--border-h);transform:translateX(4px)}
+.sec--blue .content__topic{background:var(--bg-blue-card);border-color:rgba(61,155,255,.1)}
+.sec--blue .content__topic:hover{border-color:rgba(61,155,255,.28)}
+.content__topic-icon{font-size:1.3rem;flex-shrink:0}
+.content__topic-text{font-size:.9rem;font-weight:500}
+
+/* ═══ COLLAB ═══ */
+.collab__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.collab-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px;text-align:center;transition:all var(--t)}
+.collab-card:hover{border-color:var(--border-h);transform:translateY(-3px);box-shadow:var(--shadow)}
+.collab-card__icon{font-size:1.6rem;margin-bottom:14px}
+.collab-card__title{font-family:var(--font-d);font-size:.92rem;font-weight:700;margin-bottom:6px}
+.collab-card__desc{font-size:.8rem;color:var(--text-2);line-height:1.5}
+
+/* ═══ TIMELINE ═══ */
+.timeline__item{display:flex;justify-content:space-between;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--border);gap:16px;transition:padding var(--t)}
+.timeline__item:hover{padding-left:8px}
+.timeline__left{display:flex;flex-direction:column;gap:2px}
+.timeline__company{font-weight:600;font-size:.88rem}
+.timeline__role{font-size:.78rem;color:var(--text-3)}
+.timeline__date{font-size:.78rem;color:var(--text-3);white-space:nowrap;font-weight:500}
+.skills-grid{display:flex;flex-wrap:wrap;gap:8px}
+.skill-tag{font-size:.78rem;padding:7px 18px;border-radius:var(--r-pill);border:1px solid var(--border);color:var(--text-2);font-weight:500;transition:all var(--t);cursor:default}
+.skill-tag:hover{border-color:rgb(var(--accent-rgb));color:var(--text-1);background:var(--accent-dim)}
+
+/* ═══ CAREERS ═══ */
+.careers__list{display:flex;flex-direction:column;gap:16px}
+.career-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:32px;transition:all var(--t);display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.career-card:hover{border-color:var(--border-h);transform:translateX(4px)}
+.sec--blue .career-card{background:var(--bg-blue-card);border-color:rgba(61,155,255,.1)}
+.sec--blue .career-card:hover{border-color:rgba(61,155,255,.28)}
+.career-card__header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;width:100%}
+.career-card__title{font-family:var(--font-d);font-size:1.2rem;font-weight:700}
+.career-card__type{font-size:.8rem;color:var(--text-3);background:var(--bg-elevated);padding:6px 12px;border-radius:var(--r-pill);font-weight:600}
+.career-card__desc{font-size:.92rem;color:var(--text-2);line-height:1.6;max-width:800px}
+
+/* ═══ CONTACT ═══ */
+.contact{text-align:center;padding:120px 40px 100px;max-width:var(--max-w);margin:0 auto}
+.contact__sub{font-size:.92rem;color:var(--text-3);margin-bottom:8px}
+.contact__title{font-family:var(--font-d);font-size:clamp(2.5rem,5.5vw,4.2rem);font-weight:800;letter-spacing:-.04em;margin-bottom:20px}
+.contact__desc{font-size:1rem;color:var(--text-2);max-width:480px;margin:0 auto;line-height:1.7}
+.contact__cta{display:inline-flex;align-items:center;gap:10px;padding:16px 48px;background:var(--text-1);color:var(--bg);border-radius:var(--r-pill);font-family:var(--font-d);font-weight:700;font-size:1rem;margin-top:36px;transition:all var(--t);border:none;cursor:pointer}
+.contact__cta:hover{transform:scale(1.05) translateY(-2px);box-shadow:0 10px 40px rgba(var(--accent-rgb),.15)}
+.contact__email{margin-top:20px;font-size:.88rem;color:var(--text-3)}
+.contact__loc{font-size:.84rem;color:var(--text-3);margin-top:4px}
+.social-links{display:flex;justify-content:center;gap:10px;margin-top:40px;flex-wrap:wrap}
+.social-link{color:var(--text-3);font-size:.82rem;font-weight:500;padding:9px 20px;border:1px solid var(--border);border-radius:var(--r-pill);transition:all var(--t);display:inline-flex;align-items:center;gap:6px}
+.social-link:hover{color:var(--text-1);border-color:var(--border-h);background:var(--accent-dim);transform:translateY(-2px)}
+
+/* ═══ FOOTER ═══ */
+.footer{padding:28px 40px;border-top:1px solid var(--border-blue);text-align:center;background:var(--bg-blue)}
+.footer__tagline{font-family:var(--font-d);font-size:.88rem;font-weight:600;color:var(--text-2);margin-bottom:6px;letter-spacing:-.01em}
+.footer__copy{font-size:.76rem;color:var(--text-3)}
+.footer a{color:var(--text-2);transition:color var(--t)}
+.footer a:hover{color:var(--text-1)}
+
+/* ═══ ANIMATIONS ═══ */
+@keyframes fu{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.85)}}
+@keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:.1s}
+.reveal-d2{transition-delay:.2s}
+.reveal-d3{transition-delay:.3s}
+.reveal-d4{transition-delay:.4s}
+
+/* ═══ CONTACT FORM ═══ */
+.contact-form { max-width: 540px; margin: 40px auto 0; text-align: left; background: var(--bg-card); padding: 40px; border-radius: var(--r-lg); border: 1px solid var(--border); box-shadow: var(--shadow); }
+[data-theme="light"] .contact-form { background: #fff; }
+.form-group { margin-bottom: 20px; }
+.form-label { display: block; font-size: .85rem; font-weight: 600; color: var(--text-2); margin-bottom: 8px; }
+.form-input { width: 100%; background: var(--bg); border: 1px solid var(--border); color: var(--text-1); padding: 14px 16px; border-radius: var(--r-md); font-family: var(--font-b); font-size: .95rem; outline: none; transition: all var(--t); }
+.form-input:focus { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-dim); }
+.form-textarea { resize: vertical; min-height: 120px; }
+.form-submit { width: 100%; display: flex; justify-content: center; align-items: center; gap: 10px; padding: 16px; background: var(--text-1); color: var(--bg); border-radius: var(--r-pill); font-family: var(--font-d); font-weight: 700; font-size: 1rem; border: none; cursor: pointer; transition: all var(--t); margin-top: 10px; }
+.form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(var(--accent-rgb), .15); }
+.form-submit:disabled { opacity: 0.7; cursor: not-allowed; transform: none; box-shadow: none; }
+.form-status { margin-top: 16px; font-size: .9rem; text-align: center; display: none; padding: 12px; border-radius: var(--r-md); }
+.form-status.success { display: block; background: rgba(0,255,0,0.1); color: #00ff00; border: 1px solid rgba(0,255,0,0.2); }
+.form-status.error { display: block; background: rgba(255,0,0,0.1); color: #ff5555; border: 1px solid rgba(255,0,0,0.2); }
+[data-theme="light"] .form-status.success { background: #e6ffe6; color: #008000; border-color: #b3ffb3; }
+[data-theme="light"] .form-status.error { background: #ffe6e6; color: #cc0000; border-color: #ffb3b3; }
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:1024px){
+  .hero{grid-template-columns:1fr;grid-template-rows:auto auto auto;gap:0;padding-top:110px;min-height:auto}
+  .hero__top{grid-column:1;grid-row:1;padding-bottom:20px;align-self:auto}
+  .hero__image-wrap{grid-column:1;grid-row:2;max-width:420px;margin:0 auto;padding:12px 0}
+  .hero__bottom{grid-column:1;grid-row:3;align-self:auto}
+  .about__grid,.content__grid{grid-template-columns:1fr;gap:40px}
+  .eco__grid{grid-template-columns:1fr}
+  .collab__grid{grid-template-columns:1fr 1fr}
+  .beliefs__grid{grid-template-columns:1fr}
+  .focus__grid{grid-template-columns:1fr}
+  .stats-bar{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav{padding:0 20px}
+  .nav__links,.nav__chip{display:none}
+  .nav__burger{display:flex}
+
+  .hero{padding:96px 20px 52px;min-height:auto}
+  .hero__top{padding-bottom:12px}
+  .hero__bottom{padding-top:4px}
+  .hero__scroll{display:none}
+  .hero__title{font-size:clamp(1.9rem,7.5vw,2.8rem)}
+  .hero__sub{font-size:.98rem;max-width:100%}
+  .hero__meta{flex-direction:column;align-items:flex-start;gap:10px}
+  .hero__ctas{flex-direction:column;width:100%}
+  .hero__ctas .btn{justify-content:center;width:100%}
+
+  .hero__image-wrap{max-width:300px;margin:0 auto;width:100%;padding:8px 0}
+  .hero__img-corner{display:none}
+  .hero__image-glow{width:220px;height:280px}
+  .hero__image-badge{padding:10px 14px;min-width:0;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  .hero__image-badge-value{font-size:1.1rem}
+  .hero__image-badge-label{font-size:.62rem}
+  .hero__image-badge--1{bottom:14px;left:-10px;animation:none}
+  .hero__image-badge--2{top:14px;right:-10px;animation:none}
+  .hero__image-badge--3{display:none}
+
+  .section{padding:56px 20px}
+  .section__intro{margin-bottom:36px}
+  .eco-card{padding:24px}
+  .belief{padding:24px}
+  .focus-card{padding:22px}
+  .collab-card{padding:20px}
+  .stats-bar__item{padding:24px 16px}
+  .about__pullquote{font-size:1.05rem}
+
+  .contact{padding:72px 20px 56px}
+  .collab__grid{grid-template-columns:1fr 1fr}
+  .stats-bar{grid-template-columns:1fr 1fr}
+  .footer{padding:20px 16px}
+}
+@media(max-width:600px){
+  .collab__grid{grid-template-columns:1fr}
+  .eco__grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .nav{padding:0 16px}
+  .hero{padding:88px 16px 44px}
+  .hero__title{font-size:min(1.9rem,8vw)}
+  .hero__sub{font-size:.92rem}
+  .hero__image-wrap{max-width:260px}
+  .hero__image-badge--1,.hero__image-badge--2{display:none}
+  .stats-bar{grid-template-columns:1fr}
+  .section{padding:44px 16px}
+  .contact{padding:52px 16px 44px}
+  .contact__title{font-size:2.2rem}
+  .career-card{padding:24px}
+  .footer{padding:16px}
+}
+
+/* ═══ CAREERS ═══ */
+.careers__list{display:flex;flex-direction:column;gap:20px}
+.career-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:32px 36px;display:flex;justify-content:space-between;align-items:center;gap:28px;transition:all var(--t);position:relative;overflow:hidden}
+.career-card::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);opacity:0;transition:opacity var(--t)}
+.career-card:hover{border-color:var(--border-h);transform:translateY(-2px);box-shadow:var(--shadow)}
+.career-card:hover::after{opacity:1}
+.career-card__info{flex:1;min-width:0}
+.career-card__meta{display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.career-card__role{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);font-weight:700;padding:4px 12px;background:var(--accent-dim);border-radius:var(--r-pill)}
+.career-card__location{font-size:.78rem;color:var(--text-3);font-weight:500}
+.career-card__title{font-family:var(--font-d);font-size:1.25rem;font-weight:800;letter-spacing:-.025em;margin-bottom:8px}
+.career-card__desc{font-size:.88rem;color:var(--text-2);line-height:1.65}
+.career-card__action{flex-shrink:0}
+@media(max-width:768px){
+  .career-card{flex-direction:column;align-items:flex-start;gap:20px}
+  .career-card__action{width:100%}
+  .career-card__action .btn{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFGBN74S"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ══════ NAV ══════ -->
+  <nav class="nav">
+    <div class="nav__chip">
+      <div class="nav__avatar">HI</div>
+      <span class="nav__chip-name">M. Hamza Irshad</span>
+      <span class="nav__chip-label">Builder</span>
+    </div>
+    <a href="#hero" class="nav__logo">MHI</a>
+    <div class="nav__links">
+      <a href="#ecosystem" class="nav__link">Ecosystem</a>
+      <a href="#about" class="nav__link">About</a>
+      <a href="#philosophy" class="nav__link">Philosophy</a>
+      <a href="#careers" class="nav__link">Careers</a>
+      <a href="#contact" class="nav__link">Contact</a>
+    </div>
+    <div class="nav__right">
+      <button class="nav__theme" id="themeToggle" title="Toggle theme">◐</button>
+      <span class="nav__theme-label" id="themeLabel">Light</span>
+    </div>
+    <button class="nav__burger" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#hero">Home</a>
+    <a href="#ecosystem">Ecosystem</a>
+    <a href="#about">About</a>
+    <a href="#philosophy">Philosophy</a>
+    <a href="#careers">Careers</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ══════ HERO ══════ -->
+  <section id="hero" class="sec">
+    <div class="hero">
+      <div class="hero__top">
+        <div class="hero__label">Operator · Builder · Founder</div>
+      <h1 class="hero__title">Building Conglomerate.</h1>
+      </div>
+
+      <div class="hero__image-wrap">
+        <div class="hero__image-glow"></div>
+        <img src="ceo.jpg" alt="M. Hamza Irshad — CEO & Founder" class="hero__ceo-img">
+        <div class="hero__img-corner"></div>
+        <div class="hero__image-badge hero__image-badge--1">
+          <div class="hero__image-badge-value counter-val" data-target="20" data-suffix="+">0</div>
+          <div class="hero__image-badge-label">Brands Built</div>
+        </div>
+        <div class="hero__image-badge hero__image-badge--2">
+          <div class="hero__image-badge-value">CEO</div>
+          <div class="hero__image-badge-label">&amp; Founder</div>
+        </div>
+        <div class="hero__image-badge hero__image-badge--3">
+          <div class="hero__image-badge-value counter-val" data-target="100" data-suffix="+">0</div>
+          <div class="hero__image-badge-label">Team Members</div>
+        </div>
+      </div>
+
+      <div class="hero__bottom">
+        <p class="hero__sub">
+          An operator building multiple businesses across ecommerce, manufacturing, and services — with a mission to create a globally recognized business group from Pakistan.
+        </p>
+        <div class="hero__ctas">
+          <a href="#contact" class="btn btn--primary">Work With Us</a>
+          <a href="#ecosystem" class="btn btn--secondary">Explore the Ecosystem</a>
+          <a href="#careers" class="btn btn--secondary">Join the Team</a>
+        </div>
+        <div class="hero__meta">
+          <span class="hero__tag"><span class="hero__dot"></span> Building Actively</span>
+          <span class="hero__tag">Lahore, Pakistan</span>
+          <span class="hero__tag">Multi-Industry Operator</span>
+        </div>
+      </div>
+
+      <div class="hero__scroll">Scroll</div>
+    </div>
+  </section>
+
+  <!-- ══════ MARQUEE ══════ -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span class="marquee__item">Ecommerce</span>
+      <span class="marquee__item">Manufacturing</span>
+      <span class="marquee__item">Digital Services</span>
+      <span class="marquee__item">Skincare &amp; Beauty</span>
+      <span class="marquee__item">Health &amp; Wellness</span>
+      <span class="marquee__item">Performance Marketing</span>
+      <span class="marquee__item">Private Label</span>
+      <span class="marquee__item">Team Building</span>
+      <span class="marquee__item">Systems &amp; Scale</span>
+      <span class="marquee__item">P&amp;L Thinking</span>
+      <span class="marquee__item">Food &amp; Exports</span>
+      <span class="marquee__item">Operator → Owner</span>
+      <span class="marquee__item">Discipline</span>
+      <span class="marquee__item">Ecommerce</span>
+      <span class="marquee__item">Manufacturing</span>
+      <span class="marquee__item">Digital Services</span>
+      <span class="marquee__item">Skincare &amp; Beauty</span>
+      <span class="marquee__item">Health &amp; Wellness</span>
+      <span class="marquee__item">Performance Marketing</span>
+      <span class="marquee__item">Private Label</span>
+      <span class="marquee__item">Team Building</span>
+      <span class="marquee__item">Systems &amp; Scale</span>
+      <span class="marquee__item">P&amp;L Thinking</span>
+      <span class="marquee__item">Food &amp; Exports</span>
+      <span class="marquee__item">Operator → Owner</span>
+      <span class="marquee__item">Discipline</span>
+    </div>
+  </div>
+
+  <!-- ══════ ECOSYSTEM — blue ══════ -->
+  <section id="ecosystem" class="sec sec--blue sec--bordered">
+    <div class="section">
+      <div class="section__label reveal">The Ecosystem</div>
+      <h2 class="section__title reveal reveal-d1">What We're Building</h2>
+      <p class="section__intro reveal reveal-d2">
+        A holding structure designed to build, scale, and manage multiple high-performance businesses — each one solving a different problem, playing a different game.
+      </p>
+
+      <div class="eco__grid">
+        <div class="eco-card reveal">
+          <div class="eco-card__number">01</div>
+          <div class="eco-card__icon">🛒</div>
+          <h3 class="eco-card__title">Ecommerce Brands</h3>
+          <p class="eco-card__desc">Building consumer-first brands across skincare, beauty, wellness, and lifestyle. Each brand is positioned to lead its category — not just exist in it.</p>
+          <div class="eco-card__tags">
+            <span class="tag">Skincare</span>
+            <span class="tag">Beauty</span>
+            <span class="tag">Wellness</span>
+            <span class="tag">Lifestyle</span>
+          </div>
+        </div>
+
+        <div class="eco-card reveal reveal-d1">
+          <div class="eco-card__number">02</div>
+          <div class="eco-card__icon">🏭</div>
+          <h3 class="eco-card__title">Manufacturing</h3>
+          <p class="eco-card__desc">Owning the backend to control quality, margins, and speed. In-house production for skincare, haircare, custom formulation, and private label — the infrastructure that makes everything else possible.</p>
+          <div class="eco-card__tags">
+            <span class="tag">Production</span>
+            <span class="tag">Custom Formulation</span>
+            <span class="tag">Private Label</span>
+            <span class="tag">B2B</span>
+          </div>
+        </div>
+
+        <div class="eco-card reveal reveal-d2">
+          <div class="eco-card__number">03</div>
+          <div class="eco-card__icon">📈</div>
+          <h3 class="eco-card__title">Digital Services</h3>
+          <p class="eco-card__desc">Helping brands scale through performance marketing, content, and strategy. Ecommerce-focused growth systems and full-stack brand support for a growing client base.</p>
+          <div class="eco-card__tags">
+            <span class="tag">Performance Marketing</span>
+            <span class="tag">Growth Systems</span>
+            <span class="tag">Brand Strategy</span>
+          </div>
+        </div>
+
+        <div class="eco-card reveal reveal-d3">
+          <div class="eco-card__number">04</div>
+          <div class="eco-card__icon">🌱</div>
+          <h3 class="eco-card__title">Emerging Ventures</h3>
+          <p class="eco-card__desc">New bets in food manufacturing, exports, and wellness products — category creation businesses where the playbook hasn't been written yet.</p>
+          <div class="eco-card__tags">
+            <span class="tag">Food</span>
+            <span class="tag">Exports</span>
+            <span class="tag">New Categories</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-bar reveal">
+        <div class="stats-bar__item">
+          <div class="stats-bar__value counter-val" data-target="20" data-suffix="+">0</div>
+          <div class="stats-bar__label">Brands launched</div>
+        </div>
+        <div class="stats-bar__item">
+          <div class="stats-bar__value counter-val" data-target="100" data-suffix="+">0</div>
+          <div class="stats-bar__label">Team members</div>
+        </div>
+        <div class="stats-bar__item">
+          <div class="stats-bar__value counter-val" data-target="50" data-suffix="+">0</div>
+          <div class="stats-bar__label">Active clients</div>
+        </div>
+        <div class="stats-bar__item">
+          <div class="stats-bar__value counter-val" data-target="1000" data-suffix="s">0</div>
+          <div class="stats-bar__label">Customers served</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ ABOUT — dark ══════ -->
+  <section id="about" class="sec sec--bordered">
+    <div class="section">
+      <div class="section__label reveal">The Operator</div>
+      <h2 class="section__title reveal reveal-d1">About</h2>
+
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>I didn't start with capital, connections, or a roadmap. I started with curiosity, discomfort, and a willingness to try — and fail — repeatedly.</p>
+          <p>Today, I operate a growing ecosystem of businesses across ecommerce brands in skincare, wellness, and fashion — a manufacturing operation that gives us control over what we sell — a services division that helps other brands scale — and emerging ventures in food, exports, and new categories.</p>
+          <div class="about__pullquote">I'm not building one company. I'm building a system that builds companies.</div>
+          <p>The future belongs to operators who can identify opportunities quickly, build teams and systems around them, and scale execution — not just ideas. This isn't a startup story. This is a long-term mission to build something that creates value, creates jobs, and outlasts its founder.</p>
+          <p>The complexity is the advantage. Understanding how different models compound together — how agency cashflow funds product development, how manufacturing margins protect brand pricing, how one team's insight feeds another team's strategy — that's the game.</p>
+        </div>
+
+        <div class="about__sidebar">
+          <h3>Structure</h3>
+          <ul>
+            <li class="timeline__item reveal">
+              <div class="timeline__left">
+                <span class="timeline__company">Potato Holdings</span>
+                <span class="timeline__role">Founder &amp; CEO</span>
+              </div>
+              <span class="timeline__date">Present</span>
+            </li>
+            <li class="timeline__item reveal reveal-d1">
+              <div class="timeline__left">
+                <span class="timeline__company">Ecommerce Division</span>
+                <span class="timeline__role">Brand Portfolio — Skincare, Wellness, Lifestyle</span>
+              </div>
+              <span class="timeline__date">Active</span>
+            </li>
+            <li class="timeline__item reveal reveal-d2">
+              <div class="timeline__left">
+                <span class="timeline__company">Manufacturing Division</span>
+                <span class="timeline__role">Production, Formulation, Private Label</span>
+              </div>
+              <span class="timeline__date">Active</span>
+            </li>
+            <li class="timeline__item reveal reveal-d3">
+              <div class="timeline__left">
+                <span class="timeline__company">Services Division</span>
+                <span class="timeline__role">Performance Marketing &amp; Brand Growth</span>
+              </div>
+              <span class="timeline__date">Active</span>
+            </li>
+            <li class="timeline__item reveal reveal-d4">
+              <div class="timeline__left">
+                <span class="timeline__company">New Ventures</span>
+                <span class="timeline__role">Food, Exports, Category Creation</span>
+              </div>
+              <span class="timeline__date">Emerging</span>
+            </li>
+          </ul>
+
+          <h3>Operating In</h3>
+          <div class="skills-grid reveal">
+            <span class="skill-tag">Skincare &amp; Beauty</span>
+            <span class="skill-tag">Health &amp; Wellness</span>
+            <span class="skill-tag">Fashion &amp; Lifestyle</span>
+            <span class="skill-tag">Manufacturing</span>
+            <span class="skill-tag">Performance Marketing</span>
+            <span class="skill-tag">Private Label / B2B</span>
+            <span class="skill-tag">Food &amp; Exports</span>
+            <span class="skill-tag">Brand Building</span>
+            <span class="skill-tag">Team &amp; Systems</span>
+            <span class="skill-tag">P&amp;L Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ PHILOSOPHY — blue ══════ -->
+  <section id="philosophy" class="sec sec--blue sec--bordered">
+    <div class="section">
+      <div class="section__label reveal">Operating Principles</div>
+      <h2 class="section__title reveal reveal-d1">What I Believe</h2>
+
+      <div class="beliefs__grid">
+        <div class="belief reveal">
+          <div class="belief__number">01</div>
+          <h3 class="belief__title">Execution beats ideas.</h3>
+          <p class="belief__desc">Ideas are everywhere. Operators are rare. The world rewards the person who ships, not the person who plans.</p>
+        </div>
+        <div class="belief reveal reveal-d1">
+          <div class="belief__number">02</div>
+          <h3 class="belief__title">Ownership changes everything.</h3>
+          <p class="belief__desc">Owning manufacturing, distribution, and brand creates real leverage. When you control the backend, you control the game.</p>
+        </div>
+        <div class="belief reveal reveal-d2">
+          <div class="belief__number">03</div>
+          <h3 class="belief__title">Focus is a superpower.</h3>
+          <p class="belief__desc">Scaling happens when you eliminate noise and double down on winners. Most operators spread too thin too early.</p>
+        </div>
+        <div class="belief reveal reveal-d3">
+          <div class="belief__number">04</div>
+          <h3 class="belief__title">Systems build empires.</h3>
+          <p class="belief__desc">Not people. Not luck. Systems. The companies that last are the ones where the machine runs without the founder in the room.</p>
+        </div>
+        <div class="belief reveal reveal-d4" style="grid-column:1/-1">
+          <div class="belief__number">05</div>
+          <h3 class="belief__title">Pakistan can produce global brands.</h3>
+          <p class="belief__desc">We just need better operators. The talent is here. The market is here. The infrastructure is being built. What's missing is ambition at scale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ CURRENT FOCUS — dark ══════ -->
+  <section id="focus" class="sec sec--bordered">
+    <div class="section">
+      <div class="section__label reveal">Right Now</div>
+      <h2 class="section__title reveal reveal-d1">Current Focus</h2>
+
+      <div class="focus__grid">
+        <div class="focus-card reveal">
+          <div class="focus-card__label">Short Term</div>
+          <h3 class="focus-card__title">Scaling a portfolio of core brands</h3>
+          <p class="focus-card__desc">Building strong category leaders in skincare, wellness, and lifestyle — not average brands, but market-defining ones.</p>
+        </div>
+        <div class="focus-card reveal reveal-d1">
+          <div class="focus-card__label">Short Term</div>
+          <h3 class="focus-card__title">Growing manufacturing capacity</h3>
+          <p class="focus-card__desc">Turning production into a high-capacity backbone that serves both our brands and external partners.</p>
+        </div>
+        <div class="focus-card reveal reveal-d2">
+          <div class="focus-card__label">Long Term</div>
+          <h3 class="focus-card__title">International market presence</h3>
+          <p class="focus-card__desc">Building the infrastructure for global distribution — exports, partnerships, and market entry beyond Pakistan.</p>
+        </div>
+        <div class="focus-card reveal reveal-d3">
+          <div class="focus-card__label">Long Term</div>
+          <h3 class="focus-card__title">A legacy that outlasts the founder</h3>
+          <p class="focus-card__desc">Creating a structure that can scale to a recognized business group — one that creates value, jobs, and impact for decades.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ JOURNEY — blue ══════ -->
+  <section id="journey" class="sec sec--blue sec--bordered">
+    <div class="section">
+      <div class="section__label reveal">The Journey</div>
+      <h2 class="section__title reveal reveal-d1">Building in Public</h2>
+
+      <div class="content__grid">
+        <div class="content__text reveal">
+          <p>I document the process publicly. Not as a highlight reel — but as a real, raw record of what it actually takes to build multiple businesses at once.</p>
+          <p>Because success isn't just business. It's who you become while building it. The decisions that keep you up at night. The hires that change everything. The products that fail. The systems that finally click.</p>
+          <p>If you're an operator, a founder, or someone who wants to understand what building at scale actually looks like — follow along.</p>
+        </div>
+
+        <div class="content__topics reveal reveal-d1">
+          <div class="content__topic">
+            <span class="content__topic-icon">🏗️</span>
+            <span class="content__topic-text">Building and scaling businesses — the real decisions, not the polished version</span>
+          </div>
+          <div class="content__topic">
+            <span class="content__topic-icon">👥</span>
+            <span class="content__topic-text">Hiring, managing teams, and the operator-to-owner transition</span>
+          </div>
+          <div class="content__topic">
+            <span class="content__topic-icon">🧠</span>
+            <span class="content__topic-text">Mental struggles of founders — the pressure nobody talks about</span>
+          </div>
+          <div class="content__topic">
+            <span class="content__topic-icon">🏋️</span>
+            <span class="content__topic-text">Discipline, fitness, and personal systems that make everything else work</span>
+          </div>
+          <div class="content__topic">
+            <span class="content__topic-icon">⚙️</span>
+            <span class="content__topic-text">How different business models compound — agency vs ecommerce vs manufacturing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ WORK WITH ME — dark ══════ -->
+  <section id="collaborate" class="sec sec--bordered">
+    <div class="section">
+      <div class="section__label reveal">Opportunities</div>
+      <h2 class="section__title reveal reveal-d1">Work With Me</h2>
+      <p class="section__intro reveal reveal-d2">If you're serious about building — not just talking — we'll get along.</p>
+
+      <div class="collab__grid">
+        <div class="collab-card reveal">
+          <div class="collab-card__icon">🤝</div>
+          <h3 class="collab-card__title">Strategic Partnerships</h3>
+          <p class="collab-card__desc">Joint ventures, distribution deals, and co-creation with aligned operators.</p>
+        </div>
+        <div class="collab-card reveal reveal-d1">
+          <div class="collab-card__icon">🚀</div>
+          <h3 class="collab-card__title">Collaborations</h3>
+          <p class="collab-card__desc">High-potential projects where speed and execution matter more than process.</p>
+        </div>
+        <div class="collab-card reveal reveal-d2">
+          <div class="collab-card__icon">🧲</div>
+          <h3 class="collab-card__title">Talent</h3>
+          <p class="collab-card__desc">Operators, marketers, and builders who want to be part of something bigger than a single company.</p>
+        </div>
+        <div class="collab-card reveal reveal-d3">
+          <div class="collab-card__icon">📊</div>
+          <h3 class="collab-card__title">Investors</h3>
+          <p class="collab-card__desc">Aligned with long-term vision, patient capital, and the belief that Pakistan can produce global brands.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ CAREERS — blue ══════ -->
+  <section id="careers" class="sec sec--blue sec--bordered">
+    <div class="section">
+      <div class="section__label reveal">Join the Team</div>
+      <h2 class="section__title reveal reveal-d1">We're Hiring</h2>
+      <p class="section__intro reveal reveal-d2">We're building something big — and we need the right people. No generic CVs. No passengers. Only operators who want to build.</p>
+
+      <div class="careers__list">
+
+        <div class="career-card reveal">
+          <div class="career-card__info">
+            <div class="career-card__meta">
+              <span class="career-card__role">Content & Media</span>
+              <span class="career-card__location">Full-time · Lahore / On-site</span>
+            </div>
+            <h3 class="career-card__title">Founder Generated Content Creator</h3>
+            <p class="career-card__desc">Shoot and edit powerful short-form content alongside our founders. iPhone shooting, CapCut editing, and the confidence to direct talent on camera. We need someone with instinct, not just skills.</p>
+          </div>
+          <div class="career-card__action">
+            <a href="Form1_Content_Creator.html" class="btn btn--primary">Full Details &amp; Apply</a>
+          </div>
+        </div>
+
+        <div class="career-card reveal reveal-d1">
+          <div class="career-card__info">
+            <div class="career-card__meta">
+              <span class="career-card__role">Technology & AI</span>
+              <span class="career-card__location">Full-time · On-site / Hybrid</span>
+            </div>
+            <h3 class="career-card__title">AI Implementation Specialist</h3>
+            <p class="career-card__desc">Bring AI-powered change across our entire organization — from design to media buying to content creation. If you actively use AI tools and can implement them in a real business environment, this is for you.</p>
+          </div>
+          <div class="career-card__action">
+            <a href="Form2_AI_Specialist.html" class="btn btn--primary">Full Details &amp; Apply</a>
+          </div>
+        </div>
+
+        <div class="career-card reveal reveal-d2">
+          <div class="career-card__info">
+            <div class="career-card__meta">
+              <span class="career-card__role">Marketing & PR</span>
+              <span class="career-card__location">Contract / Agency · Pakistan</span>
+            </div>
+            <h3 class="career-card__title">Celebrity &amp; Influencer Relations Manager</h3>
+            <p class="career-card__desc">Connect our D2C brands with Pakistan's biggest celebrity faces for national-level campaigns. We need someone with real, direct access to actors, cricketers, singers, or top-tier influencers — not just followers.</p>
+          </div>
+          <div class="career-card__action">
+            <a href="Form3_Celebrity_Relations.html" class="btn btn--primary">Full Details &amp; Apply</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ CONTACT — blue ══════ -->
+  <section id="contact" class="sec sec--blue sec--bordered">
+    <div class="contact">
+      <div class="section__label reveal">Get in touch</div>
+      <div class="contact__sub reveal reveal-d1">Let's build something meaningful.</div>
+      <h2 class="contact__title reveal reveal-d2">Let's Talk.</h2>
+      <p class="contact__desc reveal reveal-d3">Open to conversations with founders, operators, investors, and talent who want to build — not just watch.</p>
+      
+      <form id="contactForm" class="contact-form reveal reveal-d4" name="submit-to-google-sheet">
+        <div class="form-group">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" name="name" class="form-input" required placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" name="email" class="form-input" required placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" id="subject" name="subject" class="form-input" required placeholder="What's this about?">
+        </div>
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" class="form-input form-textarea" required placeholder="How can we build together?"></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="submitBtn">Send Message</button>
+        <div id="formStatus" class="form-status"></div>
+      </form>
+
+      <div class="contact__email reveal" style="margin-top:40px;">muhammadhamzairshad@gmail.com</div>
+      <div class="contact__loc reveal">Lahore, Pakistan</div>
+      <div class="social-links reveal">
+        <a href="https://www.instagram.com/mhamzairshad_/" target="_blank" rel="noopener" class="social-link">Instagram</a>
+        <a href="https://www.linkedin.com/in/muhammadhamzairshad/" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+        <a href="https://www.youtube.com/@MHamzaIrshad/featured" target="_blank" rel="noopener" class="social-link">YouTube</a>
+        <a href="https://www.tiktok.com/@mhamzairshad_" target="_blank" rel="noopener" class="social-link">TikTok</a>
+        <a href="https://www.threads.com/@mhamzairshad_" target="_blank" rel="noopener" class="social-link">Threads</a>
+        <a href="https://www.facebook.com/MHamzaIrshad" target="_blank" rel="noopener" class="social-link">Facebook</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer class="footer">
+    <div class="footer__tagline">Building with intent. Scaling with discipline. Thinking long-term.</div>
+    <div class="footer__copy">© 2026 <a href="#hero">M. Hamza Irshad</a></div>
+  </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Theme
+  const btn = document.getElementById('themeToggle');
+  const label = document.getElementById('themeLabel');
+  let currentTheme = localStorage.getItem('mhi-theme');
+  if (!currentTheme) {
+    currentTheme = 'dark'; // Default to dark mode
+  }
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  updateTheme(currentTheme);
+
+  btn.addEventListener('click', () => {
+    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    localStorage.setItem('mhi-theme', currentTheme);
+    updateTheme(currentTheme);
+  });
+  function updateTheme(t) {
+    btn.textContent = t === 'light' ? '◑' : '◐';
+    if (label) label.textContent = t === 'light' ? 'Dark' : 'Light';
+  }
+
+  // Counter Animation
+  const counterObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      const el = e.target;
+      const target = parseInt(el.getAttribute('data-target'));
+      const suffix = el.getAttribute('data-suffix') || '';
+      
+      if (e.isIntersecting) {
+        const duration = 2000;
+        const start = performance.now();
+        const updateCounter = (time) => {
+          const elapsed = time - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+          const currentVal = Math.floor(easeProgress * target);
+          el.textContent = currentVal + suffix;
+          if (progress < 1) {
+            el.dataset.animId = requestAnimationFrame(updateCounter);
+          } else {
+            el.textContent = target + suffix;
+          }
+        };
+        cancelAnimationFrame(parseInt(el.dataset.animId || '0'));
+        el.dataset.animId = requestAnimationFrame(updateCounter);
+      } else {
+        cancelAnimationFrame(parseInt(el.dataset.animId || '0'));
+        el.textContent = '0' + suffix;
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.counter-val').forEach(el => counterObs.observe(el));
+
+  // Nav scroll
+  const nav = document.querySelector('.nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('nav--scrolled', window.scrollY > 50);
+  }, { passive: true });
+
+  // Scroll reveal
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Mobile menu
+  const burger = document.getElementById('mobileToggle');
+  const menu = document.getElementById('mobileMenu');
+  if (burger && menu) {
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      menu.classList.toggle('active');
+      document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+    });
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('active');
+        menu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      const t = document.querySelector(this.getAttribute('href'));
+      if (t) window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+    });
+  });
+
+  // Active nav
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.nav__link');
+  const navObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.getAttribute('id');
+        links.forEach(l => {
+          l.classList.toggle('nav__link--active', l.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { threshold: 0.25, rootMargin: '-80px 0px -50% 0px' });
+  sections.forEach(s => navObs.observe(s));
+
+  // Contact Form Submission to Google Sheets
+  const contactForm = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const formStatus = document.getElementById('formStatus');
+  
+  // Using the same Web App URL you already have for other forms!
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzvYTU6a4boGv1kHHezaHJtoq8lIWgQssBAJ4MEIKtF4Afwo5TqJCxDR8cq_Z0TQU9y/exec'; 
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async e => {
+      e.preventDefault();
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      formStatus.className = 'form-status';
+      formStatus.textContent = '';
+
+      const formData = new FormData(contactForm);
+      const data = {
+        "Form Type": "Contact Form",
+        "Timestamp": new Date().toLocaleString('en-PK', {timeZone: 'Asia/Karachi'}),
+        "Name": formData.get('name'),
+        "Email": formData.get('email'),
+        "Subject": formData.get('subject'),
+        "Message": formData.get('message')
+      };
+
+      try {
+        await fetch(scriptURL, { 
+          method: 'POST', 
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data) 
+        });
+        
+        // Success (no-cors doesn't give a readable response, so we assume success if no network error)
+        submitBtn.textContent = 'Success!';
+        formStatus.className = 'form-status success';
+        formStatus.textContent = 'Message sent successfully. Redirecting...';
+        contactForm.reset();
+        
+        // Redirect to Thank You page
+        setTimeout(() => {
+          window.location.href = 'thankyou.html';
+        }, 1500);
+
+      } catch (error) {
+        console.error('Error!', error.message);
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+        formStatus.className = 'form-status error';
+        formStatus.textContent = 'Something went wrong. Please try again.';
+      }
+    });
+  }
+});
+</script>
+
+</body>
+</html>

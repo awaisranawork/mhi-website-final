@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MFGBN74S');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7V8JGHDJV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W7V8JGHDJV');
+  </script>
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="FYCthtRBHV0R0aHyKS7QHwepIzAHEu05BJf7ektWJc0" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You — M. Hamza Irshad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --bg-card: #141414;
+      --text-1: #edece8;
+      --text-2: #9a9990;
+      --accent: #c8ff00;
+      --accent-rgb: 200,255,0;
+      --font-d: 'Syne', sans-serif;
+      --font-b: 'Instrument Sans', sans-serif;
+      --ease: cubic-bezier(.25,.46,.45,.94);
+      --t: .35s var(--ease);
+    }
+    [data-theme="light"] {
+      --bg: #f4f1eb;
+      --bg-card: #eae7e0;
+      --text-1: #18180f;
+      --text-2: #65635a;
+      --accent: #18180f;
+      --accent-rgb: 24,24,15;
+    }
+    
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:var(--font-b);background:var(--bg);color:var(--text-1);line-height:1.6;display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center;}
+    
+    .ty-card {
+      background: var(--bg-card);
+      padding: 60px 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.07);
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      animation: floatUp 0.8s var(--ease) forwards;
+    }
+    [data-theme="light"] .ty-card {
+      border: 1px solid rgba(0,0,0,0.07);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    }
+
+    .icon {
+      width: 80px;
+      height: 80px;
+      background: var(--accent);
+      color: var(--bg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      margin: 0 auto 30px;
+      animation: pop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s backwards;
+    }
+
+    h1 {
+      font-family: var(--font-d);
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    
+    p {
+      color: var(--text-2);
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 14px 36px;
+      background: var(--text-1);
+      color: var(--bg);
+      border-radius: 100px;
+      font-family: var(--font-d);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all var(--t);
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(var(--accent-rgb), 0.2);
+    }
+
+    @keyframes floatUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pop {
+      0% { transform: scale(0); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFGBN74S"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="ty-card">
+    <div class="icon">✓</div>
+    <h1>Message Received.</h1>
+    <p>Thank you for reaching out. We will get back to you as soon as possible.</p>
+    <a href="index.html" class="btn">Return Home</a>
+  </div>
+
+  <script>
+    // Keep the theme consistent
+    let currentTheme = localStorage.getItem('mhi-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+  </script>
+</body>
+</html>
