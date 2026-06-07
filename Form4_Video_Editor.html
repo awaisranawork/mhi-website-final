@@ -92,30 +92,43 @@
     -webkit-backdrop-filter: blur(24px) saturate(1.2); background: var(--nav-bg);
     border-bottom: 1px solid var(--border); transition: all var(--t);
   }
-  .nav__logo {
-    font-family: var(--font-d); font-weight: 800; font-size: 0.85rem;
-    letter-spacing: -.02em; padding: 8px 18px; border-radius: var(--r-pill);
-    border: 1px solid var(--border); transition: all var(--t);
-  }
-  .nav__logo:hover {
-    border-color: var(--border-h); background: var(--bg-card);
-  }
-  .nav__right {
-    display: flex; align-items: center; gap: 10px;
-  }
+  .nav__chip { display: flex; align-items: center; gap: 10px; padding: 6px 14px 6px 8px; border-radius: var(--r-pill); border: 1px solid var(--border); transition: all var(--t); }
+  .nav__chip:hover { border-color: var(--border-h); background: var(--bg-elevated); }
+  .nav__avatar { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg,rgb(var(--accent-rgb)),#888); display: flex; align-items: center; justify-content: center; font-family: var(--font-d); font-weight: 700; font-size: .7rem; color: var(--bg); }
+  .nav__chip-name { font-size: .82rem; font-weight: 500; color: var(--text-2); }
+  .nav__chip-label { font-size: .7rem; padding: 2px 9px; background: var(--accent-dim); border-radius: var(--r-pill); color: var(--text-2); font-weight: 600; }
+  .nav__logo { font-family: var(--font-d); font-weight: 800; font-size: 1.05rem; letter-spacing: -.02em; position: relative; }
+  .nav__logo::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width var(--t); }
+  .nav__logo:hover::after { width: 100%; }
+  .nav__links { display: flex; gap: 4px; }
+  .nav__link { font-size: .85rem; font-weight: 500; color: var(--text-2); padding: 8px 16px; border-radius: var(--r-pill); transition: all var(--t); }
+  .nav__link:hover { color: var(--text-1); background: var(--accent-dim); }
+  .nav__right { display: flex; align-items: center; gap: 10px; }
   .nav__theme {
     width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--border);
     background: 0; color: var(--text-2); cursor: pointer; display: flex;
     align-items: center; justify-content: center; font-size: 1.1rem;
     transition: all var(--t);
   }
-  .nav__theme:hover {
-    border-color: var(--text-1); color: var(--text-1); transform: rotate(180deg);
-  }
-  .nav__theme-label {
-    font-size: .76rem; color: var(--text-3); font-weight: 500;
-  }
+  .nav__theme:hover { border-color: var(--text-1); color: var(--text-1); transform: rotate(180deg); }
+  .nav__theme-label { font-size: .76rem; color: var(--text-3); font-weight: 500; }
   
+  .nav__burger { display: none; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 8px; background: 0; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+  .nav__burger span { display: block; width: 18px; height: 2px; background: var(--text-1); border-radius: 2px; transition: all var(--t); }
+  .nav__burger.active span:nth-child(1) { transform: rotate(45deg) translate(3px,4px); }
+  .nav__burger.active span:nth-child(2) { opacity: 0; }
+  .nav__burger.active span:nth-child(3) { transform: rotate(-45deg) translate(3px,-4px); }
+  
+  .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: var(--bg); padding: 40px; flex-direction: column; gap: 8px; z-index: 999; }
+  .mobile-menu.active { display: flex; }
+  .mobile-menu a { font-family: var(--font-d); font-size: 1.8rem; font-weight: 700; padding: 12px 0; border-bottom: 1px solid var(--border); transition: color var(--t); }
+  .mobile-menu a:hover { color: var(--accent); }
+  
+  @media(max-width:768px) {
+    .nav__links, .nav__chip { display: none; }
+    .nav__burger { display: flex; }
+  }
+
   /* ═══ HERO ═══ */
   .hero {
     background: var(--bg); color: var(--text-1);
@@ -140,13 +153,8 @@
     font-weight: 800; line-height: 1.12; margin-bottom: 12px;
     letter-spacing: -.03em;
   }
-  .hero h1 em {
-    font-style: normal; color: var(--accent);
-  }
-  .hero p {
-    font-size: 15px; color: var(--text-2); max-width: 500px;
-    margin: 0 auto; line-height: 1.7;
-  }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero p { font-size: 15px; color: var(--text-2); max-width: 500px; margin: 0 auto; line-height: 1.7; }
   
   /* ═══ WRAPPER ═══ */
   .wrap { max-width: 660px; margin: 0 auto 80px; padding: 0 16px; position: relative; z-index: 2; }
@@ -261,8 +269,10 @@
   [data-theme="light"] .form-status.error { background: #ffe6e6; color: #cc0000; border-color: #ffb3b3; }
 
   /* Footer */
-  .footer { text-align: center; padding: 24px; font-size: 12px; color: var(--text-3); }
-  .footer a { color: var(--text-2); text-decoration: none; transition: color var(--t); }
+  .footer { padding: 28px 40px; border-top: 1px solid var(--border); text-align: center; background: var(--bg-card); transition: all var(--t); }
+  .footer__tagline { font-family: var(--font-d); font-size: .88rem; font-weight: 600; color: var(--text-2); margin-bottom: 6px; letter-spacing: -.01em; }
+  .footer__copy { font-size: .76rem; color: var(--text-3); }
+  .footer a { color: var(--text-2); transition: color var(--t); }
   .footer a:hover { color: var(--text-1); }
   </style>
 </head>
@@ -274,12 +284,38 @@
 
   <!-- ══════ NAV ══════ -->
   <nav class="nav">
-    <a href="index.html" class="nav__logo">← Back to MHI</a>
+    <div class="nav__chip">
+      <div class="nav__avatar">HI</div>
+      <span class="nav__chip-name">M. Hamza Irshad</span>
+      <span class="nav__chip-label">Builder</span>
+    </div>
+    <a href="index.html#hero" class="nav__logo">MHI</a>
+    <div class="nav__links">
+      <a href="index.html#ecosystem" class="nav__link">Ecosystem</a>
+      <a href="index.html#about" class="nav__link">About</a>
+      <a href="index.html#philosophy" class="nav__link">Philosophy</a>
+      <a href="careers.html" class="nav__link">Careers</a>
+      <a href="consultation.html" class="nav__link" style="color: var(--accent);">Consultation</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+    </div>
     <div class="nav__right">
       <button class="nav__theme" id="themeToggle" title="Toggle theme">◐</button>
       <span class="nav__theme-label" id="themeLabel">Light</span>
     </div>
+    <button class="nav__burger" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#hero">Home</a>
+    <a href="index.html#ecosystem">Ecosystem</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#philosophy">Philosophy</a>
+    <a href="careers.html">Careers</a>
+    <a href="consultation.html" style="color: var(--accent);">1:1 Consultation</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
   <!-- ══════ HERO ══════ -->
   <div class="hero">
@@ -600,7 +636,8 @@
 
   <!-- ══════ FOOTER ══════ -->
   <footer class="footer">
-    <div>© 2026 <a href="index.html">M. Hamza Irshad</a> — Building Brands with Intent</div>
+    <div class="footer__tagline">Building with intent. Scaling with discipline. Thinking long-term.</div>
+    <div class="footer__copy">© 2026 <a href="index.html#hero">M. Hamza Irshad</a></div>
   </footer>
 
   <script>
@@ -623,6 +660,24 @@
     function updateThemeUI(t) {
       toggleBtn.textContent = t === 'light' ? '◑' : '◐';
       if (toggleLabel) toggleLabel.textContent = t === 'light' ? 'Dark' : 'Light';
+    }
+
+    // Mobile menu toggle
+    const burger = document.getElementById('mobileToggle');
+    const menu = document.getElementById('mobileMenu');
+    if (burger && menu) {
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        menu.classList.toggle('active');
+        document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+      });
+      menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          burger.classList.remove('active');
+          menu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
     }
 
     // 2. City Toggle Logic ("Other" show field)
@@ -708,7 +763,7 @@
           .join(', ');
       };
 
-      // Construct application payload
+      // Construct payload
       const data = {
         "Form Type": "Video Editor Application",
         "Timestamp": new Date().toLocaleString('en-PK', {timeZone: 'Asia/Karachi'}),
@@ -755,7 +810,6 @@
           body: JSON.stringify(data)
         });
 
-        // Display Success and Redirect to thank you page
         submitBtn.textContent = 'Success!';
         formStatus.className = 'form-status success';
         formStatus.textContent = 'Application submitted successfully! Redirecting...';

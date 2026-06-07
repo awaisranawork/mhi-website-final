@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MFGBN74S');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7V8JGHDJV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W7V8JGHDJV');
+  </script>
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="FYCthtRBHV0R0aHyKS7QHwepIzAHEu05BJf7ektWJc0" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers — M. Hamza Irshad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+  :root {
+    --bg: #0b0b0b;
+    --bg-card: #141414;
+    --bg-elevated: #1a1a1a;
+    --bg-blue: #060e1c;
+    --bg-blue-card: #0d1a30;
+    --bg-blue-elevated: #122040;
+    --text-1: #edece8;
+    --text-2: #9a9990;
+    --text-3: #5a5a52;
+    --accent: #c8ff00;
+    --accent-rgb: 200,255,0;
+    --accent-dim: rgba(200,255,0,.1);
+    --border: rgba(255,255,255,.07);
+    --border-h: rgba(255,255,255,.14);
+    --nav-bg: rgba(11,11,11,.82);
+    --shadow: 0 2px 24px rgba(0,0,0,.3);
+    --r-lg: 20px;
+    --r-md: 14px;
+    --r-pill: 100px;
+    --font-d: 'Syne', sans-serif;
+    --font-b: 'Instrument Sans', sans-serif;
+    --ease: cubic-bezier(.25,.46,.45,.94);
+    --t: .35s var(--ease);
+    --max-w: 1140px;
+  }
+
+  [data-theme="light"] {
+    --bg: #f4f1eb;
+    --bg-card: #eae7e0;
+    --bg-elevated: #e0ddd6;
+    --bg-blue: #edf2fc;
+    --bg-blue-card: #dce8f5;
+    --bg-blue-elevated: #ccddf0;
+    --text-1: #18180f;
+    --text-2: #65635a;
+    --text-3: #9c9a91;
+    --accent: #18180f;
+    --accent-rgb: 24,24,15;
+    --accent-dim: rgba(24,24,15,.07);
+    --border: rgba(0,0,0,.07);
+    --border-h: rgba(0,0,0,.14);
+    --nav-bg: rgba(244,241,235,.82);
+    --shadow: 0 2px 24px rgba(0,0,0,.06);
+  }
+
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--font-b);background:var(--bg);color:var(--text-1);line-height:1.6;transition:background .5s var(--ease),color .5s var(--ease)}
+  a{color:inherit;text-decoration:none}
+
+  /* ═══ NAV ═══ */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 40px;height:64px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(24px) saturate(1.2);-webkit-backdrop-filter:blur(24px) saturate(1.2);background:var(--nav-bg);border-bottom:1px solid var(--border);transition:all var(--t)}
+  .nav__chip { display: flex; align-items: center; gap: 10px; padding: 6px 14px 6px 8px; border-radius: var(--r-pill); border: 1px solid var(--border); transition: all var(--t); }
+  .nav__chip:hover { border-color: var(--border-h); background: var(--bg-elevated); }
+  .nav__avatar { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg,rgb(var(--accent-rgb)),#888); display: flex; align-items: center; justify-content: center; font-family: var(--font-d); font-weight: 700; font-size: .7rem; color: var(--bg); }
+  .nav__chip-name { font-size: .82rem; font-weight: 500; color: var(--text-2); }
+  .nav__chip-label { font-size: .7rem; padding: 2px 9px; background: var(--accent-dim); border-radius: var(--r-pill); color: var(--text-2); font-weight: 600; }
+  .nav__logo { font-family: var(--font-d); font-weight: 800; font-size: 1.05rem; letter-spacing: -.02em; position: relative; }
+  .nav__logo::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width var(--t); }
+  .nav__logo:hover::after { width: 100%; }
+  .nav__links { display: flex; gap: 4px; }
+  .nav__link { font-size: .85rem; font-weight: 500; color: var(--text-2); padding: 8px 16px; border-radius: var(--r-pill); transition: all var(--t); }
+  .nav__link:hover, .nav__link--active { color: var(--text-1); background: var(--accent-dim); }
+  .nav__right { display: flex; align-items: center; gap: 10px; }
+  .nav__theme {
+    width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--border);
+    background: 0; color: var(--text-2); cursor: pointer; display: flex;
+    align-items: center; justify-content: center; font-size: 1.1rem;
+    transition: all var(--t);
+  }
+  .nav__theme:hover { border-color: var(--text-1); color: var(--text-1); transform: rotate(180deg); }
+  .nav__theme-label { font-size: .76rem; color: var(--text-3); font-weight: 500; }
+  
+  .nav__burger { display: none; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 8px; background: 0; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+  .nav__burger span { display: block; width: 18px; height: 2px; background: var(--text-1); border-radius: 2px; transition: all var(--t); }
+  .nav__burger.active span:nth-child(1) { transform: rotate(45deg) translate(3px,4px); }
+  .nav__burger.active span:nth-child(2) { opacity: 0; }
+  .nav__burger.active span:nth-child(3) { transform: rotate(-45deg) translate(3px,-4px); }
+  
+  .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: var(--bg); padding: 40px; flex-direction: column; gap: 8px; z-index: 999; }
+  .mobile-menu.active { display: flex; }
+  .mobile-menu a { font-family: var(--font-d); font-size: 1.8rem; font-weight: 700; padding: 12px 0; border-bottom: 1px solid var(--border); transition: color var(--t); }
+  .mobile-menu a:hover { color: var(--accent); }
+
+  @media(max-width:768px) {
+    .nav__links, .nav__chip { display: none; }
+    .nav__burger { display: flex; }
+  }
+
+  /* ═══ SECTION ═══ */
+  .sec { width:100%; position:relative; }
+  .sec--blue { background:var(--bg-blue); }
+  .sec--bordered { border-top:1px solid var(--border); }
+  
+  .section { padding: 120px 40px 100px; max-width: var(--max-w); margin: 0 auto; }
+  .section__label { font-size: .76rem; text-transform: uppercase; letter-spacing: .18em; color: var(--accent); margin-bottom: 10px; font-weight: 600; }
+  .section__title { font-family: var(--font-d); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -.035em; margin-bottom: 24px; line-height: 1.1; }
+  .section__intro { font-size: 1.05rem; color: var(--text-2); max-width: 600px; line-height: 1.8; margin-bottom: 56px; }
+
+  /* ═══ CAREERS LIST ═══ */
+  .careers__list { display: flex; flex-direction: column; gap: 20px; }
+  .career-card {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg);
+    padding: 32px 36px; display: flex; justify-content: space-between; align-items: center;
+    gap: 28px; transition: all var(--t); position: relative; overflow: hidden;
+  }
+  .career-card::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--accent); opacity: 0; transition: opacity var(--t); }
+  .career-card:hover { border-color: var(--border-h); transform: translateY(-2px); box-shadow: var(--shadow); }
+  .career-card:hover::after { opacity: 1; }
+  .career-card__info { flex: 1; min-width: 0; }
+  .career-card__meta { display: flex; gap: 10px; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }
+  .career-card__role { font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; color: var(--text-1); font-weight: 700; padding: 4px 12px; background: var(--accent-dim); border-radius: var(--r-pill); }
+  [data-theme="dark"] .career-card__role { color: var(--accent); }
+  .career-card__location { font-size: .78rem; color: var(--text-3); font-weight: 500; }
+  .career-card__title { font-family: var(--font-d); font-size: 1.25rem; font-weight: 800; letter-spacing: -.025em; margin-bottom: 8px; }
+  .career-card__desc { font-size: .88rem; color: var(--text-2); line-height: 1.65; }
+  .career-card__action { flex-shrink: 0; }
+  
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: var(--r-pill); font-family: var(--font-d); font-weight: 700; font-size: .88rem; transition: all var(--t); border: none; cursor: pointer; letter-spacing: -.01em; }
+  .btn--primary { background: var(--text-1); color: var(--bg); }
+  .btn--primary:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 8px 30px rgba(var(--accent-rgb),.15); }
+  
+  @media(max-width:768px) {
+    .section { padding: 96px 20px 56px; }
+    .career-card { flex-direction: column; align-items: flex-start; gap: 20px; padding: 24px; }
+    .career-card__action { width: 100%; }
+    .career-card__action .btn { width: 100%; justify-content: center; }
+  }
+
+  /* ═══ FOOTER ═══ */
+  .footer { padding: 28px 40px; border-top: 1px solid var(--border); text-align: center; background: var(--bg-card); transition: all var(--t); }
+  .footer__tagline { font-family: var(--font-d); font-size: .88rem; font-weight: 600; color: var(--text-2); margin-bottom: 6px; letter-spacing: -.01em; }
+  .footer__copy { font-size: .76rem; color: var(--text-3); }
+  .footer a { color: var(--text-2); transition: color var(--t); }
+  .footer a:hover { color: var(--text-1); }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFGBN74S"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ══════ NAV ══════ -->
+  <nav class="nav">
+    <div class="nav__chip">
+      <div class="nav__avatar">HI</div>
+      <span class="nav__chip-name">M. Hamza Irshad</span>
+      <span class="nav__chip-label">Builder</span>
+    </div>
+    <a href="index.html#hero" class="nav__logo">MHI</a>
+    <div class="nav__links">
+      <a href="index.html#ecosystem" class="nav__link">Ecosystem</a>
+      <a href="index.html#about" class="nav__link">About</a>
+      <a href="index.html#philosophy" class="nav__link">Philosophy</a>
+      <a href="careers.html" class="nav__link nav__link--active">Careers</a>
+      <a href="consultation.html" class="nav__link" style="color: var(--accent);">Consultation</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+    </div>
+    <div class="nav__right">
+      <button class="nav__theme" id="themeToggle" title="Toggle theme">◐</button>
+      <span class="nav__theme-label" id="themeLabel">Light</span>
+    </div>
+    <button class="nav__burger" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#hero">Home</a>
+    <a href="index.html#ecosystem">Ecosystem</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#philosophy">Philosophy</a>
+    <a href="careers.html">Careers</a>
+    <a href="consultation.html" style="color: var(--accent);">1:1 Consultation</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ══════ CAREERS SECTION ══════ -->
+  <section class="sec">
+    <div class="section">
+      <div class="section__label">Join the Team</div>
+      <h1 class="section__title">Careers at MHI</h1>
+      <p class="section__intro">We're building something big — and we need the right people. No generic CVs. No passengers. Only operators who want to build.</p>
+
+      <div class="careers__list">
+
+        <!-- Card 1 -->
+        <div class="career-card">
+          <div class="career-card__info">
+            <div class="career-card__meta">
+              <span class="career-card__role">Content & Media</span>
+              <span class="career-card__location">Full-time · Lahore / On-site</span>
+            </div>
+            <h3 class="career-card__title">Founder Generated Content Creator</h3>
+            <p class="career-card__desc">Shoot and edit powerful short-form content alongside our founders. iPhone shooting, CapCut editing, and the confidence to direct talent on camera. We need someone with instinct, not just skills.</p>
+          </div>
+          <div class="career-card__action">
+            <a href="Form1_Content_Creator.html" class="btn btn--primary">Full Details &amp; Apply</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="career-card">
+          <div class="career-card__info">
+            <div class="career-card__meta">
+              <span class="career-card__role">Technology & AI</span>
+              <span class="career-card__location">Full-time · On-site / Hybrid</span>
+            </div>
+            <h3 class="career-card__title">AI Implementation Specialist</h3>
+            <p class="career-card__desc">Bring AI-powered change across our entire organization — from design to media buying to content creation. If you actively use AI tools and can implement them in a real business environment, this is for you.</p>
+          </div>
+          <div class="career-card__action">
+            <a href="Form2_AI_Specialist.html" class="btn btn--primary">Full Details &amp; Apply</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="career-card">
+          <div class="career-card__info">
+            <div class="career-card__meta">
+              <span class="career-card__role">Marketing & PR</span>
+              <span class="career-card__location">Contract / Agency · Pakistan</span>
+            </div>
+            <h3 class="career-card__title">Celebrity &amp; Influencer Relations Manager</h3>
+            <p class="career-card__desc">Connect our D2C brands with Pakistan's biggest celebrity faces for national-level campaigns. We need someone with real, direct access to actors, cricketers, singers, or top-tier influencers — not just followers.</p>
+          </div>
+          <div class="career-card__action">
+            <a href="Form3_Celebrity_Relations.html" class="btn btn--primary">Full Details &amp; Apply</a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="career-card">
+          <div class="career-card__info">
+            <div class="career-card__meta">
+              <span class="career-card__role">Content & Media</span>
+              <span class="career-card__location">Full-time · Lahore / On-site</span>
+            </div>
+            <h3 class="career-card__title">Creative Video Editor (Ads &amp; Long-form)</h3>
+            <p class="career-card__desc">Scale our brand content by editing high-impact e-commerce ad creatives and engaging long-form YouTube videos (podcasts). Expert with Premiere Pro, After Effects, CapCut, and Final Cut Pro. Must understand e-commerce ad structure (hooks, CTAs, social proof).</p>
+          </div>
+          <div class="career-card__action">
+            <a href="Form4_Video_Editor.html" class="btn btn--primary">Full Details &amp; Apply</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer class="footer">
+    <div class="footer__tagline">Building with intent. Scaling with discipline. Thinking long-term.</div>
+    <div class="footer__copy">© 2026 <a href="index.html#hero">M. Hamza Irshad</a></div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Theme
+    const btn = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    let currentTheme = localStorage.getItem('mhi-theme') || 'dark';
+
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateTheme(currentTheme);
+
+    btn.addEventListener('click', () => {
+      currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      localStorage.setItem('mhi-theme', currentTheme);
+      updateTheme(currentTheme);
+    });
+
+    function updateTheme(t) {
+      btn.textContent = t === 'light' ? '◑' : '◐';
+      if (label) label.textContent = t === 'light' ? 'Dark' : 'Light';
+    }
+
+    // Mobile menu toggle
+    const burger = document.getElementById('mobileToggle');
+    const menu = document.getElementById('mobileMenu');
+    if (burger && menu) {
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        menu.classList.toggle('active');
+        document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+      });
+      menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          burger.classList.remove('active');
+          menu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MFGBN74S');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7V8JGHDJV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W7V8JGHDJV');
+  </script>
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="FYCthtRBHV0R0aHyKS7QHwepIzAHEu05BJf7ektWJc0" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — M. Hamza Irshad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+  :root {
+    --bg: #0b0b0b;
+    --bg-card: #141414;
+    --bg-elevated: #1a1a1a;
+    --bg-blue: #060e1c;
+    --bg-blue-card: #0d1a30;
+    --bg-blue-elevated: #122040;
+    --text-1: #edece8;
+    --text-2: #9a9990;
+    --text-3: #5a5a52;
+    --accent: #c8ff00;
+    --accent-rgb: 200,255,0;
+    --accent-dim: rgba(200,255,0,.1);
+    --border: rgba(255,255,255,.07);
+    --border-h: rgba(255,255,255,.14);
+    --nav-bg: rgba(11,11,11,.82);
+    --shadow: 0 2px 24px rgba(0,0,0,.3);
+    --r-lg: 20px;
+    --r-md: 14px;
+    --r-pill: 100px;
+    --font-d: 'Syne', sans-serif;
+    --font-b: 'Instrument Sans', sans-serif;
+    --ease: cubic-bezier(.25,.46,.45,.94);
+    --t: .35s var(--ease);
+    --max-w: 1140px;
+  }
+
+  [data-theme="light"] {
+    --bg: #f4f1eb;
+    --bg-card: #eae7e0;
+    --bg-elevated: #e0ddd6;
+    --bg-blue: #edf2fc;
+    --bg-blue-card: #dce8f5;
+    --bg-blue-elevated: #ccddf0;
+    --text-1: #18180f;
+    --text-2: #65635a;
+    --text-3: #9c9a91;
+    --accent: #18180f;
+    --accent-rgb: 24,24,15;
+    --accent-dim: rgba(24,24,15,.07);
+    --border: rgba(0,0,0,.07);
+    --border-h: rgba(0,0,0,.14);
+    --nav-bg: rgba(244,241,235,.82);
+    --shadow: 0 2px 24px rgba(0,0,0,.06);
+  }
+
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--font-b);background:var(--bg);color:var(--text-1);line-height:1.6;transition:background .5s var(--ease),color .5s var(--ease)}
+  a{color:inherit;text-decoration:none}
+
+  /* ═══ NAV ═══ */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 40px;height:64px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(24px) saturate(1.2);-webkit-backdrop-filter:blur(24px) saturate(1.2);background:var(--nav-bg);border-bottom:1px solid var(--border);transition:all var(--t)}
+  .nav__chip { display: flex; align-items: center; gap: 10px; padding: 6px 14px 6px 8px; border-radius: var(--r-pill); border: 1px solid var(--border); transition: all var(--t); }
+  .nav__chip:hover { border-color: var(--border-h); background: var(--bg-elevated); }
+  .nav__avatar { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg,rgb(var(--accent-rgb)),#888); display: flex; align-items: center; justify-content: center; font-family: var(--font-d); font-weight: 700; font-size: .7rem; color: var(--bg); }
+  .nav__chip-name { font-size: .82rem; font-weight: 500; color: var(--text-2); }
+  .nav__chip-label { font-size: .7rem; padding: 2px 9px; background: var(--accent-dim); border-radius: var(--r-pill); color: var(--text-2); font-weight: 600; }
+  .nav__logo { font-family: var(--font-d); font-weight: 800; font-size: 1.05rem; letter-spacing: -.02em; position: relative; }
+  .nav__logo::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width var(--t); }
+  .nav__logo:hover::after { width: 100%; }
+  .nav__links { display: flex; gap: 4px; }
+  .nav__link { font-size: .85rem; font-weight: 500; color: var(--text-2); padding: 8px 16px; border-radius: var(--r-pill); transition: all var(--t); }
+  .nav__link:hover, .nav__link--active { color: var(--text-1); background: var(--accent-dim); }
+  .nav__right { display: flex; align-items: center; gap: 10px; }
+  .nav__theme {
+    width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--border);
+    background: 0; color: var(--text-2); cursor: pointer; display: flex;
+    align-items: center; justify-content: center; font-size: 1.1rem;
+    transition: all var(--t);
+  }
+  .nav__theme:hover { border-color: var(--text-1); color: var(--text-1); transform: rotate(180deg); }
+  .nav__theme-label { font-size: .76rem; color: var(--text-3); font-weight: 500; }
+  
+  .nav__burger { display: none; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 8px; background: 0; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+  .nav__burger span { display: block; width: 18px; height: 2px; background: var(--text-1); border-radius: 2px; transition: all var(--t); }
+  .nav__burger.active span:nth-child(1) { transform: rotate(45deg) translate(3px,4px); }
+  .nav__burger.active span:nth-child(2) { opacity: 0; }
+  .nav__burger.active span:nth-child(3) { transform: rotate(-45deg) translate(3px,-4px); }
+  
+  .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: var(--bg); padding: 40px; flex-direction: column; gap: 8px; z-index: 999; }
+  .mobile-menu.active { display: flex; }
+  .mobile-menu a { font-family: var(--font-d); font-size: 1.8rem; font-weight: 700; padding: 12px 0; border-bottom: 1px solid var(--border); transition: color var(--t); }
+  .mobile-menu a:hover { color: var(--accent); }
+
+  @media(max-width:768px) {
+    .nav__links, .nav__chip { display: none; }
+    .nav__burger { display: flex; }
+  }
+
+  /* ═══ SECTION WRAPPER ═══ */
+  .sec { width:100%; position:relative; }
+  .sec--blue { background:var(--bg-blue); }
+  .sec--bordered { border-top:1px solid var(--border); }
+  .sec--blue.sec--bordered { border-top:1px solid rgba(61,155,255,.15); }
+  
+  /* ═══ CONTACT ═══ */
+  .contact { text-align:center; padding:120px 40px 100px; max-width:var(--max-w); margin:0 auto }
+  .section__label { font-size: .76rem; text-transform: uppercase; letter-spacing: .18em; color: #3d9bff; margin-bottom: 10px; font-weight: 600; }
+  [data-theme="light"] .section__label { color: #1a6fd4; }
+  .contact__sub { font-size:.92rem; color:var(--text-3); margin-bottom:8px }
+  .contact__title { font-family:var(--font-d); font-size:clamp(2.5rem,5.5vw,4.2rem); font-weight:800; letter-spacing:-.04em; margin-bottom:20px }
+  .contact__desc { font-size:1rem; color:var(--text-2); max-width:480px; margin:0 auto; line-height:1.7 }
+  
+  .contact-form { max-width: 540px; margin: 40px auto 0; text-align: left; background: var(--bg-card); padding: 40px; border-radius: var(--r-lg); border: 1px solid var(--border); box-shadow: var(--shadow); }
+  .form-group { margin-bottom: 20px; }
+  .form-label { display: block; font-size: .85rem; font-weight: 600; color: var(--text-2); margin-bottom: 8px; }
+  .form-input { width: 100%; background: var(--bg); border: 1px solid var(--border); color: var(--text-1); padding: 14px 16px; border-radius: var(--r-md); font-family: var(--font-b); font-size: .95rem; outline: none; transition: all var(--t); }
+  .form-input:focus { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-dim); }
+  .form-textarea { resize: vertical; min-height: 120px; }
+  
+  .form-submit { width: 100%; display: flex; justify-content: center; align-items: center; gap: 10px; padding: 16px; background: var(--text-1); color: var(--bg); border-radius: var(--r-pill); font-family: var(--font-d); font-weight: 700; font-size: 1rem; border: none; cursor: pointer; transition: all var(--t); margin-top: 10px; }
+  .form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(var(--accent-rgb), .15); }
+  .form-submit:disabled { opacity: 0.7; cursor: not-allowed; transform: none; box-shadow: none; }
+  
+  .form-status { margin-top: 16px; font-size: .9rem; text-align: center; display: none; padding: 12px; border-radius: var(--r-md); }
+  .form-status.success { display: block; background: rgba(0,255,0,0.1); color: #00ff00; border: 1px solid rgba(0,255,0,0.2); }
+  .form-status.error { display: block; background: rgba(255,0,0,0.1); color: #ff5555; border: 1px solid rgba(255,0,0,0.2); }
+  [data-theme="light"] .form-status.success { background: #e6ffe6; color: #008000; border-color: #b3ffb3; }
+  [data-theme="light"] .form-status.error { background: #ffe6e6; color: #cc0000; border-color: #ffb3b3; }
+  
+  .contact__email { margin-top:40px; font-size:.88rem; color:var(--text-3) }
+  .contact__loc { font-size:.84rem; color:var(--text-3); margin-top:4px }
+  
+  .social-links { display: flex; justify-content: center; gap: 10px; margin-top: 40px; flex-wrap: wrap; }
+  .social-link { color: var(--text-3); font-size: .82rem; font-weight: 500; padding: 9px 20px; border: 1px solid var(--border); border-radius: var(--r-pill); transition: all var(--t); display: inline-flex; align-items: center; gap: 6px; }
+  .social-link:hover { color: var(--text-1); border-color: var(--border-h); background: var(--accent-dim); transform: translateY(-2px); }
+
+  @media(max-width:768px) {
+    .contact { padding: 96px 20px 56px; }
+    .contact-form { padding: 24px; }
+  }
+
+  /* ═══ FOOTER ═══ */
+  .footer { padding: 28px 40px; border-top: 1px solid var(--border-blue); text-align: center; background: var(--bg-blue); transition: all var(--t); }
+  .footer__tagline { font-family: var(--font-d); font-size: .88rem; font-weight: 600; color: var(--text-2); margin-bottom: 6px; letter-spacing: -.01em; }
+  .footer__copy { font-size: .76rem; color: var(--text-3); }
+  .footer a { color: var(--text-2); transition: color var(--t); }
+  .footer a:hover { color: var(--text-1); }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFGBN74S"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ══════ NAV ══════ -->
+  <nav class="nav">
+    <div class="nav__chip">
+      <div class="nav__avatar">HI</div>
+      <span class="nav__chip-name">M. Hamza Irshad</span>
+      <span class="nav__chip-label">Builder</span>
+    </div>
+    <a href="index.html#hero" class="nav__logo">MHI</a>
+    <div class="nav__links">
+      <a href="index.html#ecosystem" class="nav__link">Ecosystem</a>
+      <a href="index.html#about" class="nav__link">About</a>
+      <a href="index.html#philosophy" class="nav__link">Philosophy</a>
+      <a href="careers.html" class="nav__link">Careers</a>
+      <a href="consultation.html" class="nav__link" style="color: var(--accent);">Consultation</a>
+      <a href="contact.html" class="nav__link nav__link--active">Contact</a>
+    </div>
+    <div class="nav__right">
+      <button class="nav__theme" id="themeToggle" title="Toggle theme">◐</button>
+      <span class="nav__theme-label" id="themeLabel">Light</span>
+    </div>
+    <button class="nav__burger" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#hero">Home</a>
+    <a href="index.html#ecosystem">Ecosystem</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#philosophy">Philosophy</a>
+    <a href="careers.html">Careers</a>
+    <a href="consultation.html" style="color: var(--accent);">1:1 Consultation</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ══════ CONTACT US SECTION ══════ -->
+  <section class="sec sec--blue sec--bordered">
+    <div class="contact">
+      <div class="section__label">Get in touch</div>
+      <div class="contact__sub">Let's build something meaningful.</div>
+      <h1 class="contact__title">Let's Talk.</h1>
+      <p class="contact__desc">Open to conversations with founders, operators, investors, and talent who want to build — not just watch.</p>
+      
+      <form id="contactForm" class="contact-form" name="submit-to-google-sheet">
+        <div class="form-group">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" name="name" class="form-input" required placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" name="email" class="form-input" required placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" id="subject" name="subject" class="form-input" required placeholder="What's this about?">
+        </div>
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" class="form-input form-textarea" required placeholder="How can we build together?"></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="submitBtn">Send Message</button>
+        <div id="formStatus" class="form-status"></div>
+      </form>
+
+      <div class="contact__email">muhammadhamzairshad@gmail.com</div>
+      <div class="contact__loc">Lahore, Pakistan</div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/mhamzairshad_/" target="_blank" rel="noopener" class="social-link">Instagram</a>
+        <a href="https://www.linkedin.com/in/muhammadhamzairshad/" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+        <a href="https://www.youtube.com/@MHamzaIrshad/featured" target="_blank" rel="noopener" class="social-link">YouTube</a>
+        <a href="https://www.tiktok.com/@mhamzairshad_" target="_blank" rel="noopener" class="social-link">TikTok</a>
+        <a href="https://www.threads.com/@mhamzairshad_" target="_blank" rel="noopener" class="social-link">Threads</a>
+        <a href="https://www.facebook.com/MHamzaIrshad" target="_blank" rel="noopener" class="social-link">Facebook</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer class="footer">
+    <div class="footer__tagline">Building with intent. Scaling with discipline. Thinking long-term.</div>
+    <div class="footer__copy">© 2026 <a href="index.html#hero">M. Hamza Irshad</a></div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Theme
+    const btn = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    let currentTheme = localStorage.getItem('mhi-theme') || 'dark';
+
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateTheme(currentTheme);
+
+    btn.addEventListener('click', () => {
+      currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      localStorage.setItem('mhi-theme', currentTheme);
+      updateTheme(currentTheme);
+    });
+
+    function updateTheme(t) {
+      btn.textContent = t === 'light' ? '◑' : '◐';
+      if (label) label.textContent = t === 'light' ? 'Dark' : 'Light';
+    }
+
+    // Mobile menu toggle
+    const burger = document.getElementById('mobileToggle');
+    const menu = document.getElementById('mobileMenu');
+    if (burger && menu) {
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        menu.classList.toggle('active');
+        document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+      });
+      menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          burger.classList.remove('active');
+          menu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    // Contact Form Submission to Google Sheets
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('formStatus');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzvYTU6a4boGv1kHHezaHJtoq8lIWgQssBAJ4MEIKtF4Afwo5TqJCxDR8cq_Z0TQU9y/exec'; 
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async e => {
+        e.preventDefault();
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        formStatus.className = 'form-status';
+        formStatus.textContent = '';
+        formStatus.style.display = 'none';
+
+        const formData = new FormData(contactForm);
+        const data = {
+          "Form Type": "Contact Form",
+          "Timestamp": new Date().toLocaleString('en-PK', {timeZone: 'Asia/Karachi'}),
+          "Name": formData.get('name'),
+          "Email": formData.get('email'),
+          "Subject": formData.get('subject'),
+          "Message": formData.get('message')
+        };
+
+        try {
+          await fetch(scriptURL, { 
+            method: 'POST', 
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data) 
+          });
+          
+          submitBtn.textContent = 'Success!';
+          formStatus.className = 'form-status success';
+          formStatus.textContent = 'Message sent successfully. Redirecting...';
+          formStatus.style.display = 'block';
+          contactForm.reset();
+          
+          setTimeout(() => {
+            window.location.href = 'thankyou.html';
+          }, 1500);
+
+        } catch (error) {
+          console.error('Error!', error.message);
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+          formStatus.className = 'form-status error';
+          formStatus.textContent = 'Something went wrong. Please try again.';
+          formStatus.style.display = 'block';
+        }
+      });
+    }
+  });
+  </script>
+</body>
+</html>
