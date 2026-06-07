@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MFGBN74S');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7V8JGHDJV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W7V8JGHDJV');
+  </script>
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="FYCthtRBHV0R0aHyKS7QHwepIzAHEu05BJf7ektWJc0" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potato Holdings — Video Editor Application</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+  :root {
+    --bg: #0b0b0b;
+    --bg-card: #141414;
+    --bg-elevated: #1a1a1a;
+    --text-1: #edece8;
+    --text-2: #9a9990;
+    --text-3: #5a5a52;
+    --accent: #c8ff00;
+    --accent-rgb: 200,255,0;
+    --accent-dim: rgba(200,255,0,.08);
+    --border: rgba(255,255,255,.07);
+    --border-h: rgba(255,255,255,.14);
+    --nav-bg: rgba(11,11,11,.82);
+    --shadow: 0 2px 24px rgba(0,0,0,.3);
+    --r-lg: 20px;
+    --r-md: 14px;
+    --r-pill: 100px;
+    --font-d: 'Syne', sans-serif;
+    --font-b: 'Instrument Sans', sans-serif;
+    --ease: cubic-bezier(.25,.46,.45,.94);
+    --t: .35s var(--ease);
+    --red: #ff4d4d;
+    --green: #c8ff00;
+  }
+
+  [data-theme="light"] {
+    --bg: #f4f1eb;
+    --bg-card: #eae7e0;
+    --bg-elevated: #e0ddd6;
+    --text-1: #18180f;
+    --text-2: #65635a;
+    --text-3: #9c9a91;
+    --accent: #18180f;
+    --accent-rgb: 24,24,15;
+    --accent-dim: rgba(24,24,15,.07);
+    --border: rgba(0,0,0,.07);
+    --border-h: rgba(0,0,0,.14);
+    --nav-bg: rgba(244,241,235,.82);
+    --shadow: 0 2px 24px rgba(0,0,0,.06);
+    --red: #d94040;
+    --green: #2d8f4e;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: var(--font-b);
+    background: var(--bg);
+    color: var(--text-1);
+    min-height: 100vh;
+    line-height: 1.6;
+    transition: background .5s var(--ease), color .5s var(--ease);
+  }
+  
+  /* ═══ NAV ═══ */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 0 40px; height: 64px; display: flex; align-items: center;
+    justify-content: space-between; backdrop-filter: blur(24px) saturate(1.2);
+    -webkit-backdrop-filter: blur(24px) saturate(1.2); background: var(--nav-bg);
+    border-bottom: 1px solid var(--border); transition: all var(--t);
+  }
+  .nav__logo {
+    font-family: var(--font-d); font-weight: 800; font-size: 0.85rem;
+    letter-spacing: -.02em; padding: 8px 18px; border-radius: var(--r-pill);
+    border: 1px solid var(--border); transition: all var(--t);
+  }
+  .nav__logo:hover {
+    border-color: var(--border-h); background: var(--bg-card);
+  }
+  .nav__right {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav__theme {
+    width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--border);
+    background: 0; color: var(--text-2); cursor: pointer; display: flex;
+    align-items: center; justify-content: center; font-size: 1.1rem;
+    transition: all var(--t);
+  }
+  .nav__theme:hover {
+    border-color: var(--text-1); color: var(--text-1); transform: rotate(180deg);
+  }
+  .nav__theme-label {
+    font-size: .76rem; color: var(--text-3); font-weight: 500;
+  }
+  
+  /* ═══ HERO ═══ */
+  .hero {
+    background: var(--bg); color: var(--text-1);
+    padding: 120px 24px 48px; text-align: center; position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 80%, var(--accent-dim), transparent 60%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; }
+  .hero-chip {
+    display: inline-block; background: var(--accent-dim);
+    border: 1px solid var(--border); color: var(--text-1);
+    font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
+    text-transform: uppercase; padding: 6px 18px; border-radius: var(--r-pill);
+    margin-bottom: 18px; font-family: var(--font-d);
+  }
+  .hero h1 {
+    font-family: var(--font-d); font-size: clamp(28px, 5vw, 42px);
+    font-weight: 800; line-height: 1.12; margin-bottom: 12px;
+    letter-spacing: -.03em;
+  }
+  .hero h1 em {
+    font-style: normal; color: var(--accent);
+  }
+  .hero p {
+    font-size: 15px; color: var(--text-2); max-width: 500px;
+    margin: 0 auto; line-height: 1.7;
+  }
+  
+  /* ═══ WRAPPER ═══ */
+  .wrap { max-width: 660px; margin: 0 auto 80px; padding: 0 16px; position: relative; z-index: 2; }
+  .card {
+    background: var(--bg-card); border-radius: var(--r-lg);
+    box-shadow: var(--shadow); border: 1px solid var(--border);
+    overflow: hidden; transition: background .5s var(--ease), border-color .5s var(--ease);
+  }
+  
+  /* ═══ SECTIONS ═══ */
+  .sec { padding: 36px 36px 30px; border-bottom: 1px solid var(--border); }
+  .sec:last-child { border-bottom: none; }
+  .sec-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+  .sec-icon {
+    width: 32px; height: 32px; border-radius: 8px; display: flex;
+    align-items: center; justify-content: center;
+    background: var(--accent-dim); font-size: 16px; flex-shrink: 0;
+    border: 1px solid var(--border); color: var(--accent);
+  }
+  .sec-title { font-family: var(--font-d); font-size: 1.15rem; font-weight: 700; color: var(--text-1); }
+  .sec-desc { font-size: 13px; color: var(--text-2); margin-bottom: 24px; padding-left: 44px; }
+  
+  /* ═══ FIELDS ═══ */
+  .fg { margin-bottom: 22px; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media(max-width:520px){ .row2 { grid-template-columns: 1fr; } }
+  
+  label { display: block; font-size: 13.5px; font-weight: 600; margin-bottom: 8px; color: var(--text-1); }
+  label .r { color: var(--red); margin-left: 2px; }
+  .hint { font-size: 12px; color: var(--text-2); margin-top: 4px; font-style: italic; line-height: 1.5; }
+  
+  input[type=text], input[type=email], input[type=tel], input[type=url], input[type=number], select, textarea {
+    width: 100%; padding: 12px 16px; border: 1px solid var(--border);
+    border-radius: var(--r-md); background: var(--bg);
+    font-family: var(--font-b); font-size: 14px; color: var(--text-1);
+    transition: all var(--t); outline: none;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--accent); background: var(--bg-elevated);
+    box-shadow: 0 0 0 2px var(--accent-dim);
+  }
+  textarea { resize: vertical; min-height: 110px; }
+  select {
+    cursor: pointer; appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239a9990' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px;
+  }
+  [data-theme="light"] select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2365635a' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  }
+  
+  /* Radios & Checkboxes */
+  .opts { display: flex; flex-direction: column; gap: 8px; }
+  .opt {
+    display: flex; align-items: center; gap: 12px; padding: 12px 16px;
+    border: 1px solid var(--border); border-radius: var(--r-md); cursor: pointer;
+    background: var(--bg); transition: all var(--t);
+  }
+  .opt:hover { border-color: var(--border-h); background: var(--bg-elevated); }
+  .opt input[type=radio], .opt input[type=checkbox] {
+    accent-color: var(--accent); width: 18px; height: 18px; cursor: pointer; flex-shrink: 0;
+  }
+  .opt span { font-size: 14px; color: var(--text-1); font-weight: 500; }
+  
+  /* CV Upload */
+  .fup {
+    border: 2px dashed var(--border); border-radius: var(--r-md); padding: 26px;
+    text-align: center; cursor: pointer; background: var(--bg); position: relative;
+    transition: all var(--t);
+  }
+  .fup:hover { border-color: var(--accent); background: var(--bg-elevated); }
+  .fup input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+  .fup .ic { font-size: 28px; margin-bottom: 6px; }
+  .fup .tx { font-size: 12.5px; color: var(--text-2); }
+  .fup .tx strong { color: var(--accent); }
+  .fname { font-size: 12px; color: var(--green); margin-top: 6px; font-weight: 600; }
+  
+  /* MCQ screening box */
+  .task-card {
+    background: var(--accent-dim); border: 1px solid var(--border);
+    border-radius: var(--r-md); padding: 20px; margin-bottom: 20px;
+  }
+  .task-card .task-badge {
+    display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--accent); background: rgba(var(--accent-rgb), 0.15);
+    padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; font-family: var(--font-d);
+  }
+  .task-card label { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+  .task-card .hint { color: var(--text-2); font-weight: 400; }
+  
+  /* Submit section */
+  .sub-sec { padding: 30px 36px 40px; text-align: center; border-top: 1px solid var(--border); }
+  .sub-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--text-1); color: var(--bg);
+    font-family: var(--font-d); font-size: 15px; font-weight: 700;
+    padding: 14px 56px; border: none; border-radius: var(--r-pill); cursor: pointer;
+    transition: all var(--t); letter-spacing: .3px;
+  }
+  .sub-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 26px rgba(var(--accent-rgb), .18);
+  }
+  .sub-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+  .sub-note { font-size: 12px; color: var(--text-3); margin-top: 14px; }
+  
+  /* Statuses */
+  .form-status { margin-top: 16px; font-size: .9rem; text-align: center; display: none; padding: 12px; border-radius: var(--r-md); }
+  .form-status.success { display: block; background: rgba(0,255,0,0.1); color: #00ff00; border: 1px solid rgba(0,255,0,0.2); }
+  .form-status.error { display: block; background: rgba(255,0,0,0.1); color: #ff5555; border: 1px solid rgba(255,0,0,0.2); }
+  [data-theme="light"] .form-status.success { background: #e6ffe6; color: #008000; border-color: #b3ffb3; }
+  [data-theme="light"] .form-status.error { background: #ffe6e6; color: #cc0000; border-color: #ffb3b3; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 24px; font-size: 12px; color: var(--text-3); }
+  .footer a { color: var(--text-2); text-decoration: none; transition: color var(--t); }
+  .footer a:hover { color: var(--text-1); }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFGBN74S"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ══════ NAV ══════ -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">← Back to MHI</a>
+    <div class="nav__right">
+      <button class="nav__theme" id="themeToggle" title="Toggle theme">◐</button>
+      <span class="nav__theme-label" id="themeLabel">Light</span>
+    </div>
+  </nav>
+
+  <!-- ══════ HERO ══════ -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-chip">We're Hiring</div>
+      <h1>Creative <em>Video Editor</em></h1>
+      <p>Scale our D2C brand content by editing high-converting video ads and engaging long-form YouTube videos (podcasts). Join Potato Holdings.</p>
+    </div>
+  </div>
+
+  <!-- ══════ FORM WRAPPER ══════ -->
+  <div class="wrap">
+    <div class="card">
+      <form id="appForm">
+        
+        <!-- 1. PERSONAL INFORMATION -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">👤</span>
+            <span class="sec-title">Personal Information</span>
+          </div>
+          <p class="sec-desc">Basic details so we can reach out to you.</p>
+          
+          <div class="row2">
+            <div class="fg">
+              <label for="fullName">Full Name <span class="r">*</span></label>
+              <input type="text" id="fullName" placeholder="e.g. Bilal Khan" required>
+            </div>
+            <div class="fg">
+              <label for="email">Email Address <span class="r">*</span></label>
+              <input type="email" id="email" placeholder="e.g. bilal@email.com" required>
+            </div>
+          </div>
+          
+          <div class="row2">
+            <div class="fg">
+              <label for="phone">Phone / WhatsApp Number <span class="r">*</span></label>
+              <input type="tel" id="phone" placeholder="e.g. 0300-1234567" required>
+            </div>
+            <div class="fg">
+              <label for="age">Age <span class="r">*</span></label>
+              <input type="number" id="age" placeholder="e.g. 24" min="16" max="60" required>
+            </div>
+          </div>
+          
+          <div class="fg">
+            <label>City of Residence <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="city" value="Lahore" required><span>Lahore</span></label>
+              <label class="opt"><input type="radio" name="city" value="Islamabad"><span>Islamabad / Rawalpindi</span></label>
+              <label class="opt"><input type="radio" name="city" value="Karachi"><span>Karachi</span></label>
+              <label class="opt"><input type="radio" name="city" value="Bahawalpur"><span>Bahawalpur</span></label>
+              <label class="opt"><input type="radio" name="city" value="Other"><span>Other</span></label>
+            </div>
+          </div>
+          
+          <div class="fg" id="otherCityContainer" style="display:none">
+            <label for="otherCityInput">Please mention your city <span class="r">*</span></label>
+            <input type="text" id="otherCityInput" placeholder="e.g. Peshawar">
+          </div>
+          
+          <div class="fg">
+            <label>Are you willing to work on-site in Lahore? <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="onsite" value="yes" required><span>Yes, fully on-site in Lahore</span></label>
+              <label class="opt"><input type="radio" name="onsite" value="hybrid"><span>Willing to relocate / Open to hybrid</span></label>
+              <label class="opt"><input type="radio" name="onsite" value="remote"><span>No, looking for fully remote only</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. EDUCATION & EXPERIENCE -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">🎓</span>
+            <span class="sec-title">Education & Experience</span>
+          </div>
+          <p class="sec-desc">Tell us about your qualification and editing background.</p>
+          
+          <div class="fg">
+            <label for="education">Highest Educational Qualification <span class="r">*</span></label>
+            <input type="text" id="education" placeholder="e.g. Bachelors in Media Sciences / Communication" required>
+          </div>
+          
+          <div class="row2">
+            <div class="fg">
+              <label for="company">Most Recent Company Worked At</label>
+              <input type="text" id="company" placeholder="e.g. Creative Flow Agency (if any)">
+            </div>
+            <div class="fg">
+              <label for="role">Your Title / Role There</label>
+              <input type="text" id="role" placeholder="e.g. Lead Video Editor (if any)">
+            </div>
+          </div>
+          
+          <div class="fg">
+            <label for="linkedin">LinkedIn Profile URL <span class="hint">(Optional)</span></label>
+            <input type="url" id="linkedin" placeholder="e.g. https://linkedin.com/in/yourprofile">
+          </div>
+          
+          <div class="fg">
+            <label for="experience">How many years of professional experience do you have? <span class="r">*</span></label>
+            <select id="experience" required>
+              <option value="" disabled selected>Select experience level</option>
+              <option>No professional experience yet</option>
+              <option>Less than 1 year</option>
+              <option>1 – 2 years</option>
+              <option>2 – 4 years</option>
+              <option>More than 4 years</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 3. SKILLS & SOFTWARE -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">🎬</span>
+            <span class="sec-title">Skills & Software Tools</span>
+          </div>
+          <p class="sec-desc">Rate your capabilities and select formats you have worked on.</p>
+          
+          <div class="fg">
+            <label>Rate your proficiency in <strong>Adobe Premiere Pro</strong> <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="premiere" value="Expert" required><span>Expert (Advance effects, sound design, workflows)</span></label>
+              <label class="opt"><input type="radio" name="premiere" value="Intermediate"><span>Intermediate (Edit comfortably, basic transitions)</span></label>
+              <label class="opt"><input type="radio" name="premiere" value="Basic"><span>Basic / Learning</span></label>
+              <label class="opt"><input type="radio" name="premiere" value="None"><span>No experience</span></label>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>Rate your proficiency in <strong>Adobe After Effects</strong> <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="after_effects" value="Expert" required><span>Expert (Custom animations, advanced motion graphics, tracking)</span></label>
+              <label class="opt"><input type="radio" name="after_effects" value="Intermediate"><span>Intermediate (Simple templates, basic keyframing)</span></label>
+              <label class="opt"><input type="radio" name="after_effects" value="Basic"><span>Basic / Learning</span></label>
+              <label class="opt"><input type="radio" name="after_effects" value="None"><span>No experience</span></label>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>Rate your proficiency in <strong>CapCut (Desktop/Mobile)</strong> <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="capcut" value="Expert" required><span>Expert (Highly familiar with quick editing & viral styling)</span></label>
+              <label class="opt"><input type="radio" name="capcut" value="Intermediate"><span>Intermediate (Use standard tools & transitions)</span></label>
+              <label class="opt"><input type="radio" name="capcut" value="Basic"><span>Basic / Learning</span></label>
+              <label class="opt"><input type="radio" name="capcut" value="None"><span>No experience</span></label>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>Rate your proficiency in <strong>Final Cut Pro</strong> <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="final_cut" value="Expert" required><span>Expert (Smooth workflows, native macOS editor)</span></label>
+              <label class="opt"><input type="radio" name="final_cut" value="Intermediate"><span>Intermediate (Can edit comfortably)</span></label>
+              <label class="opt"><input type="radio" name="final_cut" value="Basic"><span>Basic / Learning</span></label>
+              <label class="opt"><input type="radio" name="final_cut" value="None"><span>No experience</span></label>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>Rate your proficiency in <strong>DaVinci Resolve</strong> <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="davinci" value="Expert" required><span>Expert (Advanced grading, node editing, editing)</span></label>
+              <label class="opt"><input type="radio" name="davinci" value="Intermediate"><span>Intermediate (Basic color correction, standard cuts)</span></label>
+              <label class="opt"><input type="radio" name="davinci" value="Basic"><span>Basic / Learning</span></label>
+              <label class="opt"><input type="radio" name="davinci" value="None"><span>No experience</span></label>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>What types of video content have you edited? (Select all that apply) <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="checkbox" name="formats" value="Ecom Ads"><span>E-commerce Ad Creatives (TikTok/FB ads)</span></label>
+              <label class="opt"><input type="checkbox" name="formats" value="YouTube Longform"><span>Long-form YouTube Videos (Informational / Vlogs)</span></label>
+              <label class="opt"><input type="checkbox" name="formats" value="Podcasts"><span>YouTube Podcasts (Multi-cam edits, audio cleaning)</span></label>
+              <label class="opt"><input type="checkbox" name="formats" value="Shorts / Reels"><span>Short-form content (TikTok, Reels, YouTube Shorts)</span></label>
+              <label class="opt"><input type="checkbox" name="formats" value="Documentaries"><span>Cinematic Documentaries</span></label>
+              <label class="opt"><input type="checkbox" name="formats" value="Other"><span>Other</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. E-COMMERCE ADS KNOWLEDGE -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">💡</span>
+            <span class="sec-title">E-commerce Ads Knowledge Check</span>
+          </div>
+          <p class="sec-desc">Short multiple-choice questions to test your understanding of ad structures.</p>
+          
+          <div class="task-card">
+            <div class="task-badge">Question 1</div>
+            <label>What is the primary purpose of a "Hook" in an e-commerce video ad? <span class="r">*</span></label>
+            <p class="hint" style="margin-bottom:12px;">Choose the most accurate description.</p>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="mcq_hook" value="A" required><span>To immediately display the discount code and product price.</span></label>
+              <label class="opt"><input type="radio" name="mcq_hook" value="B"><span>To grab the viewer's attention in the first 3 seconds to prevent them from scrolling away.</span></label>
+              <label class="opt"><input type="radio" name="mcq_hook" value="C"><span>To show the company registration details and office locations.</span></label>
+              <label class="opt"><input type="radio" name="mcq_hook" value="D"><span>To display cinematic slow-motion B-roll with no text or voiceover.</span></label>
+            </div>
+          </div>
+
+          <div class="task-card">
+            <div class="task-badge">Question 2</div>
+            <label>Which of the following structures represents a high-converting e-commerce video ad? <span class="r">*</span></label>
+            <p class="hint" style="margin-bottom:12px;">Choose the best strategic sequence.</p>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="mcq_structure" value="A" required><span>Intro Logo -> Cinematic Music B-roll -> Detailed Specifications -> Thank You slide</span></label>
+              <label class="opt"><input type="radio" name="mcq_structure" value="B"><span>Hook -> Problem Identification -> Product Solution -> Social Proof / Reviews -> Call to Action (CTA)</span></label>
+              <label class="opt"><input type="radio" name="mcq_structure" value="C"><span>Disclaimer -> Customer Support Contact -> Unboxing -> Music Outro</span></label>
+              <label class="opt"><input type="radio" name="mcq_structure" value="D"><span>Random funny clip -> Sound effects -> Slide show of images -> Price details</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. PORTFOLIO & WORK SAMPLES -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">📂</span>
+            <span class="sec-title">Portfolio & Work Samples</span>
+          </div>
+          <p class="sec-desc">Show us your work. Real evidence of your skills beats everything else.</p>
+          
+          <div class="fg">
+            <label for="portfolio">Portfolio Link <span class="r">*</span></label>
+            <input type="url" id="portfolio" placeholder="e.g. Google Drive folder, Behance, YouTube playlist, Frame.io link" required>
+            <p class="hint">Make sure the link is set to public so our team can view your files without needing access permission.</p>
+          </div>
+
+          <div class="fg">
+            <label for="workLink">Link to your BEST edited video (Ad Creative or Podcast/YouTube) <span class="r">*</span></label>
+            <input type="url" id="workLink" placeholder="e.g. Paste direct link to a Google Drive video, YouTube, or Vimeo link" required>
+            <p class="hint">Choose a video that highlights your editing capabilities, pacing, sound design, and structure.</p>
+          </div>
+
+          <div class="fg">
+            <label>Upload CV / Resume <span class="r">*</span></label>
+            <div class="fup" id="cvUploadArea">
+              <div class="ic">📄</div>
+              <div class="tx">Click to upload &nbsp;<strong>PDF, DOC, DOCX or PNG — Max 10MB</strong></div>
+              <input type="file" accept=".pdf,.doc,.docx,.png" id="cvFileInput">
+              <div class="fname" id="cvFileNameDisplay"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. SALARY & AVAILABILITY -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">💰</span>
+            <span class="sec-title">Salary & Availability</span>
+          </div>
+          <p class="sec-desc">Tell us about your expectations and when you'd be ready to join.</p>
+          
+          <div class="row2">
+            <div class="fg">
+              <label for="currentSalary">Current Salary (PKR per month) <span class="r">*</span></label>
+              <input type="text" id="currentSalary" placeholder="e.g. 60,000 (write N/A if fresher)" required>
+            </div>
+            <div class="fg">
+              <label for="expectedSalary">Expected Salary (PKR per month) <span class="r">*</span></label>
+              <input type="text" id="expectedSalary" placeholder="e.g. 80,000" required>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label for="start">When can you join us? <span class="r">*</span></label>
+            <select id="start" required>
+              <option value="" disabled selected>Select availability</option>
+              <option>Immediately</option>
+              <option>Within 1 week</option>
+              <option>Within 2 weeks</option>
+              <option>Within 1 month</option>
+              <option>Need more than 1 month</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 7. WHY YOU -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">💬</span>
+            <span class="sec-title">Final Question</span>
+          </div>
+          <p class="sec-desc">Write an honest, human answer. No AI-generated templates please.</p>
+          
+          <div class="fg">
+            <label for="whyJoin">Why do you want to join Potato Holdings as a Video Editor? <span class="r">*</span></label>
+            <textarea id="whyJoin" placeholder="Tell us honestly what drives you. If you love e-commerce, say so. If you want a structured corporate environment to test your limits, write that. Low-effort copy-pasted responses will be discarded." required></textarea>
+          </div>
+
+          <div class="fg">
+            <label for="hearSource">How did you hear about this position? <span class="r">*</span></label>
+            <select id="hearSource" required>
+              <option value="" disabled selected>Select source</option>
+              <option>Instagram</option>
+              <option>LinkedIn</option>
+              <option>Facebook</option>
+              <option>TikTok</option>
+              <option>YouTube</option>
+              <option>A friend told me</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- SUBMIT SECTION -->
+        <div class="sub-sec">
+          <button type="submit" class="sub-btn" id="submitBtn">Submit Application →</button>
+          <p class="sub-note">Your details are safe with us. We only use them for hiring purposes.</p>
+          <div id="formStatus" class="form-status"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer class="footer">
+    <div>© 2026 <a href="index.html">M. Hamza Irshad</a> — Building Brands with Intent</div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Theme Toggle synchronized with localStorage (exactly like homepage)
+    const toggleBtn = document.getElementById('themeToggle');
+    const toggleLabel = document.getElementById('themeLabel');
+    let theme = localStorage.getItem('mhi-theme') || 'dark';
+
+    document.documentElement.setAttribute('data-theme', theme);
+    updateThemeUI(theme);
+
+    toggleBtn.addEventListener('click', () => {
+      theme = theme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('mhi-theme', theme);
+      updateThemeUI(theme);
+    });
+
+    function updateThemeUI(t) {
+      toggleBtn.textContent = t === 'light' ? '◑' : '◐';
+      if (toggleLabel) toggleLabel.textContent = t === 'light' ? 'Dark' : 'Light';
+    }
+
+    // 2. City Toggle Logic ("Other" show field)
+    const cityRadios = document.querySelectorAll('input[name="city"]');
+    const otherCityContainer = document.getElementById('otherCityContainer');
+    const otherCityInput = document.getElementById('otherCityInput');
+
+    cityRadios.forEach(r => {
+      r.addEventListener('change', () => {
+        if (r.value === 'Other') {
+          otherCityContainer.style.display = 'block';
+          otherCityInput.required = true;
+        } else {
+          otherCityContainer.style.display = 'none';
+          otherCityInput.required = false;
+          otherCityInput.value = '';
+        }
+      });
+    });
+
+    // 3. File Upload CV Handler (Max 10MB, convert to base64)
+    let cvFileData = null;
+    const fileInput = document.getElementById('cvFileInput');
+    const fileNameDisplay = document.getElementById('cvFileNameDisplay');
+
+    fileInput.addEventListener('change', function() {
+      const file = this.files[0];
+      if (!file) {
+        cvFileData = null;
+        fileNameDisplay.textContent = '';
+        return;
+      }
+      if (file.size > 10485760) {
+        alert('File size exceeds the 10MB limit.');
+        this.value = '';
+        cvFileData = null;
+        fileNameDisplay.textContent = '';
+        return;
+      }
+      fileNameDisplay.textContent = '📎 ' + file.name;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        cvFileData = {
+          name: file.name,
+          type: file.type || 'application/octet-stream',
+          data: e.target.result.split(',')[1]
+        };
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // 4. Form Submission and Google Sheet POST
+    const appForm = document.getElementById('appForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('formStatus');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzvYTU6a4boGv1kHHezaHJtoq8lIWgQssBAJ4MEIKtF4Afwo5TqJCxDR8cq_Z0TQU9y/exec';
+
+    appForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (!cvFileData) {
+        alert('Please select and upload your CV / Resume before submitting.');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+      formStatus.className = 'form-status';
+      formStatus.textContent = '';
+      formStatus.style.display = 'none';
+
+      // Helper function to extract radio text
+      const getRadioVal = (name) => {
+        const checkedInput = appForm.querySelector(`input[name="${name}"]:checked`);
+        if (!checkedInput) return '';
+        return checkedInput.closest('label')?.querySelector('span')?.textContent?.trim() || checkedInput.value;
+      };
+
+      // Helper function to extract multiple checked options
+      const getCheckedVals = (name) => {
+        return Array.from(appForm.querySelectorAll(`input[name="${name}"]:checked`))
+          .map(checkbox => checkbox.closest('label')?.querySelector('span')?.textContent?.trim() || checkbox.value)
+          .join(', ');
+      };
+
+      // Construct application payload
+      const data = {
+        "Form Type": "Video Editor Application",
+        "Timestamp": new Date().toLocaleString('en-PK', {timeZone: 'Asia/Karachi'}),
+        "Full Name": document.getElementById('fullName').value.trim(),
+        "Email": document.getElementById('email').value.trim(),
+        "Phone": document.getElementById('phone').value.trim(),
+        "Age": document.getElementById('age').value,
+        "City": getRadioVal('city'),
+        "Other City": document.getElementById('otherCityInput').value.trim(),
+        "Onsite Willingness": getRadioVal('onsite'),
+        "Education": document.getElementById('education').value.trim(),
+        "Recent Company": document.getElementById('company').value.trim(),
+        "Title/Role": document.getElementById('role').value.trim(),
+        "LinkedIn": document.getElementById('linkedin').value.trim(),
+        "Years of Experience": document.getElementById('experience').value,
+        "Premiere Pro": getRadioVal('premiere'),
+        "After Effects": getRadioVal('after_effects'),
+        "CapCut": getRadioVal('capcut'),
+        "Final Cut Pro": getRadioVal('final_cut'),
+        "DaVinci Resolve": getRadioVal('davinci'),
+        "Video Formats Edited": getCheckedVals('formats'),
+        "Screening Hook Purpose": getRadioVal('mcq_hook'),
+        "Screening Ad Structure": getRadioVal('mcq_structure'),
+        "Portfolio Link": document.getElementById('portfolio').value.trim(),
+        "Specific Work Link": document.getElementById('workLink').value.trim(),
+        "Current Salary": document.getElementById('currentSalary').value.trim(),
+        "Expected Salary": document.getElementById('expectedSalary').value.trim(),
+        "When Can Start": document.getElementById('start').value,
+        "Why Join": document.getElementById('whyJoin').value.trim(),
+        "How Did You Hear": document.getElementById('hearSource').value
+      };
+
+      if (cvFileData) {
+        data["CV File Name"] = cvFileData.name;
+        data["CV File Type"] = cvFileData.type;
+        data["CV File Data"] = cvFileData.data;
+      }
+
+      try {
+        await fetch(scriptURL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        // Display Success and Redirect to thank you page
+        submitBtn.textContent = 'Success!';
+        formStatus.className = 'form-status success';
+        formStatus.textContent = 'Application submitted successfully! Redirecting...';
+        formStatus.style.display = 'block';
+        appForm.reset();
+        cvFileData = null;
+        fileNameDisplay.textContent = '';
+
+        setTimeout(() => {
+          window.location.href = 'thankyou.html';
+        }, 1500);
+
+      } catch (error) {
+        console.error('Submission Error:', error);
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Application →';
+        formStatus.className = 'form-status error';
+        formStatus.textContent = 'Something went wrong. Please try again.';
+        formStatus.style.display = 'block';
+      }
+    });
+  });
+  </script>
+</body>
+</html>
