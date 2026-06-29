@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MFGBN74S');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7V8JGHDJV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W7V8JGHDJV');
+  </script>
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="FYCthtRBHV0R0aHyKS7QHwepIzAHEu05BJf7ektWJc0" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potato Holdings — Founder’s Office Associate Application</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+  :root {
+    --bg: #0b0b0b;
+    --bg-card: #141414;
+    --bg-elevated: #1a1a1a;
+    --text-1: #edece8;
+    --text-2: #9a9990;
+    --text-3: #5a5a52;
+    --accent: #c8ff00;
+    --accent-rgb: 200,255,0;
+    --accent-dim: rgba(200,255,0,.08);
+    --border: rgba(255,255,255,.07);
+    --border-h: rgba(255,255,255,.14);
+    --nav-bg: rgba(11,11,11,.82);
+    --shadow: 0 2px 24px rgba(0,0,0,.3);
+    --r-lg: 20px;
+    --r-md: 14px;
+    --r-pill: 100px;
+    --font-d: 'Syne', sans-serif;
+    --font-b: 'Instrument Sans', sans-serif;
+    --ease: cubic-bezier(.25,.46,.45,.94);
+    --t: .35s var(--ease);
+    --red: #ff4d4d;
+    --green: #c8ff00;
+  }
+
+  [data-theme="light"] {
+    --bg: #f4f1eb;
+    --bg-card: #eae7e0;
+    --bg-elevated: #e0ddd6;
+    --text-1: #18180f;
+    --text-2: #65635a;
+    --text-3: #9c9a91;
+    --accent: #18180f;
+    --accent-rgb: 24,24,15;
+    --accent-dim: rgba(24,24,15,.07);
+    --border: rgba(0,0,0,.07);
+    --border-h: rgba(0,0,0,.14);
+    --nav-bg: rgba(244,241,235,.82);
+    --shadow: 0 2px 24px rgba(0,0,0,.06);
+    --red: #d94040;
+    --green: #2d8f4e;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: var(--font-b);
+    background: var(--bg);
+    color: var(--text-1);
+    min-height: 100vh;
+    line-height: 1.6;
+    transition: background .5s var(--ease), color .5s var(--ease);
+  }
+  
+  /* ═══ NAV ═══ */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 0 40px; height: 64px; display: flex; align-items: center;
+    justify-content: space-between; backdrop-filter: blur(24px) saturate(1.2);
+    -webkit-backdrop-filter: blur(24px) saturate(1.2); background: var(--nav-bg);
+    border-bottom: 1px solid var(--border); transition: all var(--t);
+  }
+  .nav__chip { display: flex; align-items: center; gap: 10px; padding: 6px 14px 6px 8px; border-radius: var(--r-pill); border: 1px solid var(--border); transition: all var(--t); }
+  .nav__chip:hover { border-color: var(--border-h); background: var(--bg-elevated); }
+  .nav__avatar { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg,rgb(var(--accent-rgb)),#888); display: flex; align-items: center; justify-content: center; font-family: var(--font-d); font-weight: 700; font-size: .7rem; color: var(--bg); }
+  .nav__chip-name { font-size: .82rem; font-weight: 500; color: var(--text-2); }
+  .nav__chip-label { font-size: .7rem; padding: 2px 9px; background: var(--accent-dim); border-radius: var(--r-pill); color: var(--text-2); font-weight: 600; }
+  .nav__logo { font-family: var(--font-d); font-weight: 800; font-size: 1.05rem; letter-spacing: -.02em; position: relative; }
+  .nav__logo::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width var(--t); }
+  .nav__logo:hover::after { width: 100%; }
+  .nav__links { display: flex; gap: 4px; }
+  .nav__link { font-size: .85rem; font-weight: 500; color: var(--text-2); padding: 8px 16px; border-radius: var(--r-pill); transition: all var(--t); }
+  .nav__link:hover { color: var(--text-1); background: var(--accent-dim); }
+  .nav__right { display: flex; align-items: center; gap: 10px; }
+  .nav__theme {
+    width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--border);
+    background: 0; color: var(--text-2); cursor: pointer; display: flex;
+    align-items: center; justify-content: center; font-size: 1.1rem;
+    transition: all var(--t);
+  }
+  .nav__theme:hover { border-color: var(--text-1); color: var(--text-1); transform: rotate(180deg); }
+  .nav__theme-label { font-size: .76rem; color: var(--text-3); font-weight: 500; }
+  
+  .nav__burger { display: none; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 8px; background: 0; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+  .nav__burger span { display: block; width: 18px; height: 2px; background: var(--text-1); border-radius: 2px; transition: all var(--t); }
+  .nav__burger.active span:nth-child(1) { transform: rotate(45deg) translate(3px,4px); }
+  .nav__burger.active span:nth-child(2) { opacity: 0; }
+  .nav__burger.active span:nth-child(3) { transform: rotate(-45deg) translate(3px,-4px); }
+  
+  .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: var(--bg); padding: 40px; flex-direction: column; gap: 8px; z-index: 999; }
+  .mobile-menu.active { display: flex; }
+  .mobile-menu a { font-family: var(--font-d); font-size: 1.8rem; font-weight: 700; padding: 12px 0; border-bottom: 1px solid var(--border); transition: color var(--t); }
+  .mobile-menu a:hover { color: var(--accent); }
+  
+  @media(max-width:768px) {
+    .nav__links, .nav__chip { display: none; }
+    .nav__burger { display: flex; }
+  }
+
+  /* ═══ HERO ═══ */
+  .hero {
+    background: var(--bg); color: var(--text-1);
+    padding: 120px 24px 48px; text-align: center; position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 80%, var(--accent-dim), transparent 60%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; }
+  .hero-chip {
+    display: inline-block; background: var(--accent-dim);
+    border: 1px solid var(--border); color: var(--text-1);
+    font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
+    text-transform: uppercase; padding: 6px 18px; border-radius: var(--r-pill);
+    margin-bottom: 18px; font-family: var(--font-d);
+  }
+  .hero h1 {
+    font-family: var(--font-d); font-size: clamp(28px, 5vw, 42px);
+    font-weight: 800; line-height: 1.12; margin-bottom: 12px;
+    letter-spacing: -.03em;
+  }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero p { font-size: 15px; color: var(--text-2); max-width: 500px; margin: 0 auto; line-height: 1.7; }
+  
+  /* ═══ WRAPPER ═══ */
+  .wrap { max-width: 660px; margin: 0 auto 80px; padding: 0 16px; position: relative; z-index: 2; }
+  .card {
+    background: var(--bg-card); border-radius: var(--r-lg);
+    box-shadow: var(--shadow); border: 1px solid var(--border);
+    overflow: hidden; transition: background .5s var(--ease), border-color .5s var(--ease);
+  }
+  
+  /* ═══ SECTIONS ═══ */
+  .sec { padding: 36px 36px 30px; border-bottom: 1px solid var(--border); }
+  .sec:last-child { border-bottom: none; }
+  .sec-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+  .sec-icon {
+    width: 32px; height: 32px; border-radius: 8px; display: flex;
+    align-items: center; justify-content: center;
+    background: var(--accent-dim); font-size: 16px; flex-shrink: 0;
+    border: 1px solid var(--border); color: var(--accent);
+  }
+  .sec-title { font-family: var(--font-d); font-size: 1.15rem; font-weight: 700; color: var(--text-1); }
+  .sec-desc { font-size: 13px; color: var(--text-2); margin-bottom: 24px; padding-left: 44px; }
+  
+  /* ═══ FIELDS ═══ */
+  .fg { margin-bottom: 22px; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media(max-width:520px){ .row2 { grid-template-columns: 1fr; } }
+  
+  label { display: block; font-size: 13.5px; font-weight: 600; margin-bottom: 8px; color: var(--text-1); }
+  label .r { color: var(--red); margin-left: 2px; }
+  .hint { font-size: 12px; color: var(--text-2); margin-top: 4px; font-style: italic; line-height: 1.5; }
+  .hint strong { color: var(--text-1); }
+  
+  input[type=text], input[type=email], input[type=tel], input[type=url], input[type=number], input[type=date], select, textarea {
+    width: 100%; padding: 12px 16px; border: 1px solid var(--border);
+    border-radius: var(--r-md); background: var(--bg);
+    font-family: var(--font-b); font-size: 14px; color: var(--text-1);
+    transition: all var(--t); outline: none;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--accent); background: var(--bg-elevated);
+    box-shadow: 0 0 0 2px var(--accent-dim);
+  }
+  textarea { resize: vertical; min-height: 110px; }
+  select {
+    cursor: pointer; appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239a9990' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px;
+  }
+  [data-theme="light"] select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2365635a' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  }
+  
+  /* Radios & Checkboxes */
+  .opts { display: flex; flex-direction: column; gap: 8px; }
+  .opts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  @media(max-width: 480px) { .opts-grid { grid-template-columns: 1fr; } }
+  .opt {
+    display: flex; align-items: center; gap: 12px; padding: 12px 16px;
+    border: 1px solid var(--border); border-radius: var(--r-md); cursor: pointer;
+    background: var(--bg); transition: all var(--t);
+  }
+  .opt:hover { border-color: var(--border-h); background: var(--bg-elevated); }
+  .opt input[type=radio], .opt input[type=checkbox] {
+    accent-color: var(--accent); width: 18px; height: 18px; cursor: pointer; flex-shrink: 0;
+  }
+  .opt span { font-size: 14px; color: var(--text-1); font-weight: 500; }
+  
+  /* CV Upload */
+  .fup {
+    border: 2px dashed var(--border); border-radius: var(--r-md); padding: 26px;
+    text-align: center; cursor: pointer; background: var(--bg); position: relative;
+    transition: all var(--t);
+  }
+  .fup:hover { border-color: var(--accent); background: var(--bg-elevated); }
+  .fup input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+  .fup .ic { font-size: 28px; margin-bottom: 6px; }
+  .fup .tx { font-size: 12.5px; color: var(--text-2); }
+  .fup .tx strong { color: var(--accent); }
+  .fname { font-size: 12px; color: var(--green); margin-top: 6px; font-weight: 600; }
+
+  /* Range Sliders Grid */
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  @media(max-width:600px){ .skills-grid { grid-template-columns: 1fr; } }
+  .slider-fg { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-md); padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; }
+  .slider-info { display: flex; justify-content: space-between; align-items: center; }
+  .slider-label { font-size: 13px; font-weight: 600; color: var(--text-1); }
+  .slider-value { font-family: var(--font-d); font-size: 13px; font-weight: 700; color: var(--accent); background: var(--accent-dim); padding: 2px 8px; border-radius: var(--r-pill); }
+  .custom-slider { -webkit-appearance: none; width: 100%; height: 5px; border-radius: var(--r-pill); background: var(--border-h); outline: none; transition: background .3s; }
+  .custom-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); cursor: pointer; transition: transform .15s; }
+  .custom-slider::-webkit-slider-thumb:hover { transform: scale(1.25); }
+  .custom-slider::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); cursor: pointer; border: none; transition: transform .15s; }
+  .custom-slider::-moz-range-thumb:hover { transform: scale(1.25); }
+  
+  /* Statuses */
+  .form-status { margin-top: 16px; font-size: .9rem; text-align: center; display: none; padding: 12px; border-radius: var(--r-md); }
+  .form-status.success { display: block; background: rgba(0,255,0,0.1); color: #00ff00; border: 1px solid rgba(0,255,0,0.2); }
+  .form-status.error { display: block; background: rgba(255,0,0,0.1); color: #ff5555; border: 1px solid rgba(255,0,0,0.2); }
+  [data-theme="light"] .form-status.success { background: #e6ffe6; color: #008000; border-color: #b3ffb3; }
+  [data-theme="light"] .form-status.error { background: #ffe6e6; color: #cc0000; border-color: #ffb3b3; }
+
+  /* Submit section */
+  .sub-sec { padding: 30px 36px 40px; text-align: center; border-top: 1px solid var(--border); }
+  .sub-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--text-1); color: var(--bg);
+    font-family: var(--font-d); font-size: 15px; font-weight: 700;
+    padding: 14px 56px; border: none; border-radius: var(--r-pill); cursor: pointer;
+    transition: all var(--t); letter-spacing: .3px;
+  }
+  .sub-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 26px rgba(var(--accent-rgb), .18);
+  }
+  .sub-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+  .sub-note { font-size: 12px; color: var(--text-3); margin-top: 14px; }
+
+  /* Footer */
+  .footer { padding: 28px 40px; border-top: 1px solid var(--border); text-align: center; background: var(--bg-card); transition: all var(--t); }
+  .footer__tagline { font-family: var(--font-d); font-size: .88rem; font-weight: 600; color: var(--text-2); margin-bottom: 6px; letter-spacing: -.01em; }
+  .footer__copy { font-size: .76rem; color: var(--text-3); }
+  .footer a { color: var(--text-2); transition: color var(--t); }
+  .footer a:hover { color: var(--text-1); }
+  </style>
+  
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '568372231477736');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=568372231477736&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFGBN74S"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ══════ NAV ══════ -->
+  <nav class="nav">
+    <div class="nav__chip">
+      <div class="nav__avatar">HI</div>
+      <span class="nav__chip-name">M. Hamza Irshad</span>
+      <span class="nav__chip-label">Builder</span>
+    </div>
+    <a href="index.html#hero" class="nav__logo">MHI</a>
+    <div class="nav__links">
+      <a href="index.html#ecosystem" class="nav__link">Ecosystem</a>
+      <a href="index.html#about" class="nav__link">About</a>
+      <a href="index.html#philosophy" class="nav__link">Philosophy</a>
+      <a href="careers.html" class="nav__link">Careers</a>
+      <a href="consultation.html" class="nav__link" style="color: var(--accent);">Consultation</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+    </div>
+    <div class="nav__right">
+      <button class="nav__theme" id="themeToggle" title="Toggle theme">◐</button>
+      <span class="nav__theme-label" id="themeLabel">Light</span>
+    </div>
+    <button class="nav__burger" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#hero">Home</a>
+    <a href="index.html#ecosystem">Ecosystem</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#philosophy">Philosophy</a>
+    <a href="careers.html">Careers</a>
+    <a href="consultation.html" style="color: var(--accent);">1:1 Consultation</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ══════ HERO ══════ -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-chip">We're Hiring</div>
+      <h1>Founder’s Office <em>Associate</em></h1>
+      <p>Work directly with the founder to execute strategic initiatives, solve critical problems, and drive Potato Holdings forward.</p>
+    </div>
+  </div>
+
+  <!-- ══════ FORM WRAPPER ══════ -->
+  <div class="wrap">
+    <div class="card">
+      <form id="appForm">
+        
+        <!-- SECTION 1 – BASIC INFORMATION -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">👤</span>
+            <span class="sec-title">Section 1 – Basic Information</span>
+          </div>
+          <p class="sec-desc">Core background and contact information.</p>
+          
+          <div class="row2">
+            <div class="fg">
+              <label for="fullName">Full Name <span class="r">*</span></label>
+              <input type="text" id="fullName" placeholder="e.g. Ahmed Ali" required>
+            </div>
+            <div class="fg">
+              <label for="email">Email Address <span class="r">*</span></label>
+              <input type="email" id="email" placeholder="e.g. ahmed@email.com" required>
+            </div>
+          </div>
+          
+          <div class="row2">
+            <div class="fg">
+              <label for="phone">Mobile Number <span class="r">*</span></label>
+              <input type="tel" id="phone" placeholder="e.g. 0300-1234567" required>
+            </div>
+            <div class="fg">
+              <label for="dob">Date of Birth <span class="r">*</span></label>
+              <input type="date" id="dob" required>
+            </div>
+          </div>
+
+          <div class="row2">
+            <div class="fg">
+              <label>City <span class="r">*</span></label>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="city" value="Lahore" required><span>Lahore</span></label>
+                <label class="opt"><input type="radio" name="city" value="Islamabad"><span>Islamabad / Rawalpindi</span></label>
+                <label class="opt"><input type="radio" name="city" value="Karachi"><span>Karachi</span></label>
+                <label class="opt"><input type="radio" name="city" value="Other"><span>Other</span></label>
+              </div>
+            </div>
+            <div class="fg" style="display: flex; flex-direction: column; justify-content: flex-end;">
+              <div id="otherCityContainer" style="display:none; margin-bottom: 22px;">
+                <label for="otherCityInput">Please specify your city <span class="r">*</span></label>
+                <input type="text" id="otherCityInput" placeholder="e.g. Faisalabad">
+              </div>
+            </div>
+          </div>
+
+          <div class="row2">
+            <div class="fg">
+              <label for="linkedin">LinkedIn Profile <span class="r">*</span></label>
+              <input type="url" id="linkedin" placeholder="e.g. https://linkedin.com/in/username" required>
+            </div>
+            <div class="fg">
+              <label for="portfolio">Portfolio / Personal Website <span class="hint">(Optional)</span></label>
+              <input type="url" id="portfolio" placeholder="e.g. https://yourwebsite.com">
+            </div>
+          </div>
+
+          <div class="row2">
+            <div class="fg">
+              <label for="company">Current Employer</label>
+              <input type="text" id="company" placeholder="e.g. TechCorp (or 'None' / Freelance)">
+            </div>
+            <div class="fg">
+              <label for="designation">Current Designation</label>
+              <input type="text" id="designation" placeholder="e.g. Operations Coordinator">
+            </div>
+          </div>
+
+          <div class="row2">
+            <div class="fg">
+              <label for="experience">Total Years of Experience <span class="r">*</span></label>
+              <select id="experience" required>
+                <option value="" disabled selected>Select experience level</option>
+                <option>No experience yet</option>
+                <option>Less than 1 year</option>
+                <option>1 – 2 years</option>
+                <option>2 – 4 years</option>
+                <option>4 – 6 years</option>
+                <option>More than 6 years</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="noticePeriod">Notice Period <span class="r">*</span></label>
+              <select id="noticePeriod" required>
+                <option value="" disabled selected>Select notice period</option>
+                <option>Immediate / No notice</option>
+                <option>15 Days</option>
+                <option>1 Month</option>
+                <option>2 Months</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row2">
+            <div class="fg">
+              <label for="currentSalary">Current Monthly Salary <span class="r">*</span></label>
+              <input type="text" id="currentSalary" placeholder="Enter amount (PKR)" required>
+            </div>
+            <div class="fg">
+              <label for="expectedSalary">Expected Monthly Salary <span class="r">*</span></label>
+              <input type="text" id="expectedSalary" placeholder="Enter amount (PKR)" required>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>Are you willing to work from our Lahore office? <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="relocate" value="yes" required><span>Yes</span></label>
+              <label class="opt"><input type="radio" name="relocate" value="no"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>Resume / CV Upload <span class="r">*</span></label>
+            <div class="fup">
+              <span class="ic">📄</span>
+              <span class="tx">Drag & drop or <strong>click to upload CV</strong> (PDF/Word, Max 10MB)</span>
+              <input type="file" id="cvFileInput" accept=".pdf,.doc,.docx" required>
+            </div>
+            <div class="fname" id="cvFileNameDisplay"></div>
+          </div>
+        </div>
+
+        <!-- SECTION 2 – ABOUT YOU -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">📝</span>
+            <span class="sec-title">Section 2 – About You</span>
+          </div>
+          <p class="sec-desc">Help us understand the person behind the credentials.</p>
+
+          <div class="fg">
+            <label for="aboutSelf">1. In 200 words or less, tell us about yourself. <span class="r">*</span></label>
+            <textarea id="aboutSelf" placeholder="Write here..." required></textarea>
+          </div>
+
+          <div class="fg">
+            <label for="whyFoundersOffice">2. Why do you want to join the Founder’s Office instead of a traditional department? <span class="r">*</span></label>
+            <textarea id="whyFoundersOffice" placeholder="Write here..." required></textarea>
+          </div>
+
+          <div class="fg">
+            <label for="whyPotato">3. Why Potato Holdings? <span class="r">*</span></label>
+            <textarea id="whyPotato" placeholder="Write here..." required></textarea>
+          </div>
+
+          <div class="fg">
+            <label for="workingWithFounder">4. What excites you about working directly with a founder? <span class="r">*</span></label>
+            <textarea id="workingWithFounder" placeholder="Write here..." required></textarea>
+          </div>
+
+          <div class="fg">
+            <label for="careerGoals">5. What are your long-term career goals? <span class="r">*</span></label>
+            <textarea id="careerGoals" placeholder="Write here..." required></textarea>
+          </div>
+        </div>
+
+        <!-- SECTION 3 – SKILLS & TOOLS -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">🛠️</span>
+            <span class="sec-title">Section 3 – Skills & Tools</span>
+          </div>
+          <p class="sec-desc">Rate your proficiency and select the software you are comfortable using.</p>
+
+          <label style="margin-bottom: 12px;">Rate yourself (1–10) <span class="r">*</span></label>
+          <div class="skills-grid">
+            
+            <!-- Excel -->
+            <div class="slider-fg">
+              <div class="slider-info">
+                <span class="slider-label">Microsoft Excel</span>
+                <span class="slider-value" id="val_excel">5</span>
+              </div>
+              <input type="range" name="rate_excel" min="1" max="10" value="5" class="custom-slider" oninput="document.getElementById('val_excel').innerText = this.value">
+            </div>
+
+            <!-- Sheets -->
+            <div class="slider-fg">
+              <div class="slider-info">
+                <span class="slider-label">Google Sheets</span>
+                <span class="slider-value" id="val_sheets">5</span>
+              </div>
+              <input type="range" name="rate_sheets" min="1" max="10" value="5" class="custom-slider" oninput="document.getElementById('val_sheets').innerText = this.value">
+            </div>
+
+            <!-- Docs -->
+            <div class="slider-fg">
+              <div class="slider-info">
+                <span class="slider-label">Google Docs</span>
+                <span class="slider-value" id="val_docs">5</span>
+              </div>
+              <input type="range" name="rate_docs" min="1" max="10" value="5" class="custom-slider" oninput="document.getElementById('val_docs').innerText = this.value">
+            </div>
+
+            <!-- Slides / PPT -->
+            <div class="slider-fg">
+              <div class="slider-info">
+                <span class="slider-label">Google Slides / PPT</span>
+                <span class="slider-value" id="val_slides">5</span>
+              </div>
+              <input type="range" name="rate_slides" min="1" max="10" value="5" class="custom-slider" oninput="document.getElementById('val_slides').innerText = this.value">
+            </div>
+
+            <!-- ChatGPT -->
+            <div class="slider-fg">
+              <div class="slider-info">
+                <span class="slider-label">ChatGPT</span>
+                <span class="slider-value" id="val_chatgpt">5</span>
+              </div>
+              <input type="range" name="rate_chatgpt" min="1" max="10" value="5" class="custom-slider" oninput="document.getElementById('val_chatgpt').innerText = this.value">
+            </div>
+
+            <!-- Claude -->
+            <div class="slider-fg">
+              <div class="slider-info">
+                <span class="slider-label">Claude</span>
+                <span class="slider-value" id="val_claude">5</span>
+              </div>
+              <input type="range" name="rate_claude" min="1" max="10" value="5" class="custom-slider" oninput="document.getElementById('val_claude').innerText = this.value">
+            </div>
+
+            <!-- Perplexity -->
+            <div class="slider-fg">
+              <div class="slider-info">
+                <span class="slider-label">Perplexity</span>
+                <span class="slider-value" id="val_perplexity">5</span>
+              </div>
+              <input type="range" name="rate_perplexity" min="1" max="10" value="5" class="custom-slider" oninput="document.getElementById('val_perplexity').innerText = this.value">
+            </div>
+
+            <!-- Notion -->
+            <div class="slider-fg">
+              <div class="slider-info">
+                <span class="slider-label">Notion</span>
+                <span class="slider-value" id="val_notion">5</span>
+              </div>
+              <input type="range" name="rate_notion" min="1" max="10" value="5" class="custom-slider" oninput="document.getElementById('val_notion').innerText = this.value">
+            </div>
+
+            <!-- ClickUp -->
+            <div class="slider-fg">
+              <div class="slider-info">
+                <span class="slider-label">ClickUp</span>
+                <span class="slider-value" id="val_clickup">5</span>
+              </div>
+              <input type="range" name="rate_clickup" min="1" max="10" value="5" class="custom-slider" oninput="document.getElementById('val_clickup').innerText = this.value">
+            </div>
+
+            <!-- Asana -->
+            <div class="slider-fg">
+              <div class="slider-info">
+                <span class="slider-label">Asana</span>
+                <span class="slider-value" id="val_asana">5</span>
+              </div>
+              <input type="range" name="rate_asana" min="1" max="10" value="5" class="custom-slider" oninput="document.getElementById('val_asana').innerText = this.value">
+            </div>
+
+            <!-- Project Management -->
+            <div class="slider-fg">
+              <div class="slider-info">
+                <span class="slider-label">Project Management</span>
+                <span class="slider-value" id="val_pm">5</span>
+              </div>
+              <input type="range" name="rate_pm" min="1" max="10" value="5" class="custom-slider" oninput="document.getElementById('val_pm').innerText = this.value">
+            </div>
+
+            <!-- Business Writing -->
+            <div class="slider-fg">
+              <div class="slider-info">
+                <span class="slider-label">Business Writing</span>
+                <span class="slider-value" id="val_writing">5</span>
+              </div>
+              <input type="range" name="rate_writing" min="1" max="10" value="5" class="custom-slider" oninput="document.getElementById('val_writing').innerText = this.value">
+            </div>
+
+            <!-- English Communication -->
+            <div class="slider-fg">
+              <div class="slider-info">
+                <span class="slider-label">English Comm.</span>
+                <span class="slider-value" id="val_english">5</span>
+              </div>
+              <input type="range" name="rate_english" min="1" max="10" value="5" class="custom-slider" oninput="document.getElementById('val_english').innerText = this.value">
+            </div>
+
+            <!-- Public Speaking -->
+            <div class="slider-fg">
+              <div class="slider-info">
+                <span class="slider-label">Public Speaking</span>
+                <span class="slider-value" id="val_speaking">5</span>
+              </div>
+              <input type="range" name="rate_speaking" min="1" max="10" value="5" class="custom-slider" oninput="document.getElementById('val_speaking').innerText = this.value">
+            </div>
+
+            <!-- Analytical Thinking -->
+            <div class="slider-fg">
+              <div class="slider-info">
+                <span class="slider-label">Analytical Thinking</span>
+                <span class="slider-value" id="val_analytical">5</span>
+              </div>
+              <input type="range" name="rate_analytical" min="1" max="10" value="5" class="custom-slider" oninput="document.getElementById('val_analytical').innerText = this.value">
+            </div>
+
+          </div>
+
+          <div class="fg" style="margin-top: 30px;">
+            <label>Which AI tools do you actively use? <span class="r">*</span></label>
+            <div class="opts-grid">
+              <label class="opt"><input type="checkbox" name="aiTools" value="ChatGPT"><span>ChatGPT</span></label>
+              <label class="opt"><input type="checkbox" name="aiTools" value="Claude"><span>Claude</span></label>
+              <label class="opt"><input type="checkbox" name="aiTools" value="Gemini"><span>Gemini</span></label>
+              <label class="opt"><input type="checkbox" name="aiTools" value="Perplexity"><span>Perplexity</span></label>
+              <label class="opt"><input type="checkbox" name="aiTools" value="Cursor"><span>Cursor</span></label>
+              <label class="opt"><input type="checkbox" name="aiTools" value="Copilot"><span>Copilot</span></label>
+              <label class="opt"><input type="checkbox" name="aiTools" value="Midjourney"><span>Midjourney</span></label>
+              <label class="opt"><input type="checkbox" name="aiTools" value="Canva AI"><span>Canva AI</span></label>
+              <label class="opt"><input type="checkbox" name="aiTools" value="Other" id="aiOtherCheck"><span>Other</span></label>
+            </div>
+            <div class="fg" id="aiOtherContainer" style="display:none; margin-top: 10px;">
+              <label for="aiOtherInput">Please specify other AI tools <span class="r">*</span></label>
+              <input type="text" id="aiOtherInput" placeholder="e.g. Stable Diffusion, Runway">
+            </div>
+          </div>
+
+          <div class="fg" style="margin-top: 24px;">
+            <label>Which management software have you used? <span class="r">*</span></label>
+            <div class="opts-grid">
+              <label class="opt"><input type="checkbox" name="mgmtSoftware" value="ClickUp"><span>ClickUp</span></label>
+              <label class="opt"><input type="checkbox" name="mgmtSoftware" value="Monday.com"><span>Monday.com</span></label>
+              <label class="opt"><input type="checkbox" name="mgmtSoftware" value="Notion"><span>Notion</span></label>
+              <label class="opt"><input type="checkbox" name="mgmtSoftware" value="Trello"><span>Trello</span></label>
+              <label class="opt"><input type="checkbox" name="mgmtSoftware" value="Jira"><span>Jira</span></label>
+              <label class="opt"><input type="checkbox" name="mgmtSoftware" value="Asana"><span>Asana</span></label>
+              <label class="opt"><input type="checkbox" name="mgmtSoftware" value="Airtable"><span>Airtable</span></label>
+              <label class="opt"><input type="checkbox" name="mgmtSoftware" value="Other" id="mgmtOtherCheck"><span>Other</span></label>
+            </div>
+            <div class="fg" id="mgmtOtherContainer" style="display:none; margin-top: 10px;">
+              <label for="mgmtOtherInput">Please specify other software <span class="r">*</span></label>
+              <input type="text" id="mgmtOtherInput" placeholder="e.g. Basecamp, Linear">
+            </div>
+          </div>
+
+          <div class="fg" style="margin-top: 24px;">
+            <label>Which spreadsheet functions are you comfortable with? <span class="r">*</span></label>
+            <div class="opts-grid">
+              <label class="opt"><input type="checkbox" name="sheetFunctions" value="VLOOKUP"><span>VLOOKUP</span></label>
+              <label class="opt"><input type="checkbox" name="sheetFunctions" value="XLOOKUP"><span>XLOOKUP</span></label>
+              <label class="opt"><input type="checkbox" name="sheetFunctions" value="INDEX MATCH"><span>INDEX MATCH</span></label>
+              <label class="opt"><input type="checkbox" name="sheetFunctions" value="Pivot Tables"><span>Pivot Tables</span></label>
+              <label class="opt"><input type="checkbox" name="sheetFunctions" value="Conditional Formatting"><span>Conditional Formatting</span></label>
+              <label class="opt"><input type="checkbox" name="sheetFunctions" value="Charts"><span>Charts</span></label>
+              <label class="opt"><input type="checkbox" name="sheetFunctions" value="SUMIFS"><span>SUMIFS</span></label>
+              <label class="opt"><input type="checkbox" name="sheetFunctions" value="COUNTIFS"><span>COUNTIFS</span></label>
+              <label class="opt"><input type="checkbox" name="sheetFunctions" value="FILTER"><span>FILTER</span></label>
+              <label class="opt"><input type="checkbox" name="sheetFunctions" value="QUERY"><span>QUERY</span></label>
+              <label class="opt"><input type="checkbox" name="sheetFunctions" value="Basic Only"><span>Basic Only</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4 – PROBLEM SOLVING -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">🧠</span>
+            <span class="sec-title">Section 4 – Problem Solving</span>
+          </div>
+          <p class="sec-desc">Situational questions to test your prioritization and execution approach.</p>
+
+          <div class="fg">
+            <label for="prioritization">1. Imagine your founder gives you 15 tasks at once. How would you prioritize them? <span class="r">*</span></label>
+            <textarea id="prioritization" placeholder="Write here..." required></textarea>
+          </div>
+
+          <div class="fg">
+            <label for="ownershipProject">2. Describe one project where you took ownership from start to finish. <span class="r">*</span></label>
+            <textarea id="ownershipProject" placeholder="Write here..." required></textarea>
+          </div>
+
+          <div class="fg">
+            <label for="mistakeWork">3. Tell us about a mistake you made at work and what you learned. <span class="r">*</span></label>
+            <textarea id="mistakeWork" placeholder="Write here..." required></textarea>
+          </div>
+
+          <div class="fg">
+            <label for="deptHeadNoResponse">4. If a department head ignores your follow-up for five days, what would you do? <span class="r">*</span></label>
+            <textarea id="deptHeadNoResponse" placeholder="Write here..." required></textarea>
+          </div>
+
+          <div class="fg">
+            <label for="boardPrep">5. You’re asked to prepare a board meeting in 24 hours. Walk us through your approach. <span class="r">*</span></label>
+            <textarea id="boardPrep" placeholder="Write here..." required></textarea>
+          </div>
+        </div>
+
+        <!-- SECTION 5 – WORK STYLE -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">⚡</span>
+            <span class="sec-title">Section 5 – Work Style</span>
+          </div>
+          <p class="sec-desc">How you operate, research, and teach yourself new things.</p>
+
+          <div class="fg">
+            <label>Which statement describes you best? <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="bestStatement" value="wait" required><span>I wait for instructions.</span></label>
+              <label class="opt"><input type="radio" name="bestStatement" value="ask"><span>I ask questions before acting.</span></label>
+              <label class="opt"><input type="radio" name="bestStatement" value="research"><span>I research first and then execute.</span></label>
+              <label class="opt"><input type="radio" name="bestStatement" value="ownership"><span>I take ownership and figure things out independently.</span></label>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label for="unfamiliarTask">When faced with a task you’ve never done before, what do you usually do? <span class="r">*</span></label>
+            <textarea id="unfamiliarTask" placeholder="Write here..." required></textarea>
+          </div>
+
+          <div class="fg">
+            <label for="booksInfluential">Which books have influenced you the most? <span class="r">*</span></label>
+            <input type="text" id="booksInfluential" placeholder="e.g. Atomic Habits, Principles, Zero to One" required>
+          </div>
+
+          <div class="fg">
+            <label for="podcastsFollowed">Which podcasts or YouTube channels do you regularly follow? <span class="r">*</span></label>
+            <input type="text" id="podcastsFollowed" placeholder="e.g. My First Million, Huberman Lab, Lex Fridman" required>
+          </div>
+
+          <div class="fg">
+            <label for="selfTaughtSkill">What is something you’ve taught yourself in the last 12 months? <span class="r">*</span></label>
+            <textarea id="selfTaughtSkill" placeholder="Write here..." required></textarea>
+          </div>
+
+          <div class="fg">
+            <label for="proudAchievement">What achievement are you most proud of? <span class="r">*</span></label>
+            <textarea id="proudAchievement" placeholder="Write here..." required></textarea>
+          </div>
+        </div>
+
+        <!-- SECTION 6 – FINAL SUBMISSION -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">🚀</span>
+            <span class="sec-title">Section 6 – Final Submission</span>
+          </div>
+          <p class="sec-desc">Provide links to demonstrate your capabilities and complete your application.</p>
+
+          <div class="fg">
+            <label for="videoLink">2–3 Minute Introduction Video Link <span class="r">*</span></label>
+            <input type="url" id="videoLink" placeholder="e.g. https://drive.google.com/file/d/... or https://loom.com/share/..." required>
+            <p class="hint">Please upload your video answering: <strong>1) Who you are? 2) Why this role? 3) Why should we hire you? 4) One difficult problem you solved.</strong> Ensure the link is shared publicly (Anyone with the link can view).</p>
+          </div>
+
+          <div class="fg">
+            <label for="sheetLink">Excel or Google Sheets File Link <span class="hint">(Optional)</span></label>
+            <input type="url" id="sheetLink" placeholder="e.g. https://docs.google.com/spreadsheets/d/...">
+            <p class="hint">Link to a spreadsheet you have personally created that you are proud of. Make sure sharing is set to "Anyone with the link can view".</p>
+          </div>
+
+          <div class="fg">
+            <label for="chatgptPrompt">Share one ChatGPT prompt that has genuinely improved your productivity. <span class="r">*</span></label>
+            <textarea id="chatgptPrompt" placeholder="Paste the prompt and explain what it does..." required></textarea>
+          </div>
+
+          <div class="fg">
+            <label for="joiningTimeline">If selected, when can you join? <span class="r">*</span></label>
+            <input type="text" id="joiningTimeline" placeholder="e.g. Immediately, 2 weeks, 1 month notice" required>
+          </div>
+
+          <div class="fg">
+            <label for="anythingElse">Anything else you’d like us to know?</label>
+            <textarea id="anythingElse" placeholder="Write here..."></textarea>
+          </div>
+        </div>
+
+        <!-- Status display -->
+        <div class="form-status" id="formStatus"></div>
+
+        <!-- SUBMIT SECTION -->
+        <div class="sub-sec">
+          <button type="submit" class="sub-btn" id="submitBtn">Submit Application →</button>
+          <p class="sub-note">By submitting, you confirm that all details provided are accurate.</p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer class="footer">
+    <div class="footer__tagline">Building with intent. Scaling with discipline. Thinking long-term.</div>
+    <div class="footer__copy">© 2026 <a href="index.html#hero">M. Hamza Irshad</a></div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Theme Switcher Logic
+    const btn = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    let currentTheme = localStorage.getItem('mhi-theme') || 'dark';
+
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateTheme(currentTheme);
+
+    btn.addEventListener('click', () => {
+      currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      localStorage.setItem('mhi-theme', currentTheme);
+      updateTheme(currentTheme);
+    });
+
+    function updateTheme(t) {
+      btn.textContent = t === 'light' ? '◑' : '◐';
+      if (label) label.textContent = t === 'light' ? 'Dark' : 'Light';
+    }
+
+    // Mobile menu toggle
+    const burger = document.getElementById('mobileToggle');
+    const menu = document.getElementById('mobileMenu');
+    if (burger && menu) {
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        menu.classList.toggle('active');
+        document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+      });
+      menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          burger.classList.remove('active');
+          menu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    // City Toggle
+    const cityRadios = document.querySelectorAll('input[name="city"]');
+    const otherCityContainer = document.getElementById('otherCityContainer');
+    const otherCityInput = document.getElementById('otherCityInput');
+
+    cityRadios.forEach(r => {
+      r.addEventListener('change', () => {
+        if (r.value === 'Other') {
+          otherCityContainer.style.display = 'block';
+          otherCityInput.required = true;
+        } else {
+          otherCityContainer.style.display = 'none';
+          otherCityInput.required = false;
+          otherCityInput.value = '';
+        }
+      });
+    });
+
+    // Checkbox conditional inputs: AI tools
+    const aiOtherCheck = document.getElementById('aiOtherCheck');
+    const aiOtherContainer = document.getElementById('aiOtherContainer');
+    const aiOtherInput = document.getElementById('aiOtherInput');
+    
+    if (aiOtherCheck) {
+      aiOtherCheck.addEventListener('change', function() {
+        if (this.checked) {
+          aiOtherContainer.style.display = 'block';
+          aiOtherInput.required = true;
+        } else {
+          aiOtherContainer.style.display = 'none';
+          aiOtherInput.required = false;
+          aiOtherInput.value = '';
+        }
+      });
+    }
+
+    // Checkbox conditional inputs: Management Software
+    const mgmtOtherCheck = document.getElementById('mgmtOtherCheck');
+    const mgmtOtherContainer = document.getElementById('mgmtOtherContainer');
+    const mgmtOtherInput = document.getElementById('mgmtOtherInput');
+
+    if (mgmtOtherCheck) {
+      mgmtOtherCheck.addEventListener('change', function() {
+        if (this.checked) {
+          mgmtOtherContainer.style.display = 'block';
+          mgmtOtherInput.required = true;
+        } else {
+          mgmtOtherContainer.style.display = 'none';
+          mgmtOtherInput.required = false;
+          mgmtOtherInput.value = '';
+        }
+      });
+    }
+
+    // CV Upload (base64)
+    let cvFileData = null;
+    const fileInput = document.getElementById('cvFileInput');
+    const fileNameDisplay = document.getElementById('cvFileNameDisplay');
+
+    fileInput.addEventListener('change', function() {
+      const file = this.files[0];
+      if (!file) {
+        cvFileData = null;
+        fileNameDisplay.textContent = '';
+        return;
+      }
+      if (file.size > 10485760) {
+        alert('File size exceeds the 10MB limit.');
+        this.value = '';
+        cvFileData = null;
+        fileNameDisplay.textContent = '';
+        return;
+      }
+      fileNameDisplay.textContent = '📎 ' + file.name;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        cvFileData = {
+          name: file.name,
+          type: file.type || 'application/octet-stream',
+          data: e.target.result.split(',')[1]
+        };
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // Submission Integration
+    const appForm = document.getElementById('appForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('formStatus');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzvYTU6a4boGv1kHHezaHJtoq8lIWgQssBAJ4MEIKtF4Afwo5TqJCxDR8cq_Z0TQU9y/exec';
+
+    appForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (!cvFileData) {
+        alert('Please select and upload your CV / Resume before submitting.');
+        return;
+      }
+
+      // Check validation of checkbox selections
+      const aiChecked = appForm.querySelectorAll('input[name="aiTools"]:checked');
+      if (aiChecked.length === 0) {
+        alert('Please select at least one AI tool you actively use.');
+        return;
+      }
+
+      const mgmtChecked = appForm.querySelectorAll('input[name="mgmtSoftware"]:checked');
+      if (mgmtChecked.length === 0) {
+        alert('Please select at least one management software you have used.');
+        return;
+      }
+
+      const functionsChecked = appForm.querySelectorAll('input[name="sheetFunctions"]:checked');
+      if (functionsChecked.length === 0) {
+        alert('Please select at least one spreadsheet function you are comfortable with.');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+      formStatus.className = 'form-status';
+      formStatus.textContent = '';
+      formStatus.style.display = 'none';
+
+      const getRadioVal = (name) => {
+        const checkedInput = appForm.querySelector(`input[name="${name}"]:checked`);
+        if (!checkedInput) return '';
+        return checkedInput.closest('label')?.querySelector('span')?.textContent?.trim() || checkedInput.value;
+      };
+
+      const getCheckedVals = (name) => {
+        return Array.from(appForm.querySelectorAll(`input[name="${name}"]:checked`))
+          .map(checkbox => {
+            const val = checkbox.closest('label')?.querySelector('span')?.textContent?.trim() || checkbox.value;
+            if (val === 'Other') {
+              if (name === 'aiTools') return `Other (${aiOtherInput.value.trim()})`;
+              if (name === 'mgmtSoftware') return `Other (${mgmtOtherInput.value.trim()})`;
+            }
+            return val;
+          })
+          .join(', ');
+      };
+
+      // Collect rating sliders data
+      const getRatingVal = (name) => {
+        return appForm.querySelector(`input[name="${name}"]`)?.value || '5';
+      };
+
+      const data = {
+        "Form Type": "Founder’s Office Associate",
+        "Timestamp": new Date().toLocaleString('en-PK', {timeZone: 'Asia/Karachi'}),
+        
+        // Section 1: Basic Information
+        "Full Name": document.getElementById('fullName').value.trim(),
+        "Email": document.getElementById('email').value.trim(),
+        "Phone": document.getElementById('phone').value.trim(),
+        "Date of Birth": document.getElementById('dob').value,
+        "City": getRadioVal('city'),
+        "Other City": document.getElementById('otherCityInput').value.trim(),
+        "LinkedIn": document.getElementById('linkedin').value.trim(),
+        "Portfolio": document.getElementById('portfolio').value.trim(),
+        "Current Employer": document.getElementById('company').value.trim(),
+        "Current Designation": document.getElementById('designation').value.trim(),
+        "Years of Experience": document.getElementById('experience').value,
+        "Notice Period": document.getElementById('noticePeriod').value,
+        "Current Monthly Salary": document.getElementById('currentSalary').value.trim(),
+        "Expected Monthly Salary": document.getElementById('expectedSalary').value.trim(),
+        "Willing to Work Lahore Office": getRadioVal('relocate'),
+        
+        // Section 2: About You
+        "Tell Us About Yourself": document.getElementById('aboutSelf').value.trim(),
+        "Why Founders Office": document.getElementById('whyFoundersOffice').value.trim(),
+        "Why Potato Holdings": document.getElementById('whyPotato').value.trim(),
+        "Excited Working With Founder": document.getElementById('workingWithFounder').value.trim(),
+        "Long-term Career Goals": document.getElementById('careerGoals').value.trim(),
+
+        // Section 3: Skills & Tools - Self-Ratings
+        "Rating Microsoft Excel": getRatingVal('rate_excel'),
+        "Rating Google Sheets": getRatingVal('rate_sheets'),
+        "Rating Google Docs": getRatingVal('rate_docs'),
+        "Rating Google Slides PowerPoint": getRatingVal('rate_slides'),
+        "Rating ChatGPT": getRatingVal('rate_chatgpt'),
+        "Rating Claude": getRatingVal('rate_claude'),
+        "Rating Perplexity": getRatingVal('rate_perplexity'),
+        "Rating Notion": getRatingVal('rate_notion'),
+        "Rating ClickUp": getRatingVal('rate_clickup'),
+        "Rating Asana": getRatingVal('rate_asana'),
+        "Rating Project Management": getRatingVal('rate_pm'),
+        "Rating Business Writing": getRatingVal('rate_writing'),
+        "Rating English Communication": getRatingVal('rate_english'),
+        "Rating Public Speaking": getRatingVal('rate_speaking'),
+        "Rating Analytical Thinking": getRatingVal('rate_analytical'),
+
+        // Section 3: Skills & Tools - Checkboxes
+        "AI Tools Actively Used": getCheckedVals('aiTools'),
+        "Management Software Used": getCheckedVals('mgmtSoftware'),
+        "Spreadsheet Functions Comfortable": getCheckedVals('sheetFunctions'),
+
+        // Section 4: Problem Solving
+        "Prioritize 15 Tasks": document.getElementById('prioritization').value.trim(),
+        "Project Took Ownership": document.getElementById('ownershipProject').value.trim(),
+        "Mistake and Lesson": document.getElementById('mistakeWork').value.trim(),
+        "Ignored Followup Action": document.getElementById('deptHeadNoResponse').value.trim(),
+        "Board Prep in 24 Hours": document.getElementById('boardPrep').value.trim(),
+
+        // Section 5: Work Style
+        "Best Statement": getRadioVal('bestStatement'),
+        "Unfamiliar Task Action": document.getElementById('unfamiliarTask').value.trim(),
+        "Influential Books": document.getElementById('booksInfluential').value.trim(),
+        "Podcasts YouTube Channels": document.getElementById('podcastsFollowed').value.trim(),
+        "Self Taught Last 12 Months": document.getElementById('selfTaughtSkill').value.trim(),
+        "Most Proud Achievement": document.getElementById('proudAchievement').value.trim(),
+
+        // Section 6: Final Submission
+        "Video Link": document.getElementById('videoLink').value.trim(),
+        "Spreadsheet Link": document.getElementById('sheetLink').value.trim(),
+        "Productivity ChatGPT Prompt": document.getElementById('chatgptPrompt').value.trim(),
+        "Joining Timeline": document.getElementById('joiningTimeline').value.trim(),
+        "Anything Else": document.getElementById('anythingElse').value.trim()
+      };
+
+      if (cvFileData) {
+        data["CV File Name"] = cvFileData.name;
+        data["CV File Type"] = cvFileData.type;
+        data["CV File Data"] = cvFileData.data;
+      }
+
+      try {
+        await fetch(scriptURL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        submitBtn.textContent = 'Success!';
+        formStatus.className = 'form-status success';
+        formStatus.textContent = 'Application submitted successfully! Redirecting...';
+        formStatus.style.display = 'block';
+        
+        appForm.reset();
+        cvFileData = null;
+        fileNameDisplay.textContent = '';
+        
+        // Reset slider displays back to 5
+        document.querySelectorAll('.slider-value').forEach(el => el.textContent = '5');
+        
+        setTimeout(() => {
+          // Meta Pixel Lead Event
+          if (typeof fbq === 'function') {
+            fbq('track', 'Lead', {
+              content_name: 'Founder Office Associate Application',
+              content_category: 'Hiring'
+            });
+          }
+          window.location.href = 'thankyou.html';
+        }, 1500);
+
+      } catch (error) {
+        console.error('Submission Error:', error);
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Application →';
+        formStatus.className = 'form-status error';
+        formStatus.textContent = 'Something went wrong. Please try again.';
+        formStatus.style.display = 'block';
+      }
+    });
+  });
+  </script>
+</body>
+</html>
