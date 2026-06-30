@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MFGBN74S');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7V8JGHDJV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-W7V8JGHDJV');
+  </script>
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="FYCthtRBHV0R0aHyKS7QHwepIzAHEu05BJf7ektWJc0" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DermNest Clinical Partner Application — M. Hamza Irshad</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+  :root {
+    --bg: #0b0b0b;
+    --bg-card: #141414;
+    --bg-elevated: #1a1a1a;
+    --text-1: #edece8;
+    --text-2: #9a9990;
+    --text-3: #5a5a52;
+    --accent: #c8ff00;
+    --accent-rgb: 200,255,0;
+    --accent-dim: rgba(200,255,0,.08);
+    --border: rgba(255,255,255,.07);
+    --border-h: rgba(255,255,255,.14);
+    --nav-bg: rgba(11,11,11,.82);
+    --shadow: 0 2px 24px rgba(0,0,0,.3);
+    --r-lg: 20px;
+    --r-md: 14px;
+    --r-pill: 100px;
+    --font-d: 'Syne', sans-serif;
+    --font-b: 'Instrument Sans', sans-serif;
+    --ease: cubic-bezier(.25,.46,.45,.94);
+    --t: .35s var(--ease);
+    --red: #ff4d4d;
+    --green: #c8ff00;
+  }
+
+  [data-theme="light"] {
+    --bg: #f4f1eb;
+    --bg-card: #eae7e0;
+    --bg-elevated: #e0ddd6;
+    --text-1: #18180f;
+    --text-2: #65635a;
+    --text-3: #9c9a91;
+    --accent: #18180f;
+    --accent-rgb: 24,24,15;
+    --accent-dim: rgba(24,24,15,.07);
+    --border: rgba(0,0,0,.07);
+    --border-h: rgba(0,0,0,.14);
+    --nav-bg: rgba(244,241,235,.82);
+    --shadow: 0 2px 24px rgba(0,0,0,.06);
+    --red: #d94040;
+    --green: #2d8f4e;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: var(--font-b);
+    background: var(--bg);
+    color: var(--text-1);
+    min-height: 100vh;
+    line-height: 1.6;
+    transition: background .5s var(--ease), color .5s var(--ease);
+  }
+  
+  /* ═══ NAV ═══ */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 0 40px; height: 64px; display: flex; align-items: center;
+    justify-content: space-between; backdrop-filter: blur(24px) saturate(1.2);
+    -webkit-backdrop-filter: blur(24px) saturate(1.2); background: var(--nav-bg);
+    border-bottom: 1px solid var(--border); transition: all var(--t);
+  }
+  .nav__chip { display: flex; align-items: center; gap: 10px; padding: 6px 14px 6px 8px; border-radius: var(--r-pill); border: 1px solid var(--border); transition: all var(--t); }
+  .nav__chip:hover { border-color: var(--border-h); background: var(--bg-elevated); }
+  .nav__avatar { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg,rgb(var(--accent-rgb)),#888); display: flex; align-items: center; justify-content: center; font-family: var(--font-d); font-weight: 700; font-size: .7rem; color: var(--bg); }
+  .nav__chip-name { font-size: .82rem; font-weight: 500; color: var(--text-2); }
+  .nav__chip-label { font-size: .7rem; padding: 2px 9px; background: var(--accent-dim); border-radius: var(--r-pill); color: var(--text-2); font-weight: 600; }
+  .nav__logo { font-family: var(--font-d); font-weight: 800; font-size: 1.05rem; letter-spacing: -.02em; position: relative; }
+  .nav__logo::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width var(--t); }
+  .nav__logo:hover::after { width: 100%; }
+  .nav__links { display: flex; gap: 4px; }
+  .nav__link { font-size: .85rem; font-weight: 500; color: var(--text-2); padding: 8px 16px; border-radius: var(--r-pill); transition: all var(--t); }
+  .nav__link:hover { color: var(--text-1); background: var(--accent-dim); }
+  .nav__right { display: flex; align-items: center; gap: 10px; }
+  .nav__theme {
+    width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--border);
+    background: 0; color: var(--text-2); cursor: pointer; display: flex;
+    align-items: center; justify-content: center; font-size: 1.1rem;
+    transition: all var(--t);
+  }
+  .nav__theme:hover { border-color: var(--text-1); color: var(--text-1); transform: rotate(180deg); }
+  .nav__theme-label { font-size: .76rem; color: var(--text-3); font-weight: 500; }
+  
+  .nav__burger { display: none; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 8px; background: 0; cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+  .nav__burger span { display: block; width: 18px; height: 2px; background: var(--text-1); border-radius: 2px; transition: all var(--t); }
+  .nav__burger.active span:nth-child(1) { transform: rotate(45deg) translate(3px,4px); }
+  .nav__burger.active span:nth-child(2) { opacity: 0; }
+  .nav__burger.active span:nth-child(3) { transform: rotate(-45deg) translate(3px,-4px); }
+  
+  .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: var(--bg); padding: 40px; flex-direction: column; gap: 8px; z-index: 999; }
+  .mobile-menu.active { display: flex; }
+  .mobile-menu a { font-family: var(--font-d); font-size: 1.8rem; font-weight: 700; padding: 12px 0; border-bottom: 1px solid var(--border); transition: color var(--t); }
+  .mobile-menu a:hover { color: var(--accent); }
+  
+  @media(max-width:768px) {
+    .nav__links, .nav__chip { display: none; }
+    .nav__burger { display: flex; }
+  }
+
+  /* ═══ HERO ═══ */
+  .hero {
+    background: var(--bg); color: var(--text-1);
+    padding: 120px 24px 48px; text-align: center; position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 80%, var(--accent-dim), transparent 60%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; }
+  .hero-chip {
+    display: inline-block; background: var(--accent-dim);
+    border: 1px solid var(--border); color: var(--text-1);
+    font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
+    text-transform: uppercase; padding: 6px 18px; border-radius: var(--r-pill);
+    margin-bottom: 18px; font-family: var(--font-d);
+  }
+  .hero h1 {
+    font-family: var(--font-d); font-size: clamp(28px, 5vw, 42px);
+    font-weight: 800; line-height: 1.12; margin-bottom: 12px;
+    letter-spacing: -.03em;
+  }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero p { font-size: 15px; color: var(--text-2); max-width: 500px; margin: 0 auto; line-height: 1.7; }
+  
+  /* ═══ WRAPPER ═══ */
+  .wrap { max-width: 660px; margin: 0 auto 80px; padding: 0 16px; position: relative; z-index: 2; }
+  .card {
+    background: var(--bg-card); border-radius: var(--r-lg);
+    box-shadow: var(--shadow); border: 1px solid var(--border);
+    overflow: hidden; transition: background .5s var(--ease), border-color .5s var(--ease);
+  }
+  
+  /* ═══ SECTIONS ═══ */
+  .sec { padding: 36px 36px 30px; border-bottom: 1px solid var(--border); }
+  .sec:last-child { border-bottom: none; }
+  .sec-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+  .sec-icon {
+    width: 32px; height: 32px; border-radius: 8px; display: flex;
+    align-items: center; justify-content: center;
+    background: var(--accent-dim); font-size: 16px; flex-shrink: 0;
+    border: 1px solid var(--border); color: var(--accent);
+  }
+  .sec-title { font-family: var(--font-d); font-size: 1.15rem; font-weight: 700; color: var(--text-1); }
+  .sec-desc { font-size: 13px; color: var(--text-2); margin-bottom: 24px; padding-left: 44px; }
+  
+  /* ═══ FIELDS ═══ */
+  .fg { margin-bottom: 22px; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media(max-width:520px){ .row2 { grid-template-columns: 1fr; } }
+  
+  label { display: block; font-size: 13.5px; font-weight: 600; margin-bottom: 8px; color: var(--text-1); }
+  label .r { color: var(--red); margin-left: 2px; }
+  .hint { font-size: 12px; color: var(--text-2); margin-top: 4px; font-style: italic; line-height: 1.5; }
+  
+  input[type=text], input[type=email], input[type=tel], input[type=url], input[type=number], select, textarea {
+    width: 100%; padding: 12px 16px; border: 1px solid var(--border);
+    border-radius: var(--r-md); background: var(--bg);
+    font-family: var(--font-b); font-size: 14px; color: var(--text-1);
+    transition: all var(--t); outline: none;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--accent); background: var(--bg-elevated);
+    box-shadow: 0 0 0 2px var(--accent-dim);
+  }
+  textarea { resize: vertical; min-height: 110px; }
+  select {
+    cursor: pointer; appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239a9990' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px;
+  }
+  [data-theme="light"] select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2365635a' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  }
+  
+  /* Radios & Checkboxes */
+  .opts { display: flex; flex-direction: column; gap: 8px; }
+  .opt {
+    display: flex; align-items: center; gap: 12px; padding: 12px 16px;
+    border: 1px solid var(--border); border-radius: var(--r-md); cursor: pointer;
+    background: var(--bg); transition: all var(--t);
+  }
+  .opt:hover { border-color: var(--border-h); background: var(--bg-elevated); }
+  .opt input[type=radio], .opt input[type=checkbox] {
+    accent-color: var(--accent); width: 18px; height: 18px; cursor: pointer; flex-shrink: 0;
+  }
+  .opt span { font-size: 14px; color: var(--text-1); font-weight: 500; }
+  
+  /* Upload Area */
+  .fup {
+    border: 2px dashed var(--border); border-radius: var(--r-md); padding: 26px;
+    text-align: center; cursor: pointer; background: var(--bg); position: relative;
+    transition: all var(--t);
+  }
+  .fup:hover { border-color: var(--accent); background: var(--bg-elevated); }
+  .fup input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+  .fup .ic { font-size: 28px; margin-bottom: 6px; }
+  .fup .tx { font-size: 12.5px; color: var(--text-2); }
+  .fup .tx strong { color: var(--accent); }
+  .fname { font-size: 12px; color: var(--green); margin-top: 6px; font-weight: 600; }
+  
+  /* Submit section */
+  .sub-sec { padding: 30px 36px 40px; text-align: center; border-top: 1px solid var(--border); }
+  .sub-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--text-1); color: var(--bg);
+    font-family: var(--font-d); font-size: 15px; font-weight: 700;
+    padding: 14px 56px; border: none; border-radius: var(--r-pill); cursor: pointer;
+    transition: all var(--t); letter-spacing: .3px;
+  }
+  .sub-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 26px rgba(var(--accent-rgb), .18);
+  }
+  .sub-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+  .sub-note { font-size: 12px; color: var(--text-3); margin-top: 14px; }
+  
+  /* Statuses */
+  .form-status { margin-top: 16px; font-size: .9rem; text-align: center; display: none; padding: 12px; border-radius: var(--r-md); }
+  .form-status.success { display: block; background: rgba(0,255,0,0.1); color: #00ff00; border: 1px solid rgba(0,255,0,0.2); }
+  .form-status.error { display: block; background: rgba(255,0,0,0.1); color: #ff5555; border: 1px solid rgba(255,0,0,0.2); }
+  [data-theme="light"] .form-status.success { background: #e6ffe6; color: #008000; border-color: #b3ffb3; }
+  [data-theme="light"] .form-status.error { background: #ffe6e6; color: #cc0000; border-color: #ffb3b3; }
+
+  /* Footer */
+  .footer { padding: 28px 40px; border-top: 1px solid var(--border); text-align: center; background: var(--bg-card); transition: all var(--t); }
+  .footer__tagline { font-family: var(--font-d); font-size: .88rem; font-weight: 600; color: var(--text-2); margin-bottom: 6px; letter-spacing: -.01em; }
+  .footer__copy { font-size: .76rem; color: var(--text-3); }
+  .footer a { color: var(--text-2); transition: color var(--t); }
+  .footer a:hover { color: var(--text-1); }
+  </style>
+  
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '568372231477736');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=568372231477736&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFGBN74S"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ══════ NAV ══════ -->
+  <nav class="nav">
+    <div class="nav__chip">
+      <div class="nav__avatar">HI</div>
+      <span class="nav__chip-name">M. Hamza Irshad</span>
+      <span class="nav__chip-label">Builder</span>
+    </div>
+    <a href="index.html#hero" class="nav__logo">MHI</a>
+    <div class="nav__links">
+      <a href="index.html#ecosystem" class="nav__link">Ecosystem</a>
+      <a href="index.html#about" class="nav__link">About</a>
+      <a href="index.html#philosophy" class="nav__link">Philosophy</a>
+      <a href="careers.html" class="nav__link">Careers</a>
+      <a href="consultation.html" class="nav__link" style="color: var(--accent);">Consultation</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+    </div>
+    <div class="nav__right">
+      <button class="nav__theme" id="themeToggle" title="Toggle theme">◐</button>
+      <span class="nav__theme-label" id="themeLabel">Light</span>
+    </div>
+    <button class="nav__burger" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#hero">Home</a>
+    <a href="index.html#ecosystem">Ecosystem</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#philosophy">Philosophy</a>
+    <a href="careers.html">Careers</a>
+    <a href="consultation.html" style="color: var(--accent);">1:1 Consultation</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ══════ HERO SECTION ══════ -->
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="hero-chip">Clinical Partner</span>
+      <h1>DermNest <em>Clinical Partner Application</em></h1>
+      <p>Thank you for your interest in partnering with DermNest. We are looking for a limited number of dermatologists who want to build long-term personal brands while helping patients with evidence-based scalp and hair care solutions.</p>
+    </div>
+  </div>
+
+  <!-- ══════ FORM WRAPPER ══════ -->
+  <div class="wrap">
+    <div class="card">
+      <form id="appForm">
+        
+        <!-- 1. PERSONAL INFORMATION -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">👤</span>
+            <span class="sec-title">Personal Information</span>
+          </div>
+          <p class="sec-desc">Basic details so we can contact you.</p>
+          
+          <div class="row2">
+            <div class="fg">
+              <label for="fullName">Full Name <span class="r">*</span></label>
+              <input type="text" id="fullName" placeholder="e.g. Dr. Ayesha Khan" required>
+            </div>
+            <div class="fg">
+              <label for="email">Email Address <span class="r">*</span></label>
+              <input type="email" id="email" placeholder="e.g. ayesha.khan@gmail.com" required>
+            </div>
+          </div>
+          
+          <div class="row2">
+            <div class="fg">
+              <label for="phone">Mobile Number / WhatsApp <span class="r">*</span></label>
+              <input type="tel" id="phone" placeholder="e.g. 0300-1234567" required>
+            </div>
+            <div class="fg">
+              <label for="clinicName">Clinic Name <span class="r">*</span></label>
+              <input type="text" id="clinicName" placeholder="e.g. Skin & Hair Clinic Lahore" required>
+            </div>
+          </div>
+          
+          <div class="fg">
+            <label for="clinicAddress">Clinic Address <span class="r">*</span></label>
+            <input type="text" id="clinicAddress" placeholder="e.g. 12A, Block H, Gulberg III, Lahore" required>
+          </div>
+
+          <div class="fg">
+            <label>City <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="city" value="Lahore" required><span>Lahore</span></label>
+              <label class="opt"><input type="radio" name="city" value="Karachi"><span>Karachi</span></label>
+              <label class="opt"><input type="radio" name="city" value="Islamabad / Rawalpindi"><span>Islamabad / Rawalpindi</span></label>
+              <label class="opt"><input type="radio" name="city" value="Faisalabad"><span>Faisalabad</span></label>
+              <label class="opt"><input type="radio" name="city" value="Multan"><span>Multan</span></label>
+              <label class="opt"><input type="radio" name="city" value="Peshawar"><span>Peshawar</span></label>
+              <label class="opt"><input type="radio" name="city" value="Other"><span>Other</span></label>
+            </div>
+          </div>
+          
+          <div class="fg" id="otherCityContainer" style="display:none">
+            <label for="otherCityInput">Please mention your city <span class="r">*</span></label>
+            <input type="text" id="otherCityInput" placeholder="e.g. Quetta">
+          </div>
+        </div>
+
+        <!-- 2. PROFESSIONAL INFORMATION -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">🎓</span>
+            <span class="sec-title">Professional Information</span>
+          </div>
+          <p class="sec-desc">Tell us about your medical background and credentials.</p>
+          
+          <div class="fg">
+            <label>Highest Qualification <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="qualification" value="MBBS" required><span>MBBS</span></label>
+              <label class="opt"><input type="radio" name="qualification" value="FCPS Dermatology"><span>FCPS Dermatology</span></label>
+              <label class="opt"><input type="radio" name="qualification" value="MCPS Dermatology"><span>MCPS Dermatology</span></label>
+              <label class="opt"><input type="radio" name="qualification" value="Diploma in Dermatology"><span>Diploma in Dermatology</span></label>
+              <label class="opt"><input type="radio" name="qualification" value="Other"><span>Other</span></label>
+            </div>
+          </div>
+
+          <div class="fg" id="otherQualContainer" style="display:none">
+            <label for="otherQualInput">Please specify qualification <span class="r">*</span></label>
+            <input type="text" id="otherQualInput" placeholder="e.g. MD Dermatology / M.Phil">
+          </div>
+
+          <div class="fg">
+            <label for="experience">Years of Clinical Experience <span class="r">*</span></label>
+            <select id="experience" required>
+              <option value="" disabled selected>Select clinical experience</option>
+              <option>Less than 1 year</option>
+              <option>1 – 3 years</option>
+              <option>3 – 5 years</option>
+              <option>5 – 10 years</option>
+              <option>More than 10 years</option>
+            </select>
+          </div>
+
+          <div class="fg">
+            <label>Do you currently own or co-own your clinic? <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="ownClinic" value="Yes" required><span>Yes</span></label>
+              <label class="opt"><input type="radio" name="ownClinic" value="No"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>Do you practice at multiple clinics? <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="multipleClinics" value="Yes" required><span>Yes</span></label>
+              <label class="opt"><input type="radio" name="multipleClinics" value="No"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fg" id="multipleClinicsListContainer" style="display:none">
+            <label for="multipleClinicsList">Please list the other clinics <span class="r">*</span></label>
+            <textarea id="multipleClinicsList" placeholder="e.g. 1. Skin Care Centre Lahore (Mon/Wed 4-6 PM)&#10;2. Health Clinic Gulberg (Tue/Thu 5-8 PM)"></textarea>
+          </div>
+        </div>
+
+        <!-- 3. SOCIAL MEDIA PRESENCE -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">🌐</span>
+            <span class="sec-title">Social Media Presence</span>
+          </div>
+          <p class="sec-desc">Your social channels help us understand your personal brand potential.</p>
+          
+          <div class="row2">
+            <div class="fg">
+              <label for="igProfile">Instagram Profile URL</label>
+              <input type="text" id="igProfile" placeholder="e.g. instagram.com/dr.ayesha">
+            </div>
+            <div class="fg">
+              <label for="fbPage">Facebook Page URL</label>
+              <input type="text" id="fbPage" placeholder="e.g. facebook.com/drayeshaskin">
+            </div>
+          </div>
+
+          <div class="row2">
+            <div class="fg">
+              <label for="tiktokProfile">TikTok Link (if any)</label>
+              <input type="text" id="tiktokProfile" placeholder="e.g. tiktok.com/@drayesha">
+            </div>
+            <div class="fg">
+              <label for="youtubeProfile">YouTube Channel Link (if any)</label>
+              <input type="text" id="youtubeProfile" placeholder="e.g. youtube.com/@drayesha">
+            </div>
+          </div>
+
+          <div class="fg">
+            <label for="patientVolume">Approximately how many patients do you see per month? <span class="r">*</span></label>
+            <select id="patientVolume" required>
+              <option value="" disabled selected>Select patient volume</option>
+              <option>Less than 100</option>
+              <option>100 – 300</option>
+              <option>300 – 500</option>
+              <option>More than 500</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 4. CONTENT COLLABORATION -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">🎬</span>
+            <span class="sec-title">Content Collaboration</span>
+          </div>
+          <p class="sec-desc">We love co-creating high-quality educational material with our clinical partners.</p>
+          
+          <div class="fg">
+            <label>Would you be comfortable creating educational content with the DermNest team? <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="eduContent" value="Yes" required><span>Yes</span></label>
+              <label class="opt"><input type="radio" name="eduContent" value="No"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>Would you allow our content team to visit your clinic for professional shoots? <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="visitClinic" value="Yes" required><span>Yes</span></label>
+              <label class="opt"><input type="radio" name="visitClinic" value="No"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>Would you be comfortable documenting real patient journeys (with proper patient consent)? <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="patientJourneys" value="Yes" required><span>Yes</span></label>
+              <label class="opt"><input type="radio" name="patientJourneys" value="No"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>What type of content would you enjoy creating? <span class="r">*</span></label>
+            <div class="opts" id="contentTypesContainer">
+              <label class="opt"><input type="checkbox" name="contentTypes" value="Educational videos"><span>Educational videos</span></label>
+              <label class="opt"><input type="checkbox" name="contentTypes" value="Patient consultations"><span>Patient consultations</span></label>
+              <label class="opt"><input type="checkbox" name="contentTypes" value="Before & After case studies"><span>Before & After case studies</span></label>
+              <label class="opt"><input type="checkbox" name="contentTypes" value="Podcasts"><span>Podcasts</span></label>
+              <label class="opt"><input type="checkbox" name="contentTypes" value="Live Q&A sessions"><span>Live Q&A sessions</span></label>
+              <label class="opt"><input type="checkbox" id="allContentTypes" value="All of the above"><span>All of the above</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. CLINIC PARTNERSHIP -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">🏥</span>
+            <span class="sec-title">Clinic Partnership</span>
+          </div>
+          <p class="sec-desc">Bringing evidence-based options directly to clinic desks.</p>
+          
+          <div class="fg">
+            <label>Would you be interested in keeping DermNest products available at your clinic? <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="keepProducts" value="Yes" required><span>Yes</span></label>
+              <label class="opt"><input type="radio" name="keepProducts" value="No"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>Are you open to recommending DermNest products when clinically appropriate? <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="recommendProducts" value="Yes" required><span>Yes</span></label>
+              <label class="opt"><input type="radio" name="recommendProducts" value="No"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>Would you be interested in participating in future product testing and feedback? <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="productTesting" value="Yes" required><span>Yes</span></label>
+              <label class="opt"><input type="radio" name="productTesting" value="No"><span>No</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. LONG-TERM PARTNERSHIP -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">🤝</span>
+            <span class="sec-title">Long-Term Partnership</span>
+          </div>
+          <p class="sec-desc">Let's align on mutual growth opportunities.</p>
+          
+          <div class="fg">
+            <label>Which opportunities interest you? <span class="r">*</span></label>
+            <div class="opts" id="opportunitiesContainer">
+              <label class="opt"><input type="checkbox" name="opportunities" value="Affiliate Partner"><span>Affiliate Partner</span></label>
+              <label class="opt"><input type="checkbox" name="opportunities" value="Paid Content Creator"><span>Paid Content Creator</span></label>
+              <label class="opt"><input type="checkbox" name="opportunities" value="Clinical Advisor"><span>Clinical Advisor</span></label>
+              <label class="opt"><input type="checkbox" name="opportunities" value="Long-Term Brand Ambassador"><span>Long-Term Brand Ambassador</span></label>
+              <label class="opt"><input type="checkbox" id="allOpportunities" value="All of the above"><span>All of the above</span></label>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label for="whyPartner">Why would you like to partner with DermNest? <span class="r">*</span></label>
+            <textarea id="whyPartner" placeholder="Tell us what makes this collaboration exciting for you..." required></textarea>
+          </div>
+        </div>
+
+        <!-- 7. UPLOADS -->
+        <div class="sec">
+          <div class="sec-head">
+            <span class="sec-icon">📁</span>
+            <span class="sec-title">Uploads</span>
+          </div>
+          <p class="sec-desc">Please share your documents. Large files up to 10MB are supported.</p>
+          
+          <div class="fg">
+            <label>Your Latest CV / Profile <span class="hint">(Optional)</span></label>
+            <div class="fup" id="cvUploadArea">
+              <div class="ic">📄</div>
+              <div class="tx">Click to upload &nbsp;<strong>PDF, DOC, DOCX or PNG — Max 10MB</strong></div>
+              <input type="file" accept=".pdf,.doc,.docx,.png" id="cvFileInput">
+              <div class="fname" id="cvFileNameDisplay"></div>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>PMDC Registration Certificate <span class="r">*</span></label>
+            <div class="fup" id="pmdcUploadArea">
+              <div class="ic">📜</div>
+              <div class="tx">Click to upload &nbsp;<strong>PDF, JPG, JPEG or PNG — Max 10MB</strong></div>
+              <input type="file" accept=".pdf,.jpg,.jpeg,.png" id="pmdcFileInput" required>
+              <div class="fname" id="pmdcFileNameDisplay"></div>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>Clinic Photographs <span class="hint">(Optional)</span></label>
+            <div class="fup" id="clinicPhotoUploadArea">
+              <div class="ic">📸</div>
+              <div class="tx">Click to upload &nbsp;<strong>JPG, JPEG or PNG — Max 10MB</strong></div>
+              <input type="file" accept=".jpg,.jpeg,.png" id="clinicPhotoFileInput">
+              <div class="fname" id="clinicPhotoFileNameDisplay"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. DECLARATION -->
+        <div class="sec">
+          <div class="opts">
+            <label class="opt">
+              <input type="checkbox" id="declarationCheck" required>
+              <span>I confirm that the information provided above is accurate, and I understand that submitting this application does not guarantee selection. If shortlisted, the DermNest team will contact me for the next stage of the partnership process. <span class="r">*</span></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- SUBMIT SECTION -->
+        <div class="sub-sec">
+          <button type="submit" class="sub-btn" id="submitBtn">Submit Application →</button>
+          <p class="sub-note">Your details are safe. They are only shared with the DermNest clinical review board.</p>
+          <div id="formStatus" class="form-status"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer class="footer">
+    <div class="footer__tagline">Building with intent. Scaling with discipline. Thinking long-term.</div>
+    <div class="footer__copy">© 2026 <a href="index.html#hero">M. Hamza Irshad</a></div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Theme Toggle
+    const toggleBtn = document.getElementById('themeToggle');
+    const toggleLabel = document.getElementById('themeLabel');
+    let theme = localStorage.getItem('mhi-theme') || 'dark';
+
+    document.documentElement.setAttribute('data-theme', theme);
+    updateThemeUI(theme);
+
+    toggleBtn.addEventListener('click', () => {
+      theme = theme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('mhi-theme', theme);
+      updateThemeUI(theme);
+    });
+
+    function updateThemeUI(t) {
+      toggleBtn.textContent = t === 'light' ? '◑' : '◐';
+      if (toggleLabel) toggleLabel.textContent = t === 'light' ? 'Dark' : 'Light';
+    }
+
+    // Mobile menu toggle
+    const burger = document.getElementById('mobileToggle');
+    const menu = document.getElementById('mobileMenu');
+    if (burger && menu) {
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        menu.classList.toggle('active');
+        document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+      });
+      menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          burger.classList.remove('active');
+          menu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    // City Toggle ("Other" conditional input)
+    const cityRadios = document.querySelectorAll('input[name="city"]');
+    const otherCityContainer = document.getElementById('otherCityContainer');
+    const otherCityInput = document.getElementById('otherCityInput');
+
+    cityRadios.forEach(r => {
+      r.addEventListener('change', () => {
+        if (r.value === 'Other') {
+          otherCityContainer.style.display = 'block';
+          otherCityInput.required = true;
+        } else {
+          otherCityContainer.style.display = 'none';
+          otherCityInput.required = false;
+          otherCityInput.value = '';
+        }
+      });
+    });
+
+    // Qualification Toggle ("Other" conditional input)
+    const qualRadios = document.querySelectorAll('input[name="qualification"]');
+    const otherQualContainer = document.getElementById('otherQualContainer');
+    const otherQualInput = document.getElementById('otherQualInput');
+
+    qualRadios.forEach(r => {
+      r.addEventListener('change', () => {
+        if (r.value === 'Other') {
+          otherQualContainer.style.display = 'block';
+          otherQualInput.required = true;
+        } else {
+          otherQualContainer.style.display = 'none';
+          otherQualInput.required = false;
+          otherQualInput.value = '';
+        }
+      });
+    });
+
+    // Practice in multiple clinics Toggle
+    const multipleClinicsRadios = document.querySelectorAll('input[name="multipleClinics"]');
+    const multipleClinicsListContainer = document.getElementById('multipleClinicsListContainer');
+    const multipleClinicsList = document.getElementById('multipleClinicsList');
+
+    multipleClinicsRadios.forEach(r => {
+      r.addEventListener('change', () => {
+        if (r.value === 'Yes') {
+          multipleClinicsListContainer.style.display = 'block';
+          multipleClinicsList.required = true;
+        } else {
+          multipleClinicsListContainer.style.display = 'none';
+          multipleClinicsList.required = false;
+          multipleClinicsList.value = '';
+        }
+      });
+    });
+
+    // All of the Above Sync - Content Types Checkboxes
+    const contentCheckboxes = document.querySelectorAll('input[name="contentTypes"]');
+    const allContentCheckbox = document.getElementById('allContentTypes');
+
+    allContentCheckbox.addEventListener('change', function() {
+      contentCheckboxes.forEach(cb => {
+        cb.checked = this.checked;
+      });
+    });
+
+    contentCheckboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        if (!cb.checked) {
+          allContentCheckbox.checked = false;
+        } else {
+          const allChecked = Array.from(contentCheckboxes).every(c => c.checked);
+          if (allChecked) {
+            allContentCheckbox.checked = true;
+          }
+        }
+      });
+    });
+
+    // All of the Above Sync - Opportunities Checkboxes
+    const opportunityCheckboxes = document.querySelectorAll('input[name="opportunities"]');
+    const allOpportunitiesCheckbox = document.getElementById('allOpportunities');
+
+    allOpportunitiesCheckbox.addEventListener('change', function() {
+      opportunityCheckboxes.forEach(cb => {
+        cb.checked = this.checked;
+      });
+    });
+
+    opportunityCheckboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        if (!cb.checked) {
+          allOpportunitiesCheckbox.checked = false;
+        } else {
+          const allChecked = Array.from(opportunityCheckboxes).every(c => c.checked);
+          if (allChecked) {
+            allOpportunitiesCheckbox.checked = true;
+          }
+        }
+      });
+    });
+
+    // File Upload Base64 Handlers
+    let cvFileData = null;
+    let pmdcFileData = null;
+    let clinicPhotoData = null;
+
+    const setupFileHelper = (fileInputId, displayId, storeCallback) => {
+      const input = document.getElementById(fileInputId);
+      const display = document.getElementById(displayId);
+
+      input.addEventListener('change', function() {
+        const file = this.files[0];
+        if (!file) {
+          storeCallback(null);
+          display.textContent = '';
+          return;
+        }
+        if (file.size > 10485760) {
+          alert('File size exceeds the 10MB limit.');
+          this.value = '';
+          storeCallback(null);
+          display.textContent = '';
+          return;
+        }
+        display.textContent = '📎 ' + file.name;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          storeCallback({
+            name: file.name,
+            type: file.type || 'application/octet-stream',
+            data: e.target.result.split(',')[1]
+          });
+        };
+        reader.readAsDataURL(file);
+      });
+    };
+
+    setupFileHelper('cvFileInput', 'cvFileNameDisplay', (data) => { cvFileData = data; });
+    setupFileHelper('pmdcFileInput', 'pmdcFileNameDisplay', (data) => { pmdcFileData = data; });
+    setupFileHelper('clinicPhotoFileInput', 'clinicPhotoFileNameDisplay', (data) => { clinicPhotoData = data; });
+
+    // Submission Integration
+    const appForm = document.getElementById('appForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('formStatus');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzvYTU6a4boGv1kHHezaHJtoq8lIWgQssBAJ4MEIKtF4Afwo5TqJCxDR8cq_Z0TQU9y/exec';
+
+    appForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Checkbox group validation (at least one selected)
+      const selectedContentTypes = Array.from(contentCheckboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
+      if (allContentCheckbox.checked && !selectedContentTypes.includes("All of the above")) {
+        selectedContentTypes.push("All of the above");
+      }
+
+      const selectedOpportunities = Array.from(opportunityCheckboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
+      if (allOpportunitiesCheckbox.checked && !selectedOpportunities.includes("All of the above")) {
+        selectedOpportunities.push("All of the above");
+      }
+
+      if (selectedContentTypes.length === 0) {
+        alert('Please select at least one content type you would enjoy creating.');
+        return;
+      }
+      if (selectedOpportunities.length === 0) {
+        alert('Please select at least one partnership opportunity.');
+        return;
+      }
+
+      // Check required PMDC file
+      if (!pmdcFileData) {
+        alert('Please upload your PMDC Registration Certificate.');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting...';
+      formStatus.className = 'form-status';
+      formStatus.textContent = '';
+      formStatus.style.display = 'none';
+
+      const getRadioVal = (name) => {
+        const checkedInput = appForm.querySelector(`input[name="${name}"]:checked`);
+        if (!checkedInput) return '';
+        return checkedInput.closest('label')?.querySelector('span')?.textContent?.trim() || checkedInput.value;
+      };
+
+      // Exact matching fields based on the plan and user spec
+      const data = {
+        "Timestamp": new Date().toLocaleString('en-PK', {timeZone: 'Asia/Karachi'}),
+        "Full Name": document.getElementById('fullName').value.trim(),
+        "Email": document.getElementById('email').value.trim(),
+        "Phone": document.getElementById('phone').value.trim(),
+        "City": getRadioVal('city'),
+        "Other City": document.getElementById('otherCityInput').value.trim(),
+        "Clinic Name": document.getElementById('clinicName').value.trim(),
+        "Clinic Address": document.getElementById('clinicAddress').value.trim(),
+        "Highest Qualification": getRadioVal('qualification'),
+        "Other Qualification": document.getElementById('otherQualInput').value.trim(),
+        "Years of Clinical Experience": document.getElementById('experience').value,
+        "Owns Clinic": getRadioVal('ownClinic'),
+        "Practices Multiple Clinics": getRadioVal('multipleClinics'),
+        "Other Clinics List": document.getElementById('multipleClinicsList').value.trim(),
+        "Instagram Profile": document.getElementById('igProfile').value.trim(),
+        "Facebook Page": document.getElementById('fbPage').value.trim(),
+        "TikTok Profile": document.getElementById('tiktokProfile').value.trim(),
+        "YouTube Channel": document.getElementById('youtubeProfile').value.trim(),
+        "Patients Per Month": document.getElementById('patientVolume').value,
+        "Comfortable Creating Edu Content": getRadioVal('eduContent'),
+        "Allow Clinic Shoots": getRadioVal('visitClinic'),
+        "Comfortable Patient Journeys": getRadioVal('patientJourneys'),
+        "Enjoyed Content Types": selectedContentTypes.join(', '),
+        "Interested Keeping Products": getRadioVal('keepProducts'),
+        "Open Recommending Products": getRadioVal('recommendProducts'),
+        "Product Testing Testing Feedback": getRadioVal('productTesting'),
+        "Interested Opportunities": selectedOpportunities.join(', '),
+        "Why Partner": document.getElementById('whyPartner').value.trim(),
+        
+        // Internal Tracking Fields (Initial empty columns in sheet)
+        "PMDC Registration Verification": "",
+        "Content Quality Score": "",
+        "Camera Confidence Score": "",
+        "Clinic Aesthetics Score": "",
+        "Patient Volume Score": "",
+        "Social Media Potential": "",
+        "Partnership Recommendation": ""
+      };
+
+      // Attachment 1: CV (optional)
+      if (cvFileData) {
+        data["CV File Name"] = cvFileData.name;
+        data["CV File Type"] = cvFileData.type;
+        data["CV File Data"] = cvFileData.data;
+      }
+
+      // Attachment 2: PMDC Certificate (required)
+      data["PMDC File Name"] = pmdcFileData.name;
+      data["PMDC File Type"] = pmdcFileData.type;
+      data["PMDC File Data"] = pmdcFileData.data;
+
+      // Attachment 3: Clinic Photographs (optional)
+      if (clinicPhotoData) {
+        data["Clinic Photo Name"] = clinicPhotoData.name;
+        data["Clinic Photo Type"] = clinicPhotoData.type;
+        data["Clinic Photo Data"] = clinicPhotoData.data;
+      }
+
+      try {
+        await fetch(scriptURL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        submitBtn.textContent = 'Success!';
+        formStatus.className = 'form-status success';
+        formStatus.textContent = 'Application submitted successfully! Redirecting...';
+        formStatus.style.display = 'block';
+        appForm.reset();
+        
+        // Reset local base64 storage
+        cvFileData = null;
+        pmdcFileData = null;
+        clinicPhotoData = null;
+        document.getElementById('cvFileNameDisplay').textContent = '';
+        document.getElementById('pmdcFileNameDisplay').textContent = '';
+        document.getElementById('clinicPhotoFileNameDisplay').textContent = '';
+
+        setTimeout(() => {
+          if (typeof fbq === 'function') {
+            fbq('track', 'Lead', {
+              content_name: 'Clinical Partner Application',
+              content_category: 'Partnership'
+            });
+          }
+          window.location.href = 'thankyou.html';
+        }, 1500);
+
+      } catch (error) {
+        console.error('Submission Error:', error);
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Application →';
+        formStatus.className = 'form-status error';
+        formStatus.textContent = 'Something went wrong. Please try again.';
+        formStatus.style.display = 'block';
+      }
+    });
+  });
+  </script>
+</body>
+</html>
