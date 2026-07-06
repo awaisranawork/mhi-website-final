@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <!-- Google Tag Manager -->
@@ -417,6 +417,17 @@
             <input type="text" id="education" placeholder="e.g. Bachelors in Media Sciences / Communication" required>
           </div>
           
+          <div class="fg">
+            <label>Are you currently a student? <span class="r">*</span></label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="isStudent" value="yes" required><span>Yes, I am currently studying</span></label>
+              <label class="opt"><input type="radio" name="isStudent" value="no"><span>No, I have graduated / not a student</span></label>
+            </div>
+            <div id="studentWarning" style="display: none; background: rgba(255, 74, 74, 0.1); border: 1px solid rgba(255, 74, 74, 0.3); padding: 12px 16px; border-radius: 8px; margin-top: 12px; color: #ff4a4a; font-weight: 500; font-size: 0.88rem; line-height: 1.5;">
+              ⚠️ <strong>Notice:</strong> This opportunity is only for graduates. Currently studying students are not eligible to apply.
+            </div>
+          </div>
+          
           <div class="row2">
             <div class="fg">
               <label for="company">Most Recent Company Worked At</label>
@@ -752,8 +763,37 @@
     const formStatus = document.getElementById('formStatus');
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzvYTU6a4boGv1kHHezaHJtoq8lIWgQssBAJ4MEIKtF4Afwo5TqJCxDR8cq_Z0TQU9y/exec';
 
+    // Student validation logic
+    const isStudentRadios = appForm.querySelectorAll('input[name="isStudent"]');
+    const studentWarning = document.getElementById('studentWarning');
+
+    isStudentRadios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        if (radio.value === 'yes' && radio.checked) {
+          studentWarning.style.display = 'block';
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = '0.5';
+          submitBtn.style.cursor = 'not-allowed';
+          submitBtn.title = 'Currently studying students cannot apply';
+        } else {
+          studentWarning.style.display = 'none';
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '1';
+          submitBtn.style.cursor = 'pointer';
+          submitBtn.title = '';
+        }
+      });
+    });
+
     appForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      // Failsafe check
+      const checkedStudent = appForm.querySelector('input[name="isStudent"]:checked');
+      if (checkedStudent && checkedStudent.value === 'yes') {
+        alert('This opportunity is only for graduates. Currently studying students are not eligible to apply.');
+        return;
+      }
 
       if (!cvFileData) {
         alert('Please select and upload your CV / Resume before submitting.');
